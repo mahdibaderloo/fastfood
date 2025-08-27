@@ -1,10 +1,16 @@
+import Search from "../components/Search";
 import HeaderMenu from "../features/menu/HeaderMenu";
 
 function Menu() {
   return (
-    <div>
+    <>
       <HeaderMenu />
-    </div>
+      <main className="overflow-y-scroll">
+        <div>
+          <Search />
+        </div>
+      </main>
+    </>
   );
 }
 
