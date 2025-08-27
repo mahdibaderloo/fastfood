@@ -17,7 +17,9 @@ function Navbar() {
       <NavLink
         to="/dashboard"
         className={({ isActive }) =>
-          isActive ? "bg-amber-300 p-2 rounded-full" : "p-2"
+          isActive
+            ? "bg-amber-300 p-2 rounded-xl transition-all duration-500"
+            : "p-2"
         }
       >
         {({ isActive }) =>
@@ -31,7 +33,9 @@ function Navbar() {
       <NavLink
         to="/cart"
         className={({ isActive }) =>
-          isActive ? "bg-amber-300 p-2 rounded-full" : "p-2"
+          isActive
+            ? "bg-amber-300 p-2 rounded-xl transition-all duration-500"
+            : "p-2"
         }
       >
         {({ isActive }) =>
@@ -45,7 +49,9 @@ function Navbar() {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? "bg-amber-300 p-2 rounded-full" : "p-2"
+          isActive
+            ? "bg-amber-300 p-2 rounded-xl transition-all duration-500"
+            : "p-2"
         }
       >
         {({ isActive }) =>
@@ -59,7 +65,9 @@ function Navbar() {
       <NavLink
         to="/notifications"
         className={({ isActive }) =>
-          isActive ? "bg-amber-300 p-2 rounded-lg" : "p-2"
+          isActive
+            ? "bg-amber-300 p-2 rounded-xl transition-all duration-500"
+            : "p-2"
         }
       >
         {({ isActive }) =>
@@ -73,7 +81,9 @@ function Navbar() {
       <NavLink
         to="/settings"
         className={({ isActive }) =>
-          isActive ? "bg-amber-300 p-2 rounded-full" : "p-2"
+          isActive
+            ? "bg-amber-300 p-2 rounded-xl transition-all duration-500"
+            : "p-2"
         }
       >
         {({ isActive }) =>
