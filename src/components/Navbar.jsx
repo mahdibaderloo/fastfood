@@ -13,41 +13,74 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between rounded-xl bg-white fixed left-0 right-0 bottom-0 p-4 m-2">
-      <NavLink to="/dashboard">
-        {({ isActive }) =>
-          isActive ? <GoPersonFill size={34} /> : <GoPerson size={34} />
+    <nav className="flex justify-between rounded-xl bg-white fixed left-0 right-0 bottom-0 p-2 m-2">
+      <NavLink
+        to="/dashboard"
+        className={({ isActive }) =>
+          isActive ? "bg-amber-300 p-2 rounded-full" : "p-2"
         }
-      </NavLink>
-      <NavLink to="/cart">
-        {({ isActive }) =>
-          isActive ? <IoCart size={34} /> : <IoCartOutline size={34} />
-        }
-      </NavLink>
-      <NavLink to="/">
+      >
         {({ isActive }) =>
           isActive ? (
-            <IoFastFoodSharp size={34} />
+            <GoPersonFill size={34} color="#2c2c2c" />
           ) : (
-            <IoFastFoodOutline size={34} />
+            <GoPerson size={34} color="#2c2c2c" />
           )
         }
       </NavLink>
-      <NavLink to="/notifications">
+      <NavLink
+        to="/cart"
+        className={({ isActive }) =>
+          isActive ? "bg-amber-300 p-2 rounded-full" : "p-2"
+        }
+      >
         {({ isActive }) =>
           isActive ? (
-            <BiSolidNotification size={34} />
+            <IoCart size={34} color="#2c2c2c" />
           ) : (
-            <TbNotification size={34} />
+            <IoCartOutline size={34} color="#2c2c2c" />
           )
         }
       </NavLink>
-      <NavLink to="/settings">
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? "bg-amber-300 p-2 rounded-full" : "p-2"
+        }
+      >
         {({ isActive }) =>
           isActive ? (
-            <IoSettingsSharp size={34} />
+            <IoFastFoodSharp size={34} color="#2c2c2c" />
           ) : (
-            <IoSettingsOutline size={34} />
+            <IoFastFoodOutline size={34} color="#2c2c2c" />
+          )
+        }
+      </NavLink>
+      <NavLink
+        to="/notifications"
+        className={({ isActive }) =>
+          isActive ? "bg-amber-300 p-2 rounded-lg" : "p-2"
+        }
+      >
+        {({ isActive }) =>
+          isActive ? (
+            <BiSolidNotification size={34} color="#2c2c2c" />
+          ) : (
+            <TbNotification size={34} color="#2c2c2c" />
+          )
+        }
+      </NavLink>
+      <NavLink
+        to="/settings"
+        className={({ isActive }) =>
+          isActive ? "bg-amber-300 p-2 rounded-full" : "p-2"
+        }
+      >
+        {({ isActive }) =>
+          isActive ? (
+            <IoSettingsSharp size={34} color="#2c2c2c" />
+          ) : (
+            <IoSettingsOutline size={34} color="#2c2c2c" />
           )
         }
       </NavLink>

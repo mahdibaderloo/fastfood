@@ -2,6 +2,7 @@
 
 @theme {
   --animate-opacity: Opacity 2.3s ease-in-out infinite;
+  --main-color: #2c2c2c;
 }
 
 @keyframes Opacity {

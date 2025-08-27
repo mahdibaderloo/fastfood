@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 function AppLayout() {
   return (
-    <div className="bg-amber-400 h-screen">
+    <div className="bg-amber-300 h-screen">
       <Outlet />
       <Navbar />
     </div>
