@@ -12,7 +12,7 @@ function Menu() {
           <Search />
           <Filter />
         </div>
-        <ul className="flex items-center justify-center flex-wrap gap-4 mt-8">
+        <ul className="flex items-center justify-center flex-wrap gap-2 mt-4">
           <MenuItem />
           <MenuItem />
           <MenuItem />
