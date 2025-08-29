@@ -4,7 +4,7 @@ import Loading from "./Loading";
 
 function AppLayout() {
   return (
-    <div className="bg-amber-300 h-screen font-lilita">
+    <div className="bg-amber-300 font-lilita">
       <Outlet />
       {/* <Loading /> */}
       <Navbar />
