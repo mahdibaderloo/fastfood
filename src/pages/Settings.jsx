@@ -1,5 +1,11 @@
+import HeaderSettings from "../features/settings/HeaderSettings";
+
 function Settings() {
-  return <div></div>;
+  return (
+    <>
+      <HeaderSettings />
+    </>
+  );
 }
 
 export default Settings;
