@@ -1,10 +1,17 @@
+import CartItem from "../features/cart/CartItem";
 import HeaderCart from "../features/cart/HeaderCart";
 
 function Cart() {
   return (
-    <div>
+    <>
       <HeaderCart />
-    </div>
+      <main className="overflow-y-scroll py-4">
+        <ul className="flex flex-col gap-2">
+          <CartItem />
+          <CartItem />
+        </ul>
+      </main>
+    </>
   );
 }
 
