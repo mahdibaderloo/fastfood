@@ -5,8 +5,6 @@ import { CgChevronRight, CgDanger } from "react-icons/cg";
 import { LuSend } from "react-icons/lu";
 import { GoPerson, GoTrash } from "react-icons/go";
 import { IoLogOutOutline, IoNotificationsOutline } from "react-icons/io5";
-import { MdOutlineLogout } from "react-icons/md";
-import { HiOutlineTrash } from "react-icons/hi";
 
 function Settings() {
   return (
