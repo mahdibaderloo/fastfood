@@ -1,6 +1,6 @@
 function CartPrice() {
   return (
-    <form className="p-4 bg-amber-50 mt-2 rounded-t-xl">
+    <form className="p-4 bg-amber-50 mt-2 rounded-t-xl pb-18">
       <div className="bg-amber-200 p-1 rounded-lg">
         <input
           type="text"
