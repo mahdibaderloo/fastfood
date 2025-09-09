@@ -1,4 +1,5 @@
 import CartItem from "../features/cart/CartItem";
+import CartPrice from "../features/cart/CartPrice";
 import HeaderCart from "../features/cart/HeaderCart";
 
 function Cart() {
@@ -10,6 +11,7 @@ function Cart() {
           <CartItem />
           <CartItem />
         </ul>
+        <CartPrice />
       </main>
     </>
   );
