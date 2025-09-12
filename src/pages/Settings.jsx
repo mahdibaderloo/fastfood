@@ -12,7 +12,7 @@ function Settings() {
       <HeaderSettings />
       <main className="overflow-y-scroll p-4">
         <div>
-          <p className="text-neutral-700">Theme</p>
+          <p className="text-amber-800">Theme</p>
           <div className="flex items-center justify-between p-2">
             <p className="text-neutral-900">Light mode</p>
             <p>
@@ -23,7 +23,7 @@ function Settings() {
         </div>
 
         <div className="mt-4">
-          <p className="text-neutral-700">General</p>
+          <p className="text-amber-800">General</p>
           <div className="flex items-center justify-between p-2 border-b-2 border-[#2c2c2c1a]">
             <div className="flex items-center justify-start">
               <p>
@@ -74,7 +74,7 @@ function Settings() {
         </div>
 
         <div className="mt-4">
-          <p className="text-neutral-700">Feedback</p>
+          <p className="text-amber-800">Feedback</p>
           <div className="flex items-center justify-between p-2 border-b-2 border-[#2c2c2c1a]">
             <div className="flex items-center">
               <p>

@@ -24,8 +24,12 @@ function CartPrice() {
           <span className="text-neutral-700">Total</span>
           <p className="text-neutral-800">$130</p>
         </div>
-        <button className="bg-amber-200 text-amber-800 p-2 rounded-lg w-full mt-4">
+        <button className="bg-amber-200 text-amber-800 p-2 rounded-lg w-full mt-6 inline-block relative overflow-hidden animate-bounce">
           Checkout
+          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 animate-spin-border"></span>
+          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 animate-spin-border animation-delay-25"></span>
+          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 animate-spin-border delay-150 animation-delay-50"></span>
+          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 animate-spin-border delay-300 animation-delay-75"></span>
         </button>
       </div>
     </form>

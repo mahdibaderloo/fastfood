@@ -5,6 +5,8 @@
   --animate-opacity: Opacity 2.3s ease-in-out infinite;
   --main-color: #2c2c2c;
   --font-lilita: Lilita One;
+
+  --animate-spin-border: SpinBorder 2s infinite linear;
 }
 
 @keyframes Opacity {
@@ -16,4 +18,34 @@
   100% {
     opacity: 1;
   }
+}
+
+@keyframes SpinBorder {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(376px, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate(376px, 54px);
+  }
+  75% {
+    transform: translate(0, 54px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animation-delay-25 {
+  animation-delay: 25ms;
+}
+
+.animation-delay-50 {
+  animation-delay: 50ms;
+}
+
+.animation-delay-75 {
+  animation-delay: 75ms;
 }
