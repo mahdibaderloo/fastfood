@@ -7,7 +7,7 @@ function HeaderMenu() {
     <header className="w-full flex flex-col items-center justify-center py-4 fixed z-50 bg-amber-300">
       <div className="flex mb-4">
         <p className="text-6xl">PIZZ</p>
-        <img src={pizzaIcon} alt="pizza" className="w-11" />
+        <img src={pizzaIcon} alt="pizza" className="w-11 rotate-180" />
       </div>
       <div className="flex items-center gap-2 px-2">
         <Search />
