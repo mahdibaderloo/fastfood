@@ -1,5 +1,11 @@
+import UserInformation from "../features/dashboard/UserInformation";
+
 function Dashboard() {
-  return <div></div>;
+  return (
+    <div className="flex flex-col">
+      <UserInformation />
+    </div>
+  );
 }
 
 export default Dashboard;
