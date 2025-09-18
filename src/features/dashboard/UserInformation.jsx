@@ -2,7 +2,7 @@ import pizzaPattern from "../../data/images/PizzaPattern.jpg";
 
 function UserInformation() {
   return (
-    <div className="bg-amber-300 h-screen overflow-hidden">
+    <div className="bg-amber-300">
       <div className="h-[150px] overflow-hidden object-contain">
         <img src={pizzaPattern} alt="pattern" className="" />
       </div>
