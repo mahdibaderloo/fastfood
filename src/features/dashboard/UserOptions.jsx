@@ -5,7 +5,7 @@ import { PiHandbagFill } from "react-icons/pi";
 import { TbJewishStarFilled } from "react-icons/tb";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 
-function UserStatistics() {
+function UserOptions() {
   return (
     <ul className="bg-amber-50 m-4 mt-20 p-2 rounded-xl flex flex-wrap justify-between gap-2">
       <li className="bg-amber-100 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
@@ -48,4 +48,4 @@ function UserStatistics() {
   );
 }
 
-export default UserStatistics;
+export default UserOptions;

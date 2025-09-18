@@ -1,11 +1,11 @@
 import UserInformation from "../features/dashboard/UserInformation";
-import UserStatistics from "../features/dashboard/UserStatistics";
+import UserOptions from "../features/dashboard/UserOptions";
 
 function Dashboard() {
   return (
     <div className="flex flex-col h-screen overflow-hidden">
       <UserInformation />
-      <UserStatistics />
+      <UserOptions />
     </div>
   );
 }
