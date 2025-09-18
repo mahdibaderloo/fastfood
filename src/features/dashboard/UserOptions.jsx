@@ -7,7 +7,7 @@ import { TfiHeadphoneAlt } from "react-icons/tfi";
 
 function UserOptions() {
   return (
-    <ul className="bg-amber-50 m-4 mt-20 p-2 rounded-xl flex flex-wrap justify-between gap-2">
+    <ul className="bg-amber-50 m-4 mt-13 p-2 rounded-xl flex flex-wrap justify-between gap-2">
       <li className="bg-amber-100 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
         <p className="w-20 h-16 flex justify-center items-center">
           <MdManageAccounts size={56} color="#262626" />
