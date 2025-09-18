@@ -1,5 +1,11 @@
+import HeaderNotification from "../features/notification/HeaderNotification";
+
 function Notifications() {
-  return <div></div>;
+  return (
+    <>
+      <HeaderNotification />
+    </>
+  );
 }
 
 export default Notifications;
