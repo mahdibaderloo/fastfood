@@ -1,11 +1,11 @@
 function CartPrice() {
   return (
     <form className="p-4 bg-amber-50 mt-2 rounded-t-xl pb-18">
-      <div className="bg-amber-200 p-1 rounded-lg">
+      <div className="bg-amber-200 dark:bg-neutral-800 p-1 rounded-lg">
         <input
           type="text"
           placeholder="Enter your code..."
-          className="pl-2 border-none outline-none text-amber-800"
+          className="pl-2 border-none outline-none text-amber-800 dark:text-amber-300"
         />
         <button className="bg-amber-50 text-amber-800 p-1 rounded-lg shadow">
           Apply
@@ -24,12 +24,12 @@ function CartPrice() {
           <span className="text-neutral-700">Total</span>
           <p className="text-neutral-800">$130</p>
         </div>
-        <button className="bg-amber-200 text-amber-800 p-2 rounded-lg w-full mt-6 inline-block relative overflow-hidden animate-bounce">
+        <button className="bg-amber-200 dark:bg-neutral-800 dark:text-amber-300 text-amber-800 p-2 rounded-lg w-full mt-6 inline-block relative overflow-hidden animate-bounce">
           Checkout
-          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 animate-spin-border"></span>
-          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 animate-spin-border animation-delay-25"></span>
-          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 animate-spin-border delay-150 animation-delay-50"></span>
-          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 animate-spin-border delay-300 animation-delay-75"></span>
+          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 dark:bg-amber-300 animate-spin-border"></span>
+          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 dark:bg-amber-300 animate-spin-border animation-delay-25"></span>
+          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 dark:bg-amber-300 animate-spin-border delay-150 animation-delay-50"></span>
+          <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 dark:bg-amber-300 animate-spin-border delay-300 animation-delay-75"></span>
         </button>
       </div>
     </form>
