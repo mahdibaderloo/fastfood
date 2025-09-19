@@ -5,44 +5,70 @@ import { PiHandbagFill } from "react-icons/pi";
 import { TbJewishStarFilled } from "react-icons/tb";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 
+const isDark = document.querySelector("html").className === "dark";
+
 function UserOptions() {
   return (
-    <ul className="bg-amber-50 m-4 mt-13 p-2 rounded-xl flex flex-wrap justify-between gap-2">
-      <li className="bg-amber-100 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+    <ul className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 p-2 rounded-xl flex flex-wrap justify-between gap-2">
+      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
         <p className="w-20 h-16 flex justify-center items-center">
-          <MdManageAccounts size={56} color="#262626" />
+          {isDark ? (
+            <MdManageAccounts size={56} color="#ffd230" />
+          ) : (
+            <MdManageAccounts size={56} color="#262626" />
+          )}
         </p>
-        <p className="text-sm">Account</p>
+        <p className="text-sm dark:text-amber-300">Account</p>
       </li>
-      <li className="bg-amber-100 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
         <p className="w-20 h-16 flex justify-center items-center">
-          <PiHandbagFill size={50} color="#262626" />
+          {isDark ? (
+            <PiHandbagFill size={50} color="#ffd230" />
+          ) : (
+            <PiHandbagFill size={50} color="#262626" />
+          )}
         </p>
-        <p className="text-sm">Orders</p>
+        <p className="text-sm dark:text-amber-300">Orders</p>
       </li>
-      <li className="bg-amber-100 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
         <p className="w-20 h-16 flex justify-center items-center">
-          <TbJewishStarFilled size={50} color="#262626" />
+          {isDark ? (
+            <TbJewishStarFilled size={50} color="#ffd230" />
+          ) : (
+            <TbJewishStarFilled size={50} color="#262626" />
+          )}
         </p>
-        <p className="text-sm">Favorites</p>
+        <p className="text-sm dark:text-amber-300">Favorites</p>
       </li>
-      <li className="bg-amber-100 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
         <p className="w-20 h-16 flex justify-center items-center">
-          <IoWallet size={50} color="#262626" />
+          {isDark ? (
+            <IoWallet size={50} color="#ffd230" />
+          ) : (
+            <IoWallet size={50} color="#262626" />
+          )}
         </p>
-        <p className="text-sm">Wallet</p>
+        <p className="text-sm dark:text-amber-300">Wallet</p>
       </li>
-      <li className="bg-amber-100 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
         <p className="w-20 h-16 flex justify-center items-center">
-          <FaLocationDot size={50} color="#262626" />
+          {isDark ? (
+            <FaLocationDot size={50} color="#ffd230" />
+          ) : (
+            <FaLocationDot size={50} color="#262626" />
+          )}
         </p>
-        <p className="text-sm">Address</p>
+        <p className="text-sm dark:text-amber-300">Address</p>
       </li>
-      <li className="bg-amber-100 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
         <p className="w-20 h-16 flex justify-center items-center">
-          <TfiHeadphoneAlt size={50} color="#262626" />
+          {isDark ? (
+            <TfiHeadphoneAlt size={50} color="#ffd230" />
+          ) : (
+            <TfiHeadphoneAlt size={50} color="#262626" />
+          )}
         </p>
-        <p className="text-sm">Support</p>
+        <p className="text-sm dark:text-amber-300">Support</p>
       </li>
     </ul>
   );
