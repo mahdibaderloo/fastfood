@@ -7,10 +7,6 @@ import { TbJewishStarFilled } from "react-icons/tb";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 
 function UserOptions() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("pizza-theme") || "light"
-  );
-
   return (
     <ul className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 p-2 rounded-xl flex flex-wrap justify-between gap-2">
       <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
