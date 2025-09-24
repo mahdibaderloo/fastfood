@@ -6,25 +6,10 @@ import { LuSend } from "react-icons/lu";
 import { GoPerson, GoTrash } from "react-icons/go";
 import { IoLogOutOutline, IoNotificationsOutline } from "react-icons/io5";
 import { BsMoonStarsFill } from "react-icons/bs";
-import { useState } from "react";
+import { useTheme } from "../store/themeStore";
 
 function Settings() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("pizza-theme") || "light"
-  );
-
-  function setThemeHandler() {
-    const localTheme = localStorage.getItem("pizza-theme");
-    if (!localTheme || localTheme === "light") {
-      document.querySelector("html").classList.add("dark");
-      localStorage.setItem("pizza-theme", "dark");
-      setTheme("dark");
-    } else {
-      document.querySelector("html").classList.remove("dark");
-      localStorage.setItem("pizza-theme", "light");
-      setTheme("light");
-    }
-  }
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <>
@@ -36,7 +21,7 @@ function Settings() {
           </p>
           <div
             className="flex items-center justify-between p-2"
-            onClick={setThemeHandler}
+            onClick={toggleTheme}
           >
             <p className="text-neutral-900 dark:text-amber-300">Light mode</p>
             <p>

@@ -7,6 +7,8 @@ import Dashboard from "./pages/Dashboard";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
 import Cart from "./pages/Cart";
+import { useTheme } from "./store/themeStore";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,19 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const { theme } = useTheme();
+
+  useEffect(
+    function () {
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    },
+    [theme]
+  );
+
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
