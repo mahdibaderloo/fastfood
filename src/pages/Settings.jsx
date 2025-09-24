@@ -6,10 +6,26 @@ import { LuSend } from "react-icons/lu";
 import { GoPerson, GoTrash } from "react-icons/go";
 import { IoLogOutOutline, IoNotificationsOutline } from "react-icons/io5";
 import { BsMoonStarsFill } from "react-icons/bs";
-
-const isDark = document.querySelector("html").className === "dark";
+import { useState } from "react";
 
 function Settings() {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("pizza-theme") || "light"
+  );
+
+  function setThemeHandler() {
+    const localTheme = localStorage.getItem("pizza-theme");
+    if (!localTheme || localTheme === "light") {
+      document.querySelector("html").classList.add("dark");
+      localStorage.setItem("pizza-theme", "dark");
+      setTheme("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+      localStorage.setItem("pizza-theme", "light");
+      setTheme("light");
+    }
+  }
+
   return (
     <>
       <HeaderSettings />
@@ -18,10 +34,13 @@ function Settings() {
           <p className="text-amber-800 dark:text-amber-100 text-shadow-lg">
             Theme
           </p>
-          <div className="flex items-center justify-between p-2">
+          <div
+            className="flex items-center justify-between p-2"
+            onClick={setThemeHandler}
+          >
             <p className="text-neutral-900 dark:text-amber-300">Light mode</p>
             <p>
-              {isDark ? (
+              {theme === "dark" ? (
                 <BsMoonStarsFill color="#ffd230" />
               ) : (
                 <RiSunLine size={30} />
@@ -37,7 +56,7 @@ function Settings() {
           <div className="flex items-center justify-between p-2 border-b-2 border-[#2c2c2c1a] dark:border-[#fef3c62d]">
             <div className="flex items-center justify-start">
               <p>
-                {isDark ? (
+                {theme === "dark" ? (
                   <GoPerson size={35} color="#ffd230" />
                 ) : (
                   <GoPerson size={35} color="#171717" />
@@ -48,7 +67,7 @@ function Settings() {
               </p>
             </div>
             <p>
-              {isDark ? (
+              {theme === "dark" ? (
                 <CgChevronRight size={30} color="#ffd230" />
               ) : (
                 <CgChevronRight size={30} color="#2c2c2c96" />
@@ -59,7 +78,7 @@ function Settings() {
           <div className="flex items-center justify-between p-2 border-b-2 border-[#2c2c2c1a] dark:border-[#fef3c62d]">
             <div className="flex items-center justify-start">
               <p>
-                {isDark ? (
+                {theme === "dark" ? (
                   <IoNotificationsOutline size={35} color="#ffd230" />
                 ) : (
                   <IoNotificationsOutline size={35} color="#171717" />
@@ -70,7 +89,7 @@ function Settings() {
               </p>
             </div>
             <p>
-              {isDark ? (
+              {theme === "dark" ? (
                 <CgChevronRight size={30} color="#ffd230" />
               ) : (
                 <CgChevronRight size={30} color="#2c2c2c96" />
@@ -81,7 +100,7 @@ function Settings() {
           <div className="flex items-center justify-between p-2 border-b-2 border-[#2c2c2c1a] dark:border-[#fef3c62d]">
             <div className="flex items-center justify-start">
               <p>
-                {isDark ? (
+                {theme === "dark" ? (
                   <IoLogOutOutline size={36} color="#ffd230" />
                 ) : (
                   <IoLogOutOutline size={36} color="#171717" />
@@ -92,7 +111,7 @@ function Settings() {
               </p>
             </div>
             <p>
-              {isDark ? (
+              {theme === "dark" ? (
                 <CgChevronRight size={30} color="#ffd230" />
               ) : (
                 <CgChevronRight size={30} color="#2c2c2c96" />
@@ -103,7 +122,7 @@ function Settings() {
           <div className="flex items-center justify-between p-2">
             <div className="flex items-center justify-start">
               <p>
-                {isDark ? (
+                {theme === "dark" ? (
                   <GoTrash size={34} color="#ffd230" />
                 ) : (
                   <GoTrash size={34} color="#171717" />
@@ -114,7 +133,7 @@ function Settings() {
               </p>
             </div>
             <p>
-              {isDark ? (
+              {theme === "dark" ? (
                 <CgChevronRight size={30} color="#ffd230" />
               ) : (
                 <CgChevronRight size={30} color="#2c2c2c96" />
@@ -130,7 +149,7 @@ function Settings() {
           <div className="flex items-center justify-between p-2 border-b-2 border-[#2c2c2c1a]">
             <div className="flex items-center">
               <p>
-                {isDark ? (
+                {theme === "dark" ? (
                   <LiaBugSolid size={35} color="#ffd230" />
                 ) : (
                   <LiaBugSolid size={35} color="#171717" />
@@ -141,7 +160,7 @@ function Settings() {
               </p>
             </div>
             <p>
-              {isDark ? (
+              {theme === "dark" ? (
                 <CgChevronRight size={30} color="#ffd230" />
               ) : (
                 <CgChevronRight size={30} color="#2c2c2c96" />
@@ -152,7 +171,7 @@ function Settings() {
           <div className="flex items-center justify-between p-2 border-b-2 border-[#2c2c2c1a]">
             <div className="flex items-center">
               <p>
-                {isDark ? (
+                {theme === "dark" ? (
                   <LuSend size={30} color="#ffd230" />
                 ) : (
                   <LuSend size={30} color="#171717" />
@@ -163,7 +182,7 @@ function Settings() {
               </p>
             </div>
             <p>
-              {isDark ? (
+              {theme === "dark" ? (
                 <CgChevronRight size={30} color="#ffd230" />
               ) : (
                 <CgChevronRight size={30} color="#2c2c2c96" />
@@ -174,7 +193,7 @@ function Settings() {
           <div className="flex items-center justify-between p-2">
             <div className="flex items-center">
               <p>
-                {isDark ? (
+                {theme === "dark" ? (
                   <CgDanger size={30} color="#ffd230" />
                 ) : (
                   <CgDanger size={30} color="#171717" />
@@ -185,7 +204,7 @@ function Settings() {
               </p>
             </div>
             <p>
-              {isDark ? (
+              {theme === "dark" ? (
                 <CgChevronRight size={30} color="#ffd230" />
               ) : (
                 <CgChevronRight size={30} color="#2c2c2c96" />
