@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between rounded-xl bg-amber-50 dark:bg-neutral-100/30 dark:backdrop-blur-md shadow-[0_0_5px_#0000003d] dark:shadow-[0_0_5px_#ffffff3c] fixed left-0 right-0 bottom-0 p-2 m-2">
+    <nav className="flex justify-between rounded-xl bg-amber-50 dark:bg-amber-50 shadow-[0_0_5px_#0000003d] fixed left-0 right-0 bottom-0 p-2 m-2">
       <NavLink
         to="/dashboard"
         className={({ isActive }) =>
