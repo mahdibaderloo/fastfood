@@ -1,6 +1,6 @@
-import CartItem from "../features/cart/CartItem";
-import CartPrice from "../features/cart/CartPrice";
-import HeaderCart from "../features/cart/HeaderCart";
+import CartItem from "../features/cart/CartItem.js";
+import CartPrice from "../features/cart/CartPrice.js";
+import HeaderCart from "../features/cart/HeaderCart.js";
 
 function Cart() {
   return (

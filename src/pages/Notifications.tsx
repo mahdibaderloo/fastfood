@@ -1,5 +1,5 @@
-import HeaderNotification from "../features/notification/HeaderNotification";
-import NotificationItem from "../features/notification/NotificationItem";
+import HeaderNotification from "../features/notification/HeaderNotification.js";
+import NotificationItem from "../features/notification/NotificationItem.js";
 
 function Notifications() {
   return (

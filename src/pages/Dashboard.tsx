@@ -1,5 +1,5 @@
-import UserInformation from "../features/dashboard/UserInformation";
-import UserOptions from "../features/dashboard/UserOptions";
+import UserInformation from "../features/dashboard/UserInformation.js";
+import UserOptions from "../features/dashboard/UserOptions.js";
 
 function Dashboard() {
   return (

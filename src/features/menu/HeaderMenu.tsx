@@ -1,8 +1,8 @@
-import Filter from "../../components/Filter";
-import Search from "../../components/Search";
+import Filter from "../../components/Filter.js";
+import Search from "../../components/Search.js";
 import pizzaIcon from "../../data/images/pizza.svg";
 import pizzaDarkIcon from "../../data/images/pizza-dark.svg";
-import { useTheme } from "../../store/themeStore";
+import { useTheme } from "../../store/themeStore.js";
 
 function HeaderMenu() {
   const { theme } = useTheme();

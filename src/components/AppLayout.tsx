@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar.jsx";
-import Loading from "./Loading.jsx";
+import Navbar from "./Navbar";
+import Loading from "./Loading";
 
 function AppLayout() {
   return (

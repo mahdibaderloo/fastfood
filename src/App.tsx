@@ -1,13 +1,13 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppLayout from "./components/AppLayout";
-import Menu from "./pages/Menu";
-import Dashboard from "./pages/Dashboard";
-import Notifications from "./pages/Notifications";
-import Settings from "./pages/Settings";
-import Cart from "./pages/Cart";
-import { useTheme } from "./store/themeStore";
+import AppLayout from "./components/AppLayout.js";
+import Menu from "./pages/Menu.js";
+import Dashboard from "./pages/Dashboard.js";
+import Notifications from "./pages/Notifications.js";
+import Settings from "./pages/Settings.js";
+import Cart from "./pages/Cart.js";
+import { useTheme } from "./store/themeStore.js";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();

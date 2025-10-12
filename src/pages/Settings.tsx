@@ -1,12 +1,12 @@
 import { RiSunLine } from "react-icons/ri";
-import HeaderSettings from "../features/settings/HeaderSettings";
+import HeaderSettings from "../features/settings/HeaderSettings.js";
 import { LiaBugSolid } from "react-icons/lia";
 import { CgChevronRight, CgDanger } from "react-icons/cg";
 import { LuSend } from "react-icons/lu";
 import { GoPerson, GoTrash } from "react-icons/go";
 import { IoLogOutOutline, IoNotificationsOutline } from "react-icons/io5";
 import { BsMoonStarsFill } from "react-icons/bs";
-import { useTheme } from "../store/themeStore";
+import { useTheme } from "../store/themeStore.js";
 
 function Settings() {
   const { theme, toggleTheme } = useTheme();

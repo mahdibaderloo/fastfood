@@ -1,5 +1,5 @@
-import HeaderMenu from "../features/menu/HeaderMenu";
-import MenuItem from "../features/menu/MenuItem";
+import HeaderMenu from "../features/menu/HeaderMenu.js";
+import MenuItem from "../features/menu/MenuItem.js";
 
 function Menu() {
   return (

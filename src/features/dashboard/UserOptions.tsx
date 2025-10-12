@@ -4,7 +4,7 @@ import { MdManageAccounts } from "react-icons/md";
 import { PiHandbagFill } from "react-icons/pi";
 import { TbJewishStarFilled } from "react-icons/tb";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
-import { useTheme } from "../../store/themeStore";
+import { useTheme } from "../../store/themeStore.js";
 
 function UserOptions() {
   const { theme } = useTheme();
