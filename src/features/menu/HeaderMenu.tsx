@@ -10,7 +10,7 @@ function HeaderMenu() {
   return (
     <header className="w-full flex flex-col items-center justify-center py-4 fixed z-50 bg-amber-300 dark:bg-neutral-800">
       <div className="flex mb-4">
-        <p className="text-6xl dark:text-amber-300">PIZZ</p>
+        <p className="text-6xl dark:text-amber-300">P!ZZ</p>
         {theme === "dark" ? (
           <img src={pizzaDarkIcon} alt="pizza" className="w-11 rotate-180" />
         ) : (
