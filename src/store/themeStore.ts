@@ -1,8 +1,13 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
+
+interface ThemeState {
+  theme: "light" | "dark";
+  toggleTheme: () => void;
+}
 
 export const useTheme = create(
-  persist(
+  persist<ThemeState>(
     (set) => ({
       theme: "light",
       toggleTheme: () =>
@@ -10,6 +15,6 @@ export const useTheme = create(
           theme: state.theme === "light" ? "dark" : "light",
         })),
     }),
-    { name: "pizza-theme" }
+    { name: "pizza-theme", storage: createJSONStorage(() => localStorage) }
   )
 );

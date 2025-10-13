@@ -23,7 +23,9 @@ function Settings() {
             className="flex items-center justify-between p-2"
             onClick={toggleTheme}
           >
-            <p className="text-neutral-900 dark:text-amber-300">Light mode</p>
+            <p className="text-neutral-900 dark:text-amber-300">
+              {theme === "dark" ? "Dark" : "Light"}
+            </p>
             <p>
               {theme === "dark" ? (
                 <BsMoonStarsFill color="#ffd230" />
