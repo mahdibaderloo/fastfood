@@ -1,7 +1,20 @@
+// import { useQuery } from "@tanstack/react-query";
 import HeaderMenu from "../features/menu/HeaderMenu.js";
 import MenuItem from "../features/menu/MenuItem.js";
 
 function Menu() {
+  // const { data } = useQuery({
+  //   queryKey: ["pizzas"],
+  //   queryFn: async () => {
+  //     const response = await fetch(
+  //       "https://68ed49cfdf2025af78ffc455.mockapi.io/pizza"
+  //     );
+  //     const data = await response.json();
+  //     return data;
+  //   },
+  // });
+  // console.log(data);
+
   return (
     <>
       <HeaderMenu />

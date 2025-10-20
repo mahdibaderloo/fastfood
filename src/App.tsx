@@ -9,6 +9,9 @@ import Settings from "./pages/Settings.js";
 import Cart from "./pages/Cart.js";
 import { useTheme } from "./store/themeStore.js";
 import { useEffect } from "react";
+import Orders from "./pages/Orders.js";
+import Favorites from "./pages/Favorites.js";
+import Wallet from "./pages/Wallet.js";
 
 const queryClient = new QueryClient();
 
@@ -17,7 +20,17 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { path: "/", element: <Menu /> },
-      { path: "/dashboard", element: <Dashboard /> },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+        children: [
+          { path: "dashboard/orders", element: <Orders /> },
+          { path: "dashboard/favorites", element: <Favorites /> },
+          { path: "dashboard/wallet", element: <Wallet /> },
+          { path: "dashboard/address", element: <Orders /> },
+          { path: "dashboard/support", element: <Orders /> },
+        ],
+      },
       { path: "/notifications", element: <Notifications /> },
       { path: "/settings", element: <Settings /> },
       { path: "/cart", element: <Cart /> },
