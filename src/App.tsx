@@ -12,6 +12,8 @@ import { useEffect } from "react";
 import Orders from "./pages/Orders.js";
 import Favorites from "./pages/Favorites.js";
 import Wallet from "./pages/Wallet.js";
+import Address from "./pages/Address.js";
+import Support from "./pages/Support.js";
 
 const queryClient = new QueryClient();
 
@@ -27,8 +29,8 @@ const router = createBrowserRouter([
           { path: "dashboard/orders", element: <Orders /> },
           { path: "dashboard/favorites", element: <Favorites /> },
           { path: "dashboard/wallet", element: <Wallet /> },
-          { path: "dashboard/address", element: <Orders /> },
-          { path: "dashboard/support", element: <Orders /> },
+          { path: "dashboard/address", element: <Address /> },
+          { path: "dashboard/support", element: <Support /> },
         ],
       },
       { path: "/notifications", element: <Notifications /> },
