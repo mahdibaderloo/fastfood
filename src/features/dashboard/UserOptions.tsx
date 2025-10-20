@@ -5,13 +5,17 @@ import { PiHandbagFill } from "react-icons/pi";
 import { TbJewishStarFilled } from "react-icons/tb";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { useTheme } from "../../store/themeStore.js";
+import { Link } from "react-router-dom";
 
 function UserOptions() {
   const { theme } = useTheme();
 
   return (
-    <ul className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 p-2 rounded-xl flex flex-wrap justify-between gap-2">
-      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+    <div className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 p-2 rounded-xl flex flex-wrap justify-between gap-2">
+      <Link
+        to="/account"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+      >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
             <MdManageAccounts size={56} color="#ffd230" />
@@ -20,8 +24,12 @@ function UserOptions() {
           )}
         </p>
         <p className="text-sm dark:text-amber-300">Account</p>
-      </li>
-      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      </Link>
+
+      <Link
+        to="/orders"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+      >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
             <PiHandbagFill size={50} color="#ffd230" />
@@ -30,8 +38,12 @@ function UserOptions() {
           )}
         </p>
         <p className="text-sm dark:text-amber-300">Orders</p>
-      </li>
-      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      </Link>
+
+      <Link
+        to="/favorites"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+      >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
             <TbJewishStarFilled size={50} color="#ffd230" />
@@ -40,8 +52,12 @@ function UserOptions() {
           )}
         </p>
         <p className="text-sm dark:text-amber-300">Favorites</p>
-      </li>
-      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      </Link>
+
+      <Link
+        to="/wallet"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+      >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
             <IoWallet size={50} color="#ffd230" />
@@ -50,8 +66,12 @@ function UserOptions() {
           )}
         </p>
         <p className="text-sm dark:text-amber-300">Wallet</p>
-      </li>
-      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      </Link>
+
+      <Link
+        to="/address"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+      >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
             <FaLocationDot size={50} color="#ffd230" />
@@ -60,8 +80,12 @@ function UserOptions() {
           )}
         </p>
         <p className="text-sm dark:text-amber-300">Address</p>
-      </li>
-      <li className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow">
+      </Link>
+
+      <Link
+        to="/support"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+      >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
             <TfiHeadphoneAlt size={50} color="#ffd230" />
@@ -70,8 +94,8 @@ function UserOptions() {
           )}
         </p>
         <p className="text-sm dark:text-amber-300">Support</p>
-      </li>
-    </ul>
+      </Link>
+    </div>
   );
 }
 

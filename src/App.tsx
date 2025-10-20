@@ -22,17 +22,12 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { path: "/", element: <Menu /> },
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-        children: [
-          { path: "dashboard/orders", element: <Orders /> },
-          { path: "dashboard/favorites", element: <Favorites /> },
-          { path: "dashboard/wallet", element: <Wallet /> },
-          { path: "dashboard/address", element: <Address /> },
-          { path: "dashboard/support", element: <Support /> },
-        ],
-      },
+      { path: "/dashboard", element: <Dashboard /> },
+      { path: "/orders", element: <Orders /> },
+      { path: "/favorites", element: <Favorites /> },
+      { path: "/wallet", element: <Wallet /> },
+      { path: "/address", element: <Address /> },
+      { path: "/support", element: <Support /> },
       { path: "/notifications", element: <Notifications /> },
       { path: "/settings", element: <Settings /> },
       { path: "/cart", element: <Cart /> },

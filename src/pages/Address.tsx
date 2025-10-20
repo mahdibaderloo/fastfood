@@ -1,5 +1,5 @@
 function Address() {
-  return <div></div>;
+  return <div>ADDRESS</div>;
 }
 
 export default Address;

@@ -1,5 +1,5 @@
 function Wallet() {
-  return <div></div>;
+  return <div>WALLET</div>;
 }
 
 export default Wallet;
