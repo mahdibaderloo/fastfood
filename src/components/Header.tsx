@@ -1,11 +1,22 @@
-interface Children {
-  [props: string]: string;
+import { ReactNode } from "react";
+
+interface Props {
+  children?: string | ReactNode;
+  classHeader?: string;
+  classP?: string;
+  pContent?: ReactNode;
 }
 
-function Header({ children }: Children) {
+function Header({
+  children,
+  classHeader = "w-full flex items-center justify-center py-4 fixed bg-amber-300 dark:bg-neutral-800",
+  classP = "text-5xl dark:text-amber-300",
+  pContent,
+}: Props) {
   return (
-    <header className="w-full flex items-center justify-center py-4 fixed bg-amber-300 dark:bg-neutral-800">
-      <p className="text-5xl dark:text-amber-300">{children}</p>
+    <header className={classHeader}>
+      <p className={classP}>{pContent}</p>
+      {children}
     </header>
   );
 }

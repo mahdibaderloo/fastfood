@@ -1,5 +1,4 @@
 import { RiSunLine } from "react-icons/ri";
-import HeaderSettings from "../features/settings/HeaderSettings.js";
 import { LiaBugSolid } from "react-icons/lia";
 import { CgChevronRight, CgDanger } from "react-icons/cg";
 import { LuSend } from "react-icons/lu";
@@ -7,13 +6,17 @@ import { GoPerson, GoTrash } from "react-icons/go";
 import { IoLogOutOutline, IoNotificationsOutline } from "react-icons/io5";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { useTheme } from "../store/themeStore.js";
+import Header from "../components/Header.js";
 
 function Settings() {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <>
-      <HeaderSettings />
+      <Header
+        classHeader="w-full flex items-center justify-center pt-4"
+        pContent="Sett!ngs"
+      />
       <main className="overflow-y-scroll p-4">
         <div>
           <p className="text-amber-800 dark:text-amber-100 text-shadow-lg">
