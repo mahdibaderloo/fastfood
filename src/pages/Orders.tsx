@@ -1,5 +1,9 @@
 function Orders() {
-  return <div>ORDERS</div>;
+  return (
+    <>
+      <header>My Orders</header>
+    </>
+  );
 }
 
 export default Orders;
