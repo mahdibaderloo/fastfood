@@ -35,7 +35,7 @@ function SupportForm() {
           10 / 200
         </p>
       </div>
-      <button className="bg-amber-100 text-neutral-800 rounded-lg p-2 w-full hover:bg-amber-200 transition-all delay-100 mt-4">
+      <button className="bg-amber-200 text-neutral-800 rounded-lg p-2 w-full hover:bg-amber-300 transition-all delay-100 mt-4">
         Submit
       </button>
     </form>
