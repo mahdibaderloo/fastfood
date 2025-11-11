@@ -37,10 +37,14 @@ function Order() {
         </button> */}
 
       <main className="p-4 pt-22 h-screen overflow-y-scroll">
-        <section className="bg-amber-200 rounded-lg p-4 text-neutral-800">
-          <p className="font-semibold">Order: {order.id}</p>
-          <p className="text-sm text-neutral-600 mt-1">Date: {order.date}</p>
-          <p className="text-sm text-neutral-600 mt-1">Time: {order.time}</p>
+        <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800">
+          <p className="font-semibold text-amber-300">Order: {order.id}</p>
+          <p className="text-sm text-amber-200 dark:text-neutral-600 mt-1">
+            Date: {order.date}
+          </p>
+          <p className="text-sm text-amber-200 dark:text-neutral-600 mt-1">
+            Time: {order.time}
+          </p>
         </section>
 
         <section className="mt-4 bg-amber-100 rounded-lg">
@@ -48,7 +52,7 @@ function Order() {
             {order.items.map((it) => (
               <li
                 key={it.id}
-                className="bg-amber-100 dark:bg-neutral-800 rounded-lg p-3 flex items-center justify-between"
+                className="bg-neutral-800 rounded-lg p-3 flex items-center justify-between"
               >
                 <div className="flex items-center gap-3">
                   <img
@@ -57,14 +61,14 @@ function Order() {
                     className="w-12 h-12 rounded-md"
                   />
                   <div>
-                    <p className="text-neutral-800 dark:text-amber-100">
+                    <p className="text-amber-200 dark:text-amber-100">
                       {it.name}
                     </p>
                     <div className="flex items-center justify-between">
-                      <p className="text-sm text-neutral-600 dark:text-amber-200">
+                      <p className="text-sm text-amber-100 dark:text-amber-200">
                         Qty: {it.qty}
                       </p>
-                      <p className="text-neutral-800 dark:text-amber-200 font-medium">
+                      <p className="text-amber-100 dark:text-amber-200 font-medium">
                         ${it.price * it.qty}
                       </p>
                     </div>
@@ -76,25 +80,29 @@ function Order() {
         </section>
 
         {/* Summary */}
-        <section className="bg-amber-100 dark:bg-neutral-800 rounded-lg p-4 mt-4 text-neutral-800 dark:text-amber-100">
+        <section className="dark:bg-neutral-800 rounded-lg p-4 mt-4 text-neutral-800 dark:text-amber-100">
           <div className="flex justify-between py-1">
-            <span className="text-neutral-700 dark:text-amber-200">
+            <span className="text-neutral-700 dark:text-amber-100">
               Subtotal
             </span>
-            <span>${subtotal}</span>
+            <span className="text-neutral-700 dark:text-amber-100">
+              ${subtotal}
+            </span>
           </div>
           <div className="flex justify-between py-1">
-            <span className="text-neutral-700 dark:text-amber-200">
+            <span className="text-neutral-700 dark:text-amber-100">
               Delivery
             </span>
-            <span>
+            <span className="text-neutral-700 dark:text-amber-100">
               {order.deliveryFee === 0 ? "Free" : `$${order.deliveryFee}`}
             </span>
           </div>
-          <div className="h-px bg-neutral-300 dark:bg-neutral-700 my-2" />
+          <div className="h-px bg-neutral-600 dark:bg-neutral-700 my-2" />
           <div className="flex justify-between py-1 text-lg font-semibold">
-            <span className="text-amber-200">Total</span>
-            <span className="text-amber-100">${total}</span>
+            <span className="text-neutral-800 dark:text-amber-200">Total</span>
+            <span className="text-neutral-800 dark:text-amber-200">
+              ${total}
+            </span>
           </div>
         </section>
 
