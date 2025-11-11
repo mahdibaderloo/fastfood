@@ -14,6 +14,7 @@ import Favorites from "./pages/Favorites.js";
 import Wallet from "./pages/Wallet.js";
 import Address from "./pages/Address.js";
 import Support from "./pages/Support.js";
+import Order from "./pages/Order.js";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Menu /> },
       { path: "/dashboard", element: <Dashboard /> },
       { path: "/orders", element: <Orders /> },
+      { path: "/orders/:orderId", element: <Order /> },
       { path: "/favorites", element: <Favorites /> },
       { path: "/wallet", element: <Wallet /> },
       { path: "/address", element: <Address /> },
