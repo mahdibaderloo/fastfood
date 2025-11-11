@@ -38,11 +38,13 @@ function Order() {
 
       <main className="p-4 pt-22 h-screen overflow-y-scroll">
         <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800">
-          <p className="font-semibold text-amber-300">Order: {order.id}</p>
-          <p className="text-sm text-amber-200 dark:text-neutral-600 mt-1">
+          <p className="font-semibold text-amber-300 dark:text-neutral-800">
+            Order: {order.id}
+          </p>
+          <p className="text-sm text-amber-200 dark:text-neutral-700 mt-1">
             Date: {order.date}
           </p>
-          <p className="text-sm text-amber-200 dark:text-neutral-600 mt-1">
+          <p className="text-sm text-amber-200 dark:text-neutral-700 mt-1">
             Time: {order.time}
           </p>
         </section>
