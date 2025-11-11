@@ -1,5 +1,12 @@
-import React from "react";
+import Header from "../components/Header";
 
-export default function Account() {
-  return <div></div>;
+function Account() {
+  return (
+    <>
+      <Header pContent="ACCOUNT" />
+      <main className="p-4 pt-22 h-screen overflow-y-scroll"></main>
+    </>
+  );
 }
+
+export default Account;
