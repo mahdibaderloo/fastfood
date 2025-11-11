@@ -15,6 +15,7 @@ import Wallet from "./pages/Wallet.js";
 import Address from "./pages/Address.js";
 import Support from "./pages/Support.js";
 import Order from "./pages/Order.js";
+import Account from "./pages/Account.js";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       { path: "/settings", element: <Settings /> },
       { path: "/cart", element: <Cart /> },
       { path: "/notifications", element: <Notifications /> },
+      { path: "/account", element: <Account /> },
     ],
   },
 ]);
