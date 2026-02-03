@@ -9,7 +9,7 @@ function Account() {
       <Header pContent="ACCOUNT" />
       <main className="p-4 pt-22 h-screen overflow-y-scroll">
         <div className="w-full relative">
-          <div className="w-20 h-20 rounded-full bg-neutral-800 dark:bg-amber-300 shadow mx-auto overflow-hidden p-0.5">
+          <div className="w-20 h-20 rounded-full bg-amber-50 dark:bg-amber-300 shadow mx-auto overflow-hidden p-0.5">
             <img
               src={image1}
               alt=""
@@ -21,7 +21,27 @@ function Account() {
           </div>
         </div>
 
-        <form></form>
+        <form className="mt-8 p-2 bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md rounded-2xl">
+          <div className="p-2">
+            <p className="mb-1 text-neutral-800 dark:text-amber-300">Name</p>
+            <input
+              type="text"
+              placeholder="Mahdi Baderloo"
+              className="bg-amber-200 dark:bg-neutral-800 text-neutral-800 dark:text-amber-300 p-2 rounded-lg w-full outline-none border-none"
+            />
+          </div>
+          <div className="p-2">
+            <p className="mb-1 text-neutral-800 dark:text-amber-300">Phone</p>
+            <input
+              type="number"
+              placeholder="0910*****98"
+              className="bg-amber-200 dark:bg-neutral-800 text-neutral-800 dark:text-amber-300 p-2 rounded-lg w-full outline-none border-none"
+            />
+          </div>
+        </form>
+        <button className="w-full h-10 mt-2 bg-amber-50 dark:bg-amber-50/20 text-amber-950 rounded-xl">
+          Logout
+        </button>
       </main>
       <div className="w-full h-16"></div>
     </>
