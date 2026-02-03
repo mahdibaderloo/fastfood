@@ -6,10 +6,13 @@ function Support() {
   return (
     <>
       <Header pContent="Support" />
-      <main className="p-4 pt-22 h-screen">
-        <SupportForm />
-        <SupportLinks />
-      </main>
+      <div className="bg-amber-300 dark:bg-neutral-800">
+        <main className="p-4 pt-22 overflow-y-scroll h-screen">
+          <SupportForm />
+          <SupportLinks />
+        </main>
+        <div className="w-full h-12"></div>
+      </div>
     </>
   );
 }
