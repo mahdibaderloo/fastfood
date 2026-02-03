@@ -1,6 +1,21 @@
+import { useState } from "react";
 import pizza from "../../data/images/loading-1.png";
 
 function CartItem() {
+  const [count, setCount] = useState(1);
+
+  function handleIncrease() {
+    if (count <= 19) {
+      setCount((count) => count + 1);
+    }
+  }
+
+  function handleDecrease() {
+    if (count > 1) {
+      setCount((count) => count - 1);
+    }
+  }
+
   return (
     <li className="flex bg-amber-50 rounded-xl p-2 shadow w-[95%] mx-auto">
       <div className="bg-amber-200 w-18 rounded-xl shadow">
@@ -11,11 +26,17 @@ function CartItem() {
         <p className="text-neutral-800">$20</p>
       </div>
       <div className="w-18 h-fit p-0.5 rounded-lg flex justify-between bg-amber-200 dark:bg-neutral-800 text-amber-800 mt-auto ml-auto">
-        <span className="bg-amber-50 w-5 flex justify-center rounded-md">
+        <span
+          className="bg-amber-50 w-5 flex justify-center rounded-md"
+          onClick={handleDecrease}
+        >
           -
         </span>
-        <span className="text-amber-800">1</span>
-        <span className="bg-amber-300 text-amber-800 w-5 flex justify-center rounded-md">
+        <span className="text-amber-800">{count}</span>
+        <span
+          className="bg-amber-300 text-amber-800 w-5 flex justify-center rounded-md"
+          onClick={handleIncrease}
+        >
           +
         </span>
       </div>
