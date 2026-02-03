@@ -6,10 +6,13 @@ function Wallet() {
   return (
     <>
       <Header pContent="My Wallet" />
-      <main className="p-4 pt-22 h-screen overflow-hidden">
-        <Balance />
-        <Transactions />
-      </main>
+      <div className="bg-amber-300 dark:bg-neutral-800">
+        <main className="p-4 pt-22 overflow-y-scroll h-screen">
+          <Balance />
+          <Transactions />
+          <div className="w-full h-18"></div>
+        </main>
+      </div>
     </>
   );
 }

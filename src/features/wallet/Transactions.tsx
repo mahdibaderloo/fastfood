@@ -1,6 +1,6 @@
 function Transactions() {
   return (
-    <div className="bg-amber-100 h-[57%] mt-4 p-2 pb-4 rounded-xl">
+    <div className="bg-amber-100 h-[400px] mt-4 p-2 pb-5 rounded-xl overflow-hidden">
       <p className="text-neutral-800 text-sm h-7">Transactions History</p>
       <div className="overflow-y-scroll h-[95%] scrollbar-hide">
         <ul className="flex flex-col gap-1 overflow-y-scroll pb-2">
