@@ -1,11 +1,11 @@
 function CartPrice() {
   return (
     <form className="p-4 bg-amber-50 dark:bg-amber-300 mt-2 rounded-t-xl pb-30">
-      <div className="bg-amber-200 dark:bg-neutral-800 p-1 rounded-lg">
+      <div className="bg-amber-200 dark:bg-neutral-800 p-1 rounded-lg flex">
         <input
           type="text"
           placeholder="Enter your code..."
-          className="pl-2 border-none outline-none text-amber-800 dark:text-amber-300"
+          className="pl-2 border-none outline-none text-amber-800 dark:text-amber-300 w-[80%]"
         />
         <button className="bg-amber-50 text-amber-800 p-1 rounded-lg shadow">
           Apply
