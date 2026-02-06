@@ -52,7 +52,7 @@ const feedbackItems = [
     title: "Report a bug",
     darkIcon: <LiaBugSolid size={35} color="#ffd230" />,
     lightIcon: <LiaBugSolid size={35} color="#171717" />,
-    url: undefined,
+    url: "/support",
     onClick: () => {},
   },
   {
@@ -61,7 +61,13 @@ const feedbackItems = [
     darkIcon: <LuSend size={30} color="#ffd230" />,
     lightIcon: <LuSend size={30} color="#171717" />,
     url: undefined,
-    onClick: () => {},
+    onClick: () => {
+      window.open(
+        "https://github.com/mahdibaderloo/fastfood",
+        "_blank",
+        "noopener,noreferrer",
+      );
+    },
   },
   {
     id: 3,
@@ -69,7 +75,13 @@ const feedbackItems = [
     darkIcon: <CgDanger size={30} color="#ffd230" />,
     lightIcon: <CgDanger size={30} color="#171717" />,
     url: undefined,
-    onClick: () => {},
+    onClick: () => {
+      window.open(
+        "https://github.com/mahdibaderloo",
+        "_blank",
+        "noopener,noreferrer",
+      );
+    },
   },
 ];
 
