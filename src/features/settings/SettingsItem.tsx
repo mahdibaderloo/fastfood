@@ -1,13 +1,23 @@
 import { CgChevronRight } from "react-icons/cg";
 import { useTheme } from "../../store/themeStore";
+import { MouseEventHandler, ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 
-function SettingsItem({ children, title }) {
+interface ItemProps {
+  children: ReactNode;
+  title: string;
+  url?: string;
+  onClick?: () => void;
+}
+
+function SettingsItem({ children, title, url, onClick }: ItemProps) {
   const { theme } = useTheme();
+  const navigate = useNavigate();
 
   return (
     <li
       className="flex items-center justify-between p-2 border-b-2 border-[#2c2c2c1a] dark:border-[#fef3c62d]"
-      // onClick={}
+      onClick={() => (url ? navigate(url) : onClick?.())}
     >
       <div className="flex items-center justify-start">
         {children}

@@ -51,7 +51,7 @@ function App() {
         document.documentElement.classList.remove("dark");
       }
     },
-    [theme]
+    [theme],
   );
 
   return (
