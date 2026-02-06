@@ -1,9 +1,10 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { CiMenuKebab } from "react-icons/ci";
+import AddressMenuOptions from "./AddressMenuOptions";
 
 function AddressItem() {
   return (
-    <li className="w-full bg-amber-100 p-2 rounded-lg flex flex-col gap-2">
+    <li className="w-full bg-amber-100 p-2 rounded-lg flex flex-col gap-2 relative">
       <div className="flex justify-between items-center">
         <p>
           <FaLocationDot size={30} color="#2c2c2c" />
@@ -21,6 +22,7 @@ function AddressItem() {
       <p className="text-[16px] ml-3 text-neutral-600">
         Receiver: Mahdi Baderloo | 09100000000
       </p>
+      <AddressMenuOptions />
     </li>
   );
 }
