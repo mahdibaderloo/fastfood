@@ -43,11 +43,9 @@ function AddressItem() {
       <p className="text-[16px] ml-3 text-neutral-600">
         Postal code: 123456789
       </p>
-      {isOpenOptions && (
-        <div ref={menuRef}>
-          <AddressMenuOptions />
-        </div>
-      )}
+      <div ref={menuRef}>
+        <AddressMenuOptions isOpen={isOpenOptions} />
+      </div>
     </li>
   );
 }

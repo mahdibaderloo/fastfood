@@ -1,9 +1,21 @@
 import { GoTrash } from "react-icons/go";
 import { MdModeEditOutline } from "react-icons/md";
 
-function AddressMenuOptions() {
+function AddressMenuOptions({ isOpen }) {
   return (
-    <ul className="absolute right-5 top-5.5 bg-amber-50 shadow pl-4 pr-2 rounded-2xl flex flex-col gap-1 p-1.5">
+    <ul
+      className={`
+        absolute right-5 top-5 bg-amber-50 shadow
+        pl-4 pr-2 rounded-2xl flex flex-col gap-1 p-1.5
+        transition-all duration-200 ease-out
+        origin-top-right
+        ${
+          isOpen
+            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 scale-95 -translate-y-1 pointer-events-none"
+        }
+      `}
+    >
       <li className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1">
         <span>Edit</span>
         <MdModeEditOutline />
