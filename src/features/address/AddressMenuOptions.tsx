@@ -1,7 +1,9 @@
 import { GoTrash } from "react-icons/go";
 import { MdModeEditOutline } from "react-icons/md";
 
-function AddressMenuOptions({ isOpen }) {
+type OptionsProp = { isOpen: boolean };
+
+function AddressMenuOptions({ isOpen }: OptionsProp) {
   return (
     <ul
       className={`
