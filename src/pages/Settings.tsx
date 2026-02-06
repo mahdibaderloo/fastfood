@@ -90,7 +90,7 @@ function Settings() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <Modal>
+    <>
       <Header
         classHeader="w-full flex items-center justify-center pt-4"
         pContent="Sett!ngs"
@@ -116,7 +116,6 @@ function Settings() {
             </p>
           </div>
         </div>
-
         <div className="mt-4">
           <p className="text-amber-800 dark:text-amber-100 text-shadow-lg">
             General
@@ -134,12 +133,10 @@ function Settings() {
             ))}
           </ul>
         </div>
-
         <div className="mt-4">
           <p className="text-amber-800 dark:text-amber-100 text-shadow-lg">
             Feedback
           </p>
-
           <ul className="">
             {feedbackItems.map((item) => (
               <SettingsItem
@@ -153,10 +150,9 @@ function Settings() {
             ))}
           </ul>
         </div>
-
         <div className="w-full h-24"></div>
       </main>
-    </Modal>
+    </>
   );
 }
 
