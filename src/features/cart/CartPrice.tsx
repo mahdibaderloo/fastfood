@@ -4,6 +4,7 @@ function CartPrice() {
       <div className="bg-amber-200 dark:bg-neutral-800 p-1 rounded-lg flex">
         <input
           type="text"
+          maxLength={10}
           placeholder="Enter your code..."
           className="pl-2 border-none outline-none text-amber-800 dark:text-amber-300 w-[80%]"
         />
