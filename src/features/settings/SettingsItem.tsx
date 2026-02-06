@@ -1,13 +1,13 @@
 import { CgChevronRight } from "react-icons/cg";
 import { useTheme } from "../../store/themeStore";
-import { MouseEventHandler, ReactNode } from "react";
+import { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface ItemProps {
   children: ReactNode;
   title: string;
-  url?: string;
-  onClick?: () => void;
+  url: string | undefined;
+  onClick: () => void | undefined;
 }
 
 function SettingsItem({ children, title, url, onClick }: ItemProps) {

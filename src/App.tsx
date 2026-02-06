@@ -16,6 +16,7 @@ import Address from "./pages/Address.js";
 import Support from "./pages/Support.js";
 import Order from "./pages/Order.js";
 import Account from "./pages/Account.js";
+import NotificationsSettings from "./pages/NotificationsSettings.js";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
       { path: "/support", element: <Support /> },
       { path: "/notifications", element: <Notifications /> },
       { path: "/settings", element: <Settings /> },
+      { path: "settings/notifications", element: <NotificationsSettings /> },
       { path: "/cart", element: <Cart /> },
       { path: "/notifications", element: <Notifications /> },
       { path: "/account", element: <Account /> },

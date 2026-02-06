@@ -18,6 +18,7 @@ const generalItems = [
     darkIcon: <GoPerson size={35} color="#ffd230" />,
     lightIcon: <GoPerson size={35} color="#171717" />,
     url: "/account",
+    onClick: () => {},
   },
   {
     id: 2,
@@ -25,12 +26,14 @@ const generalItems = [
     darkIcon: <IoNotificationsOutline size={35} color="#ffd230" />,
     lightIcon: <IoNotificationsOutline size={35} color="#171717" />,
     url: "/settings/notifications",
+    onClick: () => {},
   },
   {
     id: 3,
     title: "Logout",
     darkIcon: <IoLogOutOutline size={36} color="#ffd230" />,
     lightIcon: <IoLogOutOutline size={36} color="#171717" />,
+    url: undefined,
     onClick: () => {},
   },
   {
@@ -38,6 +41,7 @@ const generalItems = [
     title: "Delete Account",
     darkIcon: <GoTrash size={34} color="#ffd230" />,
     lightIcon: <GoTrash size={34} color="#171717" />,
+    url: undefined,
     onClick: () => {},
   },
 ];
@@ -48,6 +52,7 @@ const feedbackItems = [
     title: "Report a bug",
     darkIcon: <LiaBugSolid size={35} color="#ffd230" />,
     lightIcon: <LiaBugSolid size={35} color="#171717" />,
+    url: undefined,
     onClick: () => {},
   },
   {
@@ -55,6 +60,7 @@ const feedbackItems = [
     title: "Send feedback",
     darkIcon: <LuSend size={30} color="#ffd230" />,
     lightIcon: <LuSend size={30} color="#171717" />,
+    url: undefined,
     onClick: () => {},
   },
   {
@@ -62,6 +68,7 @@ const feedbackItems = [
     title: "About us",
     darkIcon: <CgDanger size={30} color="#ffd230" />,
     lightIcon: <CgDanger size={30} color="#171717" />,
+    url: undefined,
     onClick: () => {},
   },
 ];
@@ -103,7 +110,12 @@ function Settings() {
           </p>
           <ul>
             {generalItems.map((item) => (
-              <SettingsItem key={item.id} title={item.title} url={item.url}>
+              <SettingsItem
+                key={item.id}
+                title={item.title}
+                url={item.url}
+                onClick={item.onClick}
+              >
                 <p>{theme === "dark" ? item.darkIcon : item.lightIcon}</p>
               </SettingsItem>
             ))}
@@ -117,7 +129,12 @@ function Settings() {
 
           <ul className="">
             {feedbackItems.map((item) => (
-              <SettingsItem key={item.id} title={item.title}>
+              <SettingsItem
+                key={item.id}
+                title={item.title}
+                url={item.url}
+                onClick={item.onClick}
+              >
                 <p>{theme === "dark" ? item.darkIcon : item.lightIcon}</p>
               </SettingsItem>
             ))}
