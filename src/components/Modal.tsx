@@ -18,7 +18,7 @@ function Modal({ isOpen, onClose, title }: ModalProps) {
         <button onClick={onClose} className="rounded-[0.55rem] p-1 shadow">
           <IoMdClose />
         </button>
-        <h2 className="w-[95%] mx-auto text-center">{title}</h2>
+        <h3 className="w-full text-center text-sm mt-1">{title}</h3>
         <div className="flex justify-between items-center p-4">
           <button className="bg-green-700 px-6 py-1 rounded-xl shadow">
             Yes

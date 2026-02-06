@@ -20,7 +20,6 @@ const generalItems = [
     darkIcon: <GoPerson size={35} color="#ffd230" />,
     lightIcon: <GoPerson size={35} color="#171717" />,
     url: "/account",
-    onClick: undefined,
   },
   {
     id: 2,
@@ -28,7 +27,6 @@ const generalItems = [
     darkIcon: <IoNotificationsOutline size={35} color="#ffd230" />,
     lightIcon: <IoNotificationsOutline size={35} color="#171717" />,
     url: "/settings/notifications",
-    onClick: undefined,
   },
   {
     id: 3,
@@ -36,7 +34,6 @@ const generalItems = [
     darkIcon: <IoLogOutOutline size={36} color="#ffd230" />,
     lightIcon: <IoLogOutOutline size={36} color="#171717" />,
     url: undefined,
-    onClick: undefined,
   },
   {
     id: 4,
@@ -44,7 +41,6 @@ const generalItems = [
     darkIcon: <GoTrash size={34} color="#ffd230" />,
     lightIcon: <GoTrash size={34} color="#171717" />,
     url: undefined,
-    onClick: undefined,
   },
 ];
 
@@ -91,6 +87,18 @@ function Settings() {
   const { theme, toggleTheme } = useTheme();
   const { title, isOpen, onClose, onOpen, setTitle } = useModalStore();
 
+  function handleLogoutModal() {
+    setTitle("Are you sure you want to logout?");
+    onOpen();
+  }
+
+  function handleDeleteAccountModal() {
+    setTitle(
+      "Are you sure you want to DELETE YOUR ACCOUNT? (this action cannot be undone!)",
+    );
+    onOpen();
+  }
+
   return (
     <>
       <Header
@@ -128,7 +136,9 @@ function Settings() {
                 key={item.id}
                 title={item.title}
                 url={item.url}
-                onClick={item.onClick}
+                onClick={
+                  item.id === 3 ? handleLogoutModal : handleDeleteAccountModal
+                }
               >
                 <p>{theme === "dark" ? item.darkIcon : item.lightIcon}</p>
               </SettingsItem>
