@@ -10,6 +10,7 @@ import { BsMoonStarsFill } from "react-icons/bs";
 
 import Header from "../components/Header.js";
 import SettingsItem from "../features/settings/SettingsItem.js";
+import Modal from "../components/Modal.js";
 
 const generalItems = [
   {
@@ -89,7 +90,7 @@ function Settings() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <>
+    <Modal>
       <Header
         classHeader="w-full flex items-center justify-center pt-4"
         pContent="Sett!ngs"
@@ -155,7 +156,7 @@ function Settings() {
 
         <div className="w-full h-24"></div>
       </main>
-    </>
+    </Modal>
   );
 }
 
