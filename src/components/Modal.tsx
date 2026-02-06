@@ -1,39 +1,37 @@
-import { ReactNode, useEffect } from "react";
-import { createPortal } from "react-dom";
 import { IoMdClose } from "react-icons/io";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
-  children: ReactNode;
 }
 
-function Modal({ isOpen, onClose, title, children }: ModalProps) {
+function Modal({ isOpen, onClose, title }: ModalProps) {
   if (!isOpen) return null;
 
-  return createPortal(
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
-      onClick={onClose}
-    >
+  return (
+    <div className="fixed inset-0 z-50 bg-black/60" onClick={onClose}>
       <div
-        className="bg-white dark:bg-neutral-900 rounded-lg w-full"
+        className="bg-amber-100 rounded-2xl w-[80%] mx-auto shadow mt-50 p-2 font-lilita"
         onClick={(e) => e.stopPropagation()}
       >
-        {title && (
-          <div className="flex justify-between items-center p-4 border-b">
-            <h2>{title}</h2>
-            <button onClick={onClose}>
-              <IoMdClose />
-            </button>
-          </div>
-        )}
-
-        <div className="p-4 h-full overflow-auto">{children}</div>
+        <button onClick={onClose} className="rounded-[0.55rem] p-1 shadow">
+          <IoMdClose />
+        </button>
+        <h2 className="w-[95%] mx-auto text-center">{title}</h2>
+        <div className="flex justify-between items-center p-4">
+          <button className="bg-green-700 px-6 py-1 rounded-xl shadow">
+            Yes
+          </button>
+          <button
+            className="bg-red-700 px-6 py-1 rounded-xl shadow"
+            onClick={onClose}
+          >
+            No
+          </button>
+        </div>
       </div>
-    </div>,
-    document.body,
+    </div>
   );
 }
 

@@ -11,6 +11,7 @@ import { BsMoonStarsFill } from "react-icons/bs";
 import Header from "../components/Header.js";
 import SettingsItem from "../features/settings/SettingsItem.js";
 import Modal from "../components/Modal.js";
+import { useModalStore } from "../store/modalStore.js";
 
 const generalItems = [
   {
@@ -19,7 +20,7 @@ const generalItems = [
     darkIcon: <GoPerson size={35} color="#ffd230" />,
     lightIcon: <GoPerson size={35} color="#171717" />,
     url: "/account",
-    onClick: () => {},
+    onClick: undefined,
   },
   {
     id: 2,
@@ -27,7 +28,7 @@ const generalItems = [
     darkIcon: <IoNotificationsOutline size={35} color="#ffd230" />,
     lightIcon: <IoNotificationsOutline size={35} color="#171717" />,
     url: "/settings/notifications",
-    onClick: () => {},
+    onClick: undefined,
   },
   {
     id: 3,
@@ -35,7 +36,7 @@ const generalItems = [
     darkIcon: <IoLogOutOutline size={36} color="#ffd230" />,
     lightIcon: <IoLogOutOutline size={36} color="#171717" />,
     url: undefined,
-    onClick: () => {},
+    onClick: undefined,
   },
   {
     id: 4,
@@ -43,7 +44,7 @@ const generalItems = [
     darkIcon: <GoTrash size={34} color="#ffd230" />,
     lightIcon: <GoTrash size={34} color="#171717" />,
     url: undefined,
-    onClick: () => {},
+    onClick: undefined,
   },
 ];
 
@@ -88,6 +89,7 @@ const feedbackItems = [
 
 function Settings() {
   const { theme, toggleTheme } = useTheme();
+  const { title, isOpen, onClose, onOpen, setTitle } = useModalStore();
 
   return (
     <>
@@ -150,6 +152,7 @@ function Settings() {
             ))}
           </ul>
         </div>
+        <Modal title={title} isOpen={isOpen} onClose={onClose} />
         <div className="w-full h-24"></div>
       </main>
     </>
