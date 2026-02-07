@@ -1,6 +1,7 @@
 import { GoTrash } from "react-icons/go";
 import { MdModeEditOutline } from "react-icons/md";
 import { useModalStore } from "../../store/modalStore";
+import AddressForm from "./AddressForm";
 
 type OptionsProp = { isOpen: boolean };
 
@@ -9,6 +10,10 @@ function AddressMenuOptions({ isOpen }: OptionsProp) {
 
   function handleOpenDeleteModal() {
     open({ title: "Are you sure you want to delete the address?" });
+  }
+
+  function handleOpenEditModal() {
+    open({ title: "Edit address", content: <AddressForm /> });
   }
 
   return (
@@ -25,7 +30,10 @@ function AddressMenuOptions({ isOpen }: OptionsProp) {
         }
       `}
     >
-      <li className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1">
+      <li
+        className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1"
+        onClick={handleOpenEditModal}
+      >
         <span>Edit</span>
         <MdModeEditOutline />
       </li>
