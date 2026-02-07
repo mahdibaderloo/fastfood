@@ -1,12 +1,14 @@
+import { ReactNode } from "react";
 import { IoMdClose } from "react-icons/io";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  title?: string;
+  title: string;
+  content?: ReactNode;
 }
 
-function Modal({ isOpen, onClose, title }: ModalProps) {
+function Modal({ isOpen, onClose, title, content }: ModalProps) {
   if (!isOpen) return null;
 
   return (
@@ -19,15 +21,16 @@ function Modal({ isOpen, onClose, title }: ModalProps) {
           <IoMdClose />
         </button>
         <h3 className="w-full text-center text-sm mt-1">{title}</h3>
+        {content ? content : null}
         <div className="flex justify-between items-center p-4">
           <button className="bg-green-700 px-6 py-1 rounded-xl shadow">
-            Yes
+            {content ? "Save" : "Yes"}
           </button>
           <button
             className="bg-red-700 px-6 py-1 rounded-xl shadow"
             onClick={onClose}
           >
-            No
+            {content ? "Cancel" : "No"}
           </button>
         </div>
       </div>
