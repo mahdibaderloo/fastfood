@@ -85,18 +85,17 @@ const feedbackItems = [
 
 function Settings() {
   const { theme, toggleTheme } = useTheme();
-  const { title, isOpen, onClose, onOpen, setTitle } = useModalStore();
+  const { title, isOpen, close, open } = useModalStore();
 
   function handleLogoutModal() {
-    setTitle("Are you sure you want to logout?");
-    onOpen();
+    open({ title: "Are you sure you want to logout?" });
   }
 
   function handleDeleteAccountModal() {
-    setTitle(
-      "Are you sure you want to DELETE YOUR ACCOUNT? (this action cannot be undone!)",
-    );
-    onOpen();
+    open({
+      title:
+        "Are you sure you want to DELETE YOUR ACCOUNT? (this action cannot be undone!)",
+    });
   }
 
   return (
@@ -162,7 +161,7 @@ function Settings() {
             ))}
           </ul>
         </div>
-        <Modal title={title} isOpen={isOpen} onClose={onClose} />
+        <Modal title={title} isOpen={isOpen} onClose={close} />
         <div className="w-full h-24"></div>
       </main>
     </>

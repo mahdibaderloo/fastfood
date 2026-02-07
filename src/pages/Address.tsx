@@ -4,7 +4,7 @@ import AddressItem from "../features/address/AddressItem";
 import { useModalStore } from "../store/modalStore";
 
 function Address() {
-  const { isOpen, title, onClose } = useModalStore();
+  const { isOpen, title, close } = useModalStore();
   return (
     <>
       <Header pContent="ADDRESS" />
@@ -16,7 +16,7 @@ function Address() {
         <button className="bg-amber-200 text-neutral-800 w-full rounded-lg p-2 mt-10">
           Add New Address
         </button>
-        <Modal isOpen={isOpen} title={title} onClose={onClose} />
+        <Modal isOpen={isOpen} title={title} onClose={close} />
         <div className="w-full h-16"></div>
       </main>
     </>

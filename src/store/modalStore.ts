@@ -1,24 +1,36 @@
 import { ReactNode } from "react";
 import { create } from "zustand";
 
-interface Modal {
+interface OpenModalPayload {
   title: string;
-  isOpen: boolean;
-  content?: ReactNode | null;
-
-  setTitle: (title: string) => void;
-  onOpen: () => void;
-  onClose: () => void;
-  setContent?: (content: ReactNode | null) => void | null;
+  content?: ReactNode;
 }
 
-export const useModalStore = create<Modal>((set) => ({
-  title: "",
+interface ModalStore {
+  isOpen: boolean;
+  title: string;
+  content: ReactNode | null;
+
+  open: (payload: OpenModalPayload) => void;
+  close: () => void;
+}
+
+export const useModalStore = create<ModalStore>((set) => ({
   isOpen: false,
+  title: "",
   content: null,
 
-  setTitle: (title) => set({ title }),
-  onOpen: () => set({ isOpen: true }),
-  onClose: () => set({ isOpen: false }),
-  setContent: (content) => set({ content }),
+  open: ({ title, content }) =>
+    set({
+      isOpen: true,
+      title,
+      content: content ?? null,
+    }),
+
+  close: () =>
+    set({
+      isOpen: false,
+      title: "",
+      content: null,
+    }),
 }));

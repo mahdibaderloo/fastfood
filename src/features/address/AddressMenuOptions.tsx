@@ -5,11 +5,10 @@ import { useModalStore } from "../../store/modalStore";
 type OptionsProp = { isOpen: boolean };
 
 function AddressMenuOptions({ isOpen }: OptionsProp) {
-  const { onOpen, setTitle } = useModalStore();
+  const { open } = useModalStore();
 
   function handleOpenDeleteModal() {
-    setTitle("Are you sure you want to delete the address?");
-    onOpen();
+    open({ title: "Are you sure you want to delete the address?" });
   }
 
   return (

@@ -6,16 +6,14 @@ import { useModalStore } from "../store/modalStore";
 import Modal from "../components/Modal";
 
 function Account() {
-  const { isOpen, onClose, onOpen, setTitle, title } = useModalStore();
+  const { isOpen, close, open, title } = useModalStore();
 
   function handleOpenLogoutModal() {
-    setTitle("Are you sure you want to logout?");
-    onOpen();
+    open({ title: "Are you sure you want to logout?" });
   }
 
   function handleOpenSaveModal() {
-    setTitle("Are you sure you want to save the changes?");
-    onOpen();
+    open({ title: "Are you sure you want to save the changes?" });
   }
 
   return (
@@ -65,7 +63,7 @@ function Account() {
         >
           Logout
         </button>
-        <Modal isOpen={isOpen} title={title} onClose={onClose} />
+        <Modal isOpen={isOpen} title={title} onClose={close} />
       </main>
       <div className="w-full h-24"></div>
     </>

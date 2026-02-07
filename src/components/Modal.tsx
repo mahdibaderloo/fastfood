@@ -21,7 +21,7 @@ function Modal({ isOpen, onClose, title, content }: ModalProps) {
           <IoMdClose />
         </button>
         <h3 className="w-full text-center text-sm mt-1">{title}</h3>
-        {content ? content : null}
+        {content && <div className="mt-3">{content}</div>}
         <div className="flex justify-between items-center p-4">
           <button className="bg-green-700 px-6 py-1 rounded-xl shadow">
             {content ? "Save" : "Yes"}
