@@ -1,23 +1,18 @@
-import { ReactNode } from "react";
 import { IoMdClose } from "react-icons/io";
+import { useModalStore } from "../store/modalStore";
 
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  title: string;
-  content?: ReactNode;
-}
+function Modal() {
+  const { title, content, isOpen, close } = useModalStore();
 
-function Modal({ isOpen, onClose, title, content }: ModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60" onClick={onClose}>
+    <div className="fixed inset-0 z-50 bg-black/60" onClick={close}>
       <div
         className="bg-amber-100 rounded-2xl w-[80%] mx-auto shadow mt-50 p-2 font-lilita"
         onClick={(e) => e.stopPropagation()}
       >
-        <button onClick={onClose} className="rounded-[0.55rem] p-1 shadow">
+        <button onClick={close} className="rounded-[0.55rem] p-1 shadow">
           <IoMdClose />
         </button>
         <h3 className="w-full text-center text-sm mt-1">{title}</h3>
@@ -28,7 +23,7 @@ function Modal({ isOpen, onClose, title, content }: ModalProps) {
           </button>
           <button
             className="bg-red-700 px-6 py-1 rounded-xl shadow"
-            onClick={onClose}
+            onClick={close}
           >
             {content ? "Cancel" : "No"}
           </button>

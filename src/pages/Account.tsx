@@ -63,7 +63,7 @@ function Account() {
         >
           Logout
         </button>
-        <Modal isOpen={isOpen} title={title} onClose={close} />
+        <Modal />
       </main>
       <div className="w-full h-24"></div>
     </>

@@ -1,10 +1,16 @@
 import Header from "../components/Header";
 import Modal from "../components/Modal";
+import AddressForm from "../features/address/AddressForm";
 import AddressItem from "../features/address/AddressItem";
 import { useModalStore } from "../store/modalStore";
 
 function Address() {
-  const { isOpen, title, close } = useModalStore();
+  const { isOpen, title, close, open } = useModalStore();
+
+  function handleAddAddress() {
+    open({ title: "Add New Address", content: <AddressForm /> });
+  }
+
   return (
     <>
       <Header pContent="ADDRESS" />
@@ -13,10 +19,13 @@ function Address() {
           <AddressItem />
           <AddressItem />
         </ul>
-        <button className="bg-amber-200 text-neutral-800 w-full rounded-lg p-2 mt-10">
+        <button
+          className="bg-amber-200 text-neutral-800 w-full rounded-lg p-2 mt-10"
+          onClick={handleAddAddress}
+        >
           Add New Address
         </button>
-        <Modal isOpen={isOpen} title={title} onClose={close} />
+        <Modal />
         <div className="w-full h-16"></div>
       </main>
     </>

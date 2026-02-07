@@ -13,6 +13,10 @@ function AddressForm() {
         <label htmlFor="no">No.</label>
         <input type="number" id="no" />
       </div>
+      <div>
+        <label htmlFor="postal-code">Postal code</label>
+        <input type="number" id="postal-code" />
+      </div>
     </form>
   );
 }

@@ -85,7 +85,7 @@ const feedbackItems = [
 
 function Settings() {
   const { theme, toggleTheme } = useTheme();
-  const { title, isOpen, close, open } = useModalStore();
+  const { open } = useModalStore();
 
   function handleLogoutModal() {
     open({ title: "Are you sure you want to logout?" });
@@ -161,7 +161,7 @@ function Settings() {
             ))}
           </ul>
         </div>
-        <Modal title={title} isOpen={isOpen} onClose={close} />
+        <Modal />
         <div className="w-full h-24"></div>
       </main>
     </>
