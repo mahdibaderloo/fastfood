@@ -2,8 +2,22 @@ import Header from "../components/Header";
 import { FaPen } from "react-icons/fa6";
 
 import image1 from "../data/images/1.jpg";
+import { useModalStore } from "../store/modalStore";
+import Modal from "../components/Modal";
 
 function Account() {
+  const { isOpen, onClose, onOpen, setTitle, title } = useModalStore();
+
+  function handleOpenLogoutModal() {
+    setTitle("Are you sure you want to logout?");
+    onOpen();
+  }
+
+  function handleOpenSaveModal() {
+    setTitle("Are you sure you want to save the changes?");
+    onOpen();
+  }
+
   return (
     <>
       <Header pContent="ACCOUNT" />
@@ -39,11 +53,21 @@ function Account() {
             />
           </div>
         </form>
-        <button className="w-full h-10 mt-2 bg-amber-50 dark:bg-amber-50/20 text-amber-950 rounded-xl">
+        <button
+          className="w-full h-10 mt-2 bg-amber-50 dark:bg-amber-50/20 text-amber-300 rounded-xl"
+          onClick={handleOpenSaveModal}
+        >
+          Save
+        </button>
+        <button
+          className="w-full h-10 mt-2 bg-amber-50 dark:bg-amber-50/20 text-amber-950 rounded-xl"
+          onClick={handleOpenLogoutModal}
+        >
           Logout
         </button>
+        <Modal isOpen={isOpen} title={title} onClose={onClose} />
       </main>
-      <div className="w-full h-16"></div>
+      <div className="w-full h-24"></div>
     </>
   );
 }
