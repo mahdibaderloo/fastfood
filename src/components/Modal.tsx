@@ -9,13 +9,17 @@ function Modal() {
   return (
     <div className="fixed inset-0 z-50 bg-black/60" onClick={close}>
       <div
-        className="bg-amber-100 rounded-2xl w-[80%] mx-auto shadow mt-50 p-2 font-lilita"
+        className={`bg-amber-100 rounded-2xl mx-auto shadow ${content ? "mt-20 w-[90%]" : "mt-50 w-[80%]"} p-2 font-lilita`}
         onClick={(e) => e.stopPropagation()}
       >
         <button onClick={close} className="rounded-[0.55rem] p-1 shadow">
           <IoMdClose />
         </button>
-        <h3 className="w-full text-center text-sm mt-1">{title}</h3>
+        <h3
+          className={`w-full text-center ${content ? "text-lg" : "text-sm"} mt-1`}
+        >
+          {title}
+        </h3>
         {content && <div className="mt-3">{content}</div>}
         <div className="flex justify-between items-center p-4">
           <button className="bg-green-700 px-6 py-1 rounded-xl shadow">
