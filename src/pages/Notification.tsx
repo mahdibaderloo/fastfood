@@ -1,13 +1,20 @@
+import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 
 function Notification() {
+  const params = useParams();
+
   return (
     <div>
       <Header classP="text-4xl dark:text-amber-300" showBackButton={true} />
       <main className="p-4 pt-16 h-screen flex flex-col gap-2">
-        <h2 className="text-lg text-amber-300">Notification Title</h2>
-        <p className="text-amber-300/50 text-[0.7rem]">Today at 10:00 AM</p>
-        <p className="text-amber-50/90 text-[0.6rem] mt-2 w-full text-justify">
+        <h2 className="text-lg text-neutral-950 dark:text-amber-300">
+          Notification Title #{params.notificationId}
+        </h2>
+        <p className="text-neutral-900/80 dark:text-amber-300/50 text-[0.7rem]">
+          Today at 10:00 AM
+        </p>
+        <p className="text-neutral-800 dark:text-amber-50/90 text-[0.6rem] mt-2 w-full text-justify">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo quas
           beatae deleniti exercitationem sed labore rerum quae repudiandae ipsam
           laudantium laborum cum, saepe maxime culpa natus! Aperiam corporis
