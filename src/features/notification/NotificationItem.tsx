@@ -1,10 +1,15 @@
 import { CgChevronRight } from "react-icons/cg";
 import { Link } from "react-router-dom";
 
-function NotificationItem({ id, color = "#fee685" }) {
+interface NotificationProps {
+  id: number;
+  isUnRead: boolean;
+}
+
+function NotificationItem({ id, isUnRead }: NotificationProps) {
   return (
     <li
-      style={{ backgroundColor: color }}
+      style={{ backgroundColor: isUnRead ? "#fef3c6" : "#fee685" }}
       className="bg-amber-100 rounded-lg p-3 relative"
     >
       <Link to={`/notifications/${id}`}>
