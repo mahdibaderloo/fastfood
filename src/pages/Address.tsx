@@ -13,7 +13,11 @@ function Address() {
 
   return (
     <>
-      <Header pContent="ADDRESS" />
+      <Header
+        pContent="ADDRESS"
+        showBackButton={true}
+        classP="text-4xl dark:text-amber-300"
+      />
       <main className="p-4 pt-22 h-screen overflow-y-scroll">
         <ul className="flex flex-col items-center justify-center flex-wrap gap-2">
           <AddressItem />

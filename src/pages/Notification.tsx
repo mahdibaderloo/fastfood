@@ -3,8 +3,8 @@ import Header from "../components/Header";
 function Notification() {
   return (
     <div>
-      <Header classP="text-4xl dark:text-amber-300" pContent="" />
-      <main className="p-4 pt-20 h-screen flex flex-col gap-2">
+      <Header classP="text-4xl dark:text-amber-300" showBackButton={true} />
+      <main className="p-4 pt-16 h-screen flex flex-col gap-2">
         <h2 className="text-lg text-amber-300">Notification Title</h2>
         <p className="text-amber-300/50 text-[0.7rem]">Today at 10:00 AM</p>
         <p className="text-amber-50/90 text-[0.6rem] mt-2 w-full text-justify">

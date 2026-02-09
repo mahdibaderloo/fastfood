@@ -18,7 +18,11 @@ function Account() {
 
   return (
     <>
-      <Header pContent="ACCOUNT" />
+      <Header
+        pContent="ACCOUNT"
+        showBackButton={true}
+        classP="text-4xl dark:text-amber-300"
+      />
       <main className="p-4 pt-22 h-screen overflow-y-scroll">
         <div className="w-full relative">
           <div className="w-20 h-20 rounded-full bg-amber-50 dark:bg-amber-300 shadow mx-auto overflow-hidden p-0.5">

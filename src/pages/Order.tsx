@@ -24,7 +24,7 @@ function Order() {
 
   return (
     <>
-      <Header pContent="ORDER" />
+      <Header showBackButton={true} classP="text-4xl dark:text-amber-300" />
       {/* <button
           aria-label="Back"
           className="absolute left-4 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-amber-200/60 dark:hover:bg-neutral-700"
@@ -36,7 +36,7 @@ function Order() {
           />
         </button> */}
 
-      <main className="p-4 pt-22 h-screen overflow-y-scroll">
+      <main className="p-4 pt-16 h-screen overflow-y-scroll">
         <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800">
           <p className="font-semibold text-amber-300 dark:text-neutral-800">
             Order: {order.id}

@@ -5,7 +5,11 @@ import FavoritesItem from "../features/favorites/FavoritesItem";
 function Favorites() {
   return (
     <>
-      <Header pContent="FAVOR!TES" />
+      <Header
+        pContent="FAVOR!TES"
+        showBackButton={true}
+        classP="text-4xl dark:text-amber-300"
+      />
       <main className="overflow-y-scroll pt-22 h-screen">
         <ul className="flex items-center justify-start flex-wrap gap-2 mt-4 p-2">
           <FavoritesItem />
