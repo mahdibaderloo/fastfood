@@ -7,10 +7,10 @@ function Notifications() {
       <Header classP="text-4xl dark:text-amber-300" pContent="Not!f!cat!ons" />
       <main className="overflow-y-scroll p-4 pt-20 h-screen">
         <ul className="flex flex-col gap-1">
-          <NotificationItem color="#fef3c6" />
-          <NotificationItem color="#fef3c6" />
-          <NotificationItem />
-          <NotificationItem />
+          <NotificationItem id={1} color="#fef3c6" />
+          <NotificationItem id={2} color="#fef3c6" />
+          <NotificationItem id={3} />
+          <NotificationItem id={4} />
         </ul>
       </main>
     </>
