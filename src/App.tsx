@@ -18,6 +18,7 @@ import Order from "./pages/Order.js";
 import Account from "./pages/Account.js";
 import NotificationsSettings from "./pages/NotificationsSettings.js";
 import Notification from "./pages/Notification.js";
+import Purchase from "./pages/Purchase.js";
 
 const queryClient = new QueryClient();
 
@@ -26,13 +27,16 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { path: "/", element: <Menu /> },
+
       { path: "/dashboard", element: <Dashboard /> },
       { path: "/favorites", element: <Favorites /> },
       { path: "/wallet", element: <Wallet /> },
       { path: "/address", element: <Address /> },
       { path: "/support", element: <Support /> },
-      { path: "/cart", element: <Cart /> },
       { path: "/account", element: <Account /> },
+
+      { path: "/cart", element: <Cart /> },
+      { path: "/purchase", element: <Purchase /> },
 
       { path: "/orders", element: <Orders /> },
       { path: "/orders/:orderId", element: <Order /> },
