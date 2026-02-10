@@ -1,4 +1,14 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
 function CartPrice() {
+  const navigate = useNavigate();
+
+  function handlePurchase(e: React.MouseEvent) {
+    e.preventDefault();
+    navigate("/purchase");
+  }
+
   return (
     <form className="p-4 bg-amber-50 dark:bg-amber-300 mt-2 rounded-t-xl pb-30">
       <div className="bg-amber-200 dark:bg-neutral-800 p-1 rounded-lg flex">
@@ -29,8 +39,11 @@ function CartPrice() {
           <span className="text-neutral-700">Total</span>
           <p className="text-neutral-800">$130</p>
         </div>
-        <button className="bg-amber-200 dark:bg-neutral-800 dark:text-amber-300 text-amber-800 p-2 rounded-lg w-full mt-6 inline-block relative overflow-hidden animate-bounce">
-          Checkout
+        <button
+          className="bg-amber-200 dark:bg-neutral-800 dark:text-amber-300 text-amber-800 p-2 rounded-lg w-full mt-6 inline-block relative overflow-hidden animate-bounce"
+          onClick={handlePurchase}
+        >
+          Purchase
           <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 dark:bg-amber-300 animate-spin-border"></span>
           <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 dark:bg-amber-300 animate-spin-border animation-delay-25"></span>
           <span className="absolute top-0 left-0 rounded-2xl w-[6px] h-[6px] bg-amber-800 dark:bg-amber-300 animate-spin-border delay-150 animation-delay-50"></span>
