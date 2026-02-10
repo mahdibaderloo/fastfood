@@ -21,6 +21,10 @@ function CartPrice() {
           <span className="text-neutral-700">Delivery</span>
           <p className="text-neutral-800">$10</p>
         </div>
+        <div className="flex justify-between items-center mt-2">
+          <span className="text-neutral-700">Discount</span>
+          <p className="text-neutral-800">$0</p>
+        </div>
         <div className="flex justify-between items-center mt-4">
           <span className="text-neutral-700">Total</span>
           <p className="text-neutral-800">$130</p>

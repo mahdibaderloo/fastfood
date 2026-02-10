@@ -35,7 +35,7 @@ function Header({
           </button>
 
           <p className={classP}>{pContent}</p>
-          <span>
+          <span className="pointer-events-none">
             <CgChevronLeft
               size={40}
               color={theme === "dark" ? "#262626" : "#ffd230"}
