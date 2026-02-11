@@ -14,7 +14,7 @@ function Menu() {
   //   queryKey: ["pizzas"],
   //   queryFn: async () => {
   //     const response = await fetch(
-  //       "https://68ed49cfdf2025af78ffc455.mockapi.io/pizza"
+  //       "http://localhost:3001/products"
   //     );
   //     const data = await response.json();
   //     return data;

@@ -1,0 +1,205 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Margherita Pizza",
+      "price": 12,
+      "category": "pizza",
+      "description": "Classic Italian pizza made with fresh tomato sauce, mozzarella cheese, fresh basil leaves, extra virgin olive oil, and baked in a stone oven.",
+      "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+      "comments": ["Fresh and simple!", "Loved the basil flavor."],
+      "score": 4.5
+    },
+    {
+      "id": 2,
+      "productName": "Pepperoni Pizza",
+      "price": 15,
+      "category": "pizza",
+      "description": "Traditional pizza topped with tomato sauce, mozzarella cheese, and premium sliced pepperoni.",
+      "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be65",
+      "comments": ["Perfect amount of pepperoni.", "Very flavorful."],
+      "score": 4.7
+    },
+    {
+      "id": 3,
+      "productName": "BBQ Chicken Pizza",
+      "price": 16,
+      "category": "pizza",
+      "description": "Grilled chicken breast, BBQ sauce, red onions, mozzarella, and fresh cilantro.",
+      "image": "https://images.unsplash.com/photo-1548365328-9f547fb0953d",
+      "comments": ["Sweet and smoky taste!", "Chicken was juicy."],
+      "score": 4.6
+    },
+    {
+      "id": 4,
+      "productName": "Hawaiian Pizza",
+      "price": 14,
+      "category": "pizza",
+      "description": "Tomato sauce, mozzarella cheese, smoked ham, and sweet pineapple chunks.",
+      "image": "https://images.unsplash.com/photo-1601924638867-3ec3f4b9b5a8",
+      "comments": ["Great sweet and savory combo."],
+      "score": 4.2
+    },
+    {
+      "id": 5,
+      "productName": "Veggie Supreme Pizza",
+      "price": 14,
+      "category": "pizza",
+      "description": "Loaded with bell peppers, mushrooms, onions, olives, tomatoes, and mozzarella cheese.",
+      "image": "https://images.unsplash.com/photo-1604382355076-af4b0eb60143",
+      "comments": ["Very fresh vegetables!", "Healthy option."],
+      "score": 4.4
+    },
+    {
+      "id": 6,
+      "productName": "Four Cheese Pizza",
+      "price": 15,
+      "category": "pizza",
+      "description": "A rich blend of mozzarella, cheddar, parmesan, and gorgonzola cheese.",
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002",
+      "comments": ["Cheese overload!", "Super creamy."],
+      "score": 4.8
+    },
+    {
+      "id": 7,
+      "productName": "Meat Lovers Pizza",
+      "price": 18,
+      "category": "pizza",
+      "description": "Loaded with pepperoni, sausage, beef, bacon, and mozzarella cheese.",
+      "image": "https://images.unsplash.com/photo-1618213833630-95f2eebd5c42",
+      "comments": ["Perfect for meat lovers!", "Very filling."],
+      "score": 4.7
+    },
+    {
+      "id": 8,
+      "productName": "Spicy Italian Pizza",
+      "price": 16,
+      "category": "pizza",
+      "description": "Spicy salami, jalapeños, tomato sauce, mozzarella, and chili flakes.",
+      "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e",
+      "comments": ["Nice spicy kick!"],
+      "score": 4.5
+    },
+    {
+      "id": 9,
+      "productName": "Mushroom Pizza",
+      "price": 13,
+      "category": "pizza",
+      "description": "Tomato sauce, mozzarella cheese, and fresh sautéed mushrooms.",
+      "image": "https://images.unsplash.com/photo-1600628422019-7b3b7d7d3b4e",
+      "comments": ["Simple and tasty."],
+      "score": 4.3
+    },
+    {
+      "id": 10,
+      "productName": "Buffalo Chicken Pizza",
+      "price": 17,
+      "category": "pizza",
+      "description": "Grilled chicken tossed in buffalo sauce, mozzarella, and ranch drizzle.",
+      "image": "https://images.unsplash.com/photo-1590947132387-155cc02f3212",
+      "comments": ["Spicy and creamy!"],
+      "score": 4.6
+    },
+
+    {
+      "id": 21,
+      "productName": "Coca-Cola",
+      "price": 3,
+      "category": "drink",
+      "description": "Classic carbonated soft drink with a refreshing cola flavor.",
+      "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505",
+      "comments": ["Always a good choice."],
+      "score": 4.8
+    },
+    {
+      "id": 22,
+      "productName": "Pepsi",
+      "price": 3,
+      "category": "drink",
+      "description": "Popular cola-flavored soda with a crisp and refreshing taste.",
+      "image": "https://images.unsplash.com/photo-1629203851122-3726ecdf080e",
+      "comments": ["Nice and cold."],
+      "score": 4.6
+    },
+    {
+      "id": 23,
+      "productName": "Sprite",
+      "price": 3,
+      "category": "drink",
+      "description": "Lemon-lime flavored soft drink with a crisp, clean taste.",
+      "image": "https://images.unsplash.com/photo-1585399000684-d2f72660f092",
+      "comments": ["Very refreshing."],
+      "score": 4.5
+    },
+    {
+      "id": 24,
+      "productName": "Fanta Orange",
+      "price": 3,
+      "category": "drink",
+      "description": "Orange-flavored carbonated soft drink with a sweet citrus taste.",
+      "image": "https://images.unsplash.com/photo-1629203432180-71e8c5cbd876",
+      "comments": ["Great orange flavor."],
+      "score": 4.4
+    },
+    {
+      "id": 25,
+      "productName": "Mineral Water",
+      "price": 2,
+      "category": "drink",
+      "description": "Pure natural mineral water sourced from underground springs.",
+      "image": "https://images.unsplash.com/photo-1564419320461-6870880221ad",
+      "comments": ["Clean and fresh."],
+      "score": 4.3
+    },
+    {
+      "id": 26,
+      "productName": "Iced Tea",
+      "price": 4,
+      "category": "drink",
+      "description": "Cold brewed black tea served over ice with a hint of lemon.",
+      "image": "https://images.unsplash.com/photo-1558645836-e44122a7435c",
+      "comments": ["Nice lemon touch."],
+      "score": 4.4
+    },
+    {
+      "id": 27,
+      "productName": "Lemonade",
+      "price": 4,
+      "category": "drink",
+      "description": "Freshly squeezed lemonade with natural sugar and ice.",
+      "image": "https://images.unsplash.com/photo-1524594154908-edd98d1c1a0f",
+      "comments": ["Perfect with pizza."],
+      "score": 4.6
+    },
+    {
+      "id": 28,
+      "productName": "Chocolate Milkshake",
+      "price": 5,
+      "category": "drink",
+      "description": "Creamy milkshake made with chocolate ice cream and fresh milk.",
+      "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699",
+      "comments": ["Rich and sweet."],
+      "score": 4.7
+    },
+    {
+      "id": 29,
+      "productName": "Vanilla Milkshake",
+      "price": 5,
+      "category": "drink",
+      "description": "Smooth vanilla milkshake blended with ice cream and milk.",
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b",
+      "comments": ["Very creamy."],
+      "score": 4.5
+    },
+    {
+      "id": 30,
+      "productName": "Energy Drink",
+      "price": 4,
+      "category": "drink",
+      "description": "Carbonated energy drink with caffeine and taurine for an instant boost.",
+      "image": "https://images.unsplash.com/photo-1585238342024-78d387f4a707",
+      "comments": ["Gives a good boost."],
+      "score": 4.2
+    }
+  ]
+}
