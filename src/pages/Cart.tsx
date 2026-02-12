@@ -5,7 +5,7 @@ import CartPrice from "../features/cart/CartPrice.js";
 function Cart() {
   return (
     <>
-      <Header pContent="My Cart" />
+      <Header pContent="Cart" />
       <main className="overflow-y-scroll pt-22">
         <ul className="flex flex-col gap-2">
           <CartItem />

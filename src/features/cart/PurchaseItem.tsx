@@ -22,7 +22,7 @@ export default function PurchaseItem() {
           </div>
         </div>
       </div>
-      <div className="h-full w-16 bg-amber-50 rounded-2xl p-1">
+      <div className="h-full w-16 bg-amber-50 rounded-2xl p-1 shadow">
         <img src={pizzaImage} alt="item-image" className="" />
       </div>
     </li>
