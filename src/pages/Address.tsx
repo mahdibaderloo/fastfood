@@ -5,7 +5,7 @@ import AddressItem from "../features/address/AddressItem";
 import { useModalStore } from "../store/modalStore";
 
 function Address() {
-  const { isOpen, title, close, open } = useModalStore();
+  const { open } = useModalStore();
 
   function handleAddAddress() {
     open({ title: "Add New Address", content: <AddressForm /> });

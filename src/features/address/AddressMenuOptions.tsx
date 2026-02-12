@@ -2,6 +2,7 @@ import { GoTrash } from "react-icons/go";
 import { MdModeEditOutline } from "react-icons/md";
 import { useModalStore } from "../../store/modalStore";
 import AddressForm from "./AddressForm";
+import { FaCheckCircle } from "react-icons/fa";
 
 type OptionsProp = { isOpen: boolean };
 
@@ -30,6 +31,13 @@ function AddressMenuOptions({ isOpen }: OptionsProp) {
         }
       `}
     >
+      <li
+        className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1"
+        // onClick={handleOpenEditModal}
+      >
+        <span>Select</span>
+        <FaCheckCircle />
+      </li>
       <li
         className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1"
         onClick={handleOpenEditModal}
