@@ -1,5 +1,5 @@
 import { GoHeart } from "react-icons/go";
-import pizza from "../../data/images/loading-1.png";
+import pizza from "../../assets/images/loading-1.png";
 import { IoMdAdd } from "react-icons/io";
 
 function MenuItem() {

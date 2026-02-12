@@ -1,12 +1,12 @@
 import Header from "../components/Header";
 import { FaPen } from "react-icons/fa6";
 
-import image1 from "../data/images/1.jpg";
+import image1 from "../assets/images/1.jpg";
 import { useModalStore } from "../store/modalStore";
 import Modal from "../components/Modal";
 
 function Account() {
-  const { isOpen, close, open, title } = useModalStore();
+  const { open } = useModalStore();
 
   function handleOpenLogoutModal() {
     open({ title: "Are you sure you want to logout?" });

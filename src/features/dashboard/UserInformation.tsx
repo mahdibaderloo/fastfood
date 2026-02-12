@@ -1,5 +1,5 @@
-import pizzaPattern from "../../data/images/PizzaPattern.jpg";
-import image1 from "../../data/images/1.jpg";
+import pizzaPattern from "../../assets/images/PizzaPattern.jpg";
+import image1 from "../../assets/images/1.jpg";
 
 function UserInformation() {
   return (

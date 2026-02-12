@@ -1,5 +1,5 @@
 import { useState } from "react";
-import pizza from "../../data/images/loading-1.png";
+import pizza from "../../assets/images/loading-1.png";
 
 function CartItem() {
   const [count, setCount] = useState(1);

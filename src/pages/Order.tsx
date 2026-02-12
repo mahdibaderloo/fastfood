@@ -1,10 +1,8 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "../components/Header";
-import { CgChevronLeft } from "react-icons/cg";
-import pizza from "../data/images/loading-1.png";
+import pizza from "../assets/images/loading-1.png";
 
 function Order() {
-  const navigate = useNavigate();
   const { orderId } = useParams();
 
   // Mock data for the order detail page
@@ -25,16 +23,6 @@ function Order() {
   return (
     <>
       <Header showBackButton={true} classP="text-4xl dark:text-amber-300" />
-      {/* <button
-          aria-label="Back"
-          className="absolute left-4 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-amber-200/60 dark:hover:bg-neutral-700"
-          onClick={() => navigate(-1)}
-        >
-          <CgChevronLeft
-            size={28}
-            className="text-neutral-800 dark:text-amber-300"
-          />
-        </button> */}
 
       <main className="p-4 pt-16 h-screen overflow-y-scroll">
         <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800">

@@ -1,7 +1,7 @@
 import { CgChevronRight } from "react-icons/cg";
 import { Link } from "react-router-dom";
 
-import pizza from "../../data/images/loading-1.png";
+import pizza from "../../assets/images/loading-1.png";
 
 function OrderItem() {
   return (

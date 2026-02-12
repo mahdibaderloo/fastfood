@@ -5,8 +5,8 @@ import Search from "../components/Search.js";
 import MenuItem from "../features/menu/MenuItem.js";
 import { useTheme } from "../store/themeStore.js";
 
-import pizzaIcon from "../data/images/pizza.svg";
-import pizzaDarkIcon from "../data/images/pizza-dark.svg";
+import pizzaIcon from "../assets/images/pizza.svg";
+import pizzaDarkIcon from "../assets/images/pizza-dark.svg";
 
 function Menu() {
   const { theme } = useTheme();

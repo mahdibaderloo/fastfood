@@ -1,5 +1,5 @@
 import { GoHeartFill } from "react-icons/go";
-import pizza from "../../data/images/loading-1.png";
+import pizza from "../../assets/images/loading-1.png";
 
 function FavoritesItem() {
   return (
