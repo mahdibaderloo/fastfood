@@ -1,6 +1,8 @@
 import { FaMoneyBill1Wave, FaPizzaSlice } from "react-icons/fa6";
 import { GoNumber } from "react-icons/go";
 
+import pizzaImage from "../../assets/images/loading-1.png";
+
 export default function PurchaseItem() {
   return (
     <li className="w-full h-20 bg-amber-100 p-2 rounded-2xl flex justify-between shadow">
@@ -21,7 +23,7 @@ export default function PurchaseItem() {
         </div>
       </div>
       <div className="h-full w-16 bg-amber-50 rounded-2xl p-1">
-        <img src="" alt="item-image" className="" />
+        <img src={pizzaImage} alt="item-image" className="" />
       </div>
     </li>
   );

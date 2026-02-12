@@ -27,6 +27,13 @@ function Purchase() {
           <PurchaseItem />
           <PurchaseItem />
         </ul>
+        <div className="text-neutral-800 dark:text-amber-100 flex justify-between mt-4 px-6">
+          <p>Total price: </p>
+          <p>$175</p>
+        </div>
+        <button className="bg-neutral-800 dark:bg-amber-300 text-amber-300 dark:text-neutral-800 p-2 rounded-lg w-full mt-6 shadow">
+          Proceed to payment
+        </button>
         <div className="w-full h-18"></div>
       </main>
     </>
