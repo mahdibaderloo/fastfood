@@ -21,7 +21,9 @@ function Purchase() {
           </p>
         </div>
         <ul className="flex flex-col mt-4 gap-2">
-          <p className="text-[0.7rem] text-amber-100">Items: </p>
+          <p className="text-[0.7rem] text-neutral-800 dark:text-amber-100">
+            Items:{" "}
+          </p>
           <PurchaseItem />
           <PurchaseItem />
         </ul>

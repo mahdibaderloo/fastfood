@@ -10,10 +10,10 @@ function PurchaseAddressBox() {
             <FaLocationDot size={30} color="#2c2c2c" />
           </p>
         </div>
-        <h4 className="text-neutral-900 text-[0.8rem] ml-2 w-[95%] mt-1">
+        <p className="text-neutral-900 text-[0.7rem] ml-2 w-[95%] text-justify">
           Mohammad shahr, Karaj, Iran
-        </h4>
-        <p className="text-[14px] ml-2 text-neutral-600">
+        </p>
+        <p className="text-[0.5rem] ml-2 text-neutral-600">
           Postal code: 123456789
         </p>
       </div>
