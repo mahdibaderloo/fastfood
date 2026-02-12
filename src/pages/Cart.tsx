@@ -10,9 +10,6 @@ function Cart() {
         <ul className="flex flex-col gap-2">
           <CartItem />
           <CartItem />
-          {/* <CartItem />
-          <CartItem />
-          <CartItem /> */}
         </ul>
         <CartPrice />
       </main>
