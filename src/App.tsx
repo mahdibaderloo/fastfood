@@ -16,7 +16,6 @@ import Address from "./pages/Address.js";
 import Support from "./pages/Support.js";
 import Order from "./pages/Order.js";
 import Account from "./pages/Account.js";
-import NotificationsSettings from "./pages/NotificationsSettings.js";
 import Notification from "./pages/Notification.js";
 import Purchase from "./pages/Purchase.js";
 
@@ -45,7 +44,6 @@ const router = createBrowserRouter([
       { path: "/notifications/:notificationId", element: <Notification /> },
 
       { path: "/settings", element: <Settings /> },
-      { path: "/settings/notifications", element: <NotificationsSettings /> },
     ],
   },
 ]);

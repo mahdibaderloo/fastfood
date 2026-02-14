@@ -23,20 +23,13 @@ const generalItems = [
   },
   {
     id: 2,
-    title: "Notifications",
-    darkIcon: <IoNotificationsOutline size={35} color="#ffd230" />,
-    lightIcon: <IoNotificationsOutline size={35} color="#171717" />,
-    url: "/settings/notifications",
-  },
-  {
-    id: 3,
     title: "Logout",
     darkIcon: <IoLogOutOutline size={36} color="#ffd230" />,
     lightIcon: <IoLogOutOutline size={36} color="#171717" />,
     url: undefined,
   },
   {
-    id: 4,
+    id: 3,
     title: "Delete Account",
     darkIcon: <GoTrash size={34} color="#ffd230" />,
     lightIcon: <GoTrash size={34} color="#171717" />,
@@ -136,7 +129,7 @@ function Settings() {
                 title={item.title}
                 url={item.url}
                 onClick={
-                  item.id === 3 ? handleLogoutModal : handleDeleteAccountModal
+                  item.id === 2 ? handleLogoutModal : handleDeleteAccountModal
                 }
               >
                 <p>{theme === "dark" ? item.darkIcon : item.lightIcon}</p>
