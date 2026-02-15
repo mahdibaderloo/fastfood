@@ -67,7 +67,8 @@ function Search({ items }: SearchProps) {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () =>
+      document.removeEventListener("pointerdown", handleClickOutside);
   }, []);
 
   function handleSelect(item: Food) {
@@ -94,7 +95,7 @@ function Search({ items }: SearchProps) {
           {filtered.map((item) => (
             <li
               key={item.id}
-              onClick={() => handleSelect(item)}
+              onMouseDown={() => handleSelect(item)}
               className="px-2 py-2 cursor-pointer transition-colors text-neutral-700 text-[0.7rem]"
             >
               {item.productName}
