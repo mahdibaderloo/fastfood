@@ -12,7 +12,6 @@ import Loading from "../components/Loading.js";
 function Menu() {
   const { theme } = useTheme();
   const { data: foods, isLoading } = useFoods();
-  console.log(foods);
 
   if (isLoading) return <Loading />;
 
@@ -30,8 +29,8 @@ function Menu() {
             <img src={pizzaIcon} alt="pizza" className="w-11 rotate-180" />
           )}
         </div>
-        <div className="flex items-center gap-2 px-2">
-          <Search />
+        <div className="flex items-center gap-2 px-2 h-11">
+          <Search items={foods ?? []} />
           <Filter />
         </div>
       </Header>

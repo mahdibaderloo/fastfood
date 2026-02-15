@@ -47,7 +47,7 @@
     "checkJs": false,
 
     /* === Type Roots === */
-    "types": []
+    "types": ["vite/client"]
   },
   "include": ["src"],
   "references": []
