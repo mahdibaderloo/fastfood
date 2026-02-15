@@ -37,7 +37,7 @@ function Menu() {
       </Header>
       <main className="overflow-y-scroll pt-22">
         <ul className="flex flex-wrap items-center justify-center gap-2 mt-14 p-2">
-          {foods.map((food) => (
+          {foods?.map((food) => (
             <MenuItem key={food.id} item={food} />
           ))}
         </ul>

@@ -1,11 +1,11 @@
-import pizza1 from "../data/images/loading-1.png";
-import pizza2 from "../data/images/loading-2.png";
-import pizza3 from "../data/images/loading-3.png";
-import pizza4 from "../data/images/loading-4.png";
-import pizza5 from "../data/images/loading-5.png";
-import pizza6 from "../data/images/loading-6.png";
-import pizza7 from "../data/images/loading-7.png";
-import pizza8 from "../data/images/loading-8.png";
+import pizza1 from "../assets/images/loading-1.png";
+import pizza2 from "../assets/images/loading-2.png";
+import pizza3 from "../assets/images/loading-3.png";
+import pizza4 from "../assets/images/loading-4.png";
+import pizza5 from "../assets/images/loading-5.png";
+import pizza6 from "../assets/images/loading-6.png";
+import pizza7 from "../assets/images/loading-7.png";
+import pizza8 from "../assets/images/loading-8.png";
 
 function Loading() {
   return (
