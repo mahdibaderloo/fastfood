@@ -1,4 +1,3 @@
-// import { useQuery } from "@tanstack/react-query";
 import Filter from "../components/Filter.js";
 import Header from "../components/Header.js";
 import Search from "../components/Search.js";
@@ -8,22 +7,14 @@ import { useTheme } from "../store/themeStore.js";
 import pizzaIcon from "../assets/images/pizza.svg";
 import pizzaDarkIcon from "../assets/images/pizza-dark.svg";
 import { useFoods } from "../hooks/useFoods.js";
+import Loading from "../components/Loading.js";
 
 function Menu() {
   const { theme } = useTheme();
-  const { data } = useFoods();
-  console.log(data);
-  // const { data } = useQuery({
-  //   queryKey: ["pizzas"],
-  //   queryFn: async () => {
-  //     const response = await fetch(
-  //       "http://localhost:3001/products"
-  //     );
-  //     const data = await response.json();
-  //     return data;
-  //   },
-  // });
-  // console.log(data);
+  const { data: foods, isLoading } = useFoods();
+  console.log(foods);
+
+  if (isLoading) return <Loading />;
 
   return (
     <>
@@ -46,20 +37,9 @@ function Menu() {
       </Header>
       <main className="overflow-y-scroll pt-22">
         <ul className="flex flex-wrap items-center justify-center gap-2 mt-14 p-2">
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
-          <MenuItem />
+          {foods.map((food) => (
+            <MenuItem key={food.id} item={food} />
+          ))}
         </ul>
         <div className="w-full h-16"></div>
       </main>

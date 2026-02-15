@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-export type Food = {
+interface Food {
   id: number;
   productName: string;
   price: number;
@@ -9,9 +9,9 @@ export type Food = {
   image: string;
   comments: string[];
   score: number;
-};
+}
 
-const API_URL = "http://localhost:3001";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export function useFoods() {
   return useQuery<Food[]>({
