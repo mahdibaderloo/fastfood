@@ -23,8 +23,12 @@ function MenuItem({ item }: Item) {
         <GoHeart size={30} color="#2c2c2c" />
         {/* <GoHeartFill color="#2c2c2c" /> */}
       </p>
-      <img src={image} alt="product-image" className="w-full mt-2" />
-      <p className="text-lg text-neutral-900">{productName}</p>
+      <img
+        src={image}
+        alt="product-image"
+        className="w-full h-24 mt-2 object-cover rounded-lg"
+      />
+      <p className="text-[0.6rem] text-neutral-900 mt-2">{productName}</p>
       <p className="mt-2 text-neutral-800">${price}</p>
       <p className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 rounded-tl-lg rounded-br-lg">
         <IoMdAdd />
