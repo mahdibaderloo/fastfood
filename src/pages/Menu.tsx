@@ -7,9 +7,12 @@ import { useTheme } from "../store/themeStore.js";
 
 import pizzaIcon from "../assets/images/pizza.svg";
 import pizzaDarkIcon from "../assets/images/pizza-dark.svg";
+import { useFoods } from "../hooks/useFoods.js";
 
 function Menu() {
   const { theme } = useTheme();
+  const { data } = useFoods();
+  console.log(data);
   // const { data } = useQuery({
   //   queryKey: ["pizzas"],
   //   queryFn: async () => {
