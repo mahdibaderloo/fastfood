@@ -1,6 +1,7 @@
 import { GoHeart } from "react-icons/go";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
 import { useCartStore } from "../../store/cartStore";
+import toast from "react-hot-toast";
 
 interface Item {
   item: {
@@ -22,10 +23,12 @@ function MenuItem({ item }: Item) {
 
   function handleAddItemToCart() {
     addItem({ ...item, count: 1 });
+    toast.success("Product successfully added to cart");
   }
 
   function handleRemoveItemFromCart() {
     removeItem(id);
+    toast.success("Product successfully removed from cart");
   }
 
   return (

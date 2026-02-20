@@ -18,6 +18,7 @@ import Order from "./pages/Order.js";
 import Account from "./pages/Account.js";
 import Notification from "./pages/Notification.js";
 import Purchase from "./pages/Purchase.js";
+import { Toaster } from "react-hot-toast";
 
 const queryClient = new QueryClient();
 
@@ -66,6 +67,13 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <RouterProvider router={router} />
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          className:
+            "text-[0.65rem] !text-[#fffbeb] dark:!text-[#262626] !bg-[#262626] dark:!bg-[#fffbeb] font-semibold !rounded-lg",
+        }}
+      />
     </QueryClientProvider>
   );
 }
