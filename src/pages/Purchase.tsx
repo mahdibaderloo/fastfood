@@ -2,8 +2,11 @@ import { CgDanger } from "react-icons/cg";
 import Header from "../components/Header";
 import PurchaseAddressBox from "../features/cart/PurchaseAddressBox";
 import PurchaseItem from "../features/cart/PurchaseItem";
+import { useCartStore } from "../store/cartStore";
 
 function Purchase() {
+  const { items } = useCartStore();
+
   return (
     <>
       <Header
@@ -24,8 +27,9 @@ function Purchase() {
           <p className="text-[0.7rem] text-neutral-800 dark:text-amber-100">
             Items:{" "}
           </p>
-          <PurchaseItem />
-          <PurchaseItem />
+          {items.map((item) => (
+            <PurchaseItem key={item.id} item={item} />
+          ))}
         </ul>
         <div className="text-neutral-800 dark:text-amber-100 flex justify-between mt-4 px-6">
           <p>Total price: </p>
