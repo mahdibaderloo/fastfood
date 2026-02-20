@@ -7,7 +7,7 @@ function EmptyCart() {
   const { theme } = useTheme();
 
   return (
-    <div className="flex flex-col justify-center items-center gap-2">
+    <div className="flex flex-col justify-center items-center gap-2 pb-6">
       <p className="w-full text-center mt-4 text-amber-900/90 text-lg">
         Cart is empty !
       </p>
