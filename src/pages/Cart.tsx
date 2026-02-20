@@ -1,6 +1,7 @@
 import Header from "../components/Header.js";
 import CartItem from "../features/cart/CartItem.js";
 import CartPrice from "../features/cart/CartPrice.js";
+import EmptyCart from "../features/cart/EmptyCart.js";
 import { useCartStore } from "../store/cartStore.js";
 
 function Cart() {
@@ -11,8 +12,11 @@ function Cart() {
       <Header pContent="Cart" />
       <main className="overflow-y-scroll pt-22 flex flex-col justify-between h-screen">
         <ul className="flex flex-col gap-2">
-          {items.length > 0 &&
-            items.map((item) => <CartItem key={item.id} item={item} />)}
+          {items.length > 0 ? (
+            items.map((item) => <CartItem key={item.id} item={item} />)
+          ) : (
+            <EmptyCart />
+          )}
         </ul>
         <CartPrice />
       </main>
