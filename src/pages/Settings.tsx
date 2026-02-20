@@ -5,7 +5,7 @@ import { LiaBugSolid } from "react-icons/lia";
 import { CgDanger } from "react-icons/cg";
 import { LuSend } from "react-icons/lu";
 import { GoPerson, GoTrash } from "react-icons/go";
-import { IoLogOutOutline, IoNotificationsOutline } from "react-icons/io5";
+import { IoLogOutOutline } from "react-icons/io5";
 import { BsMoonStarsFill } from "react-icons/bs";
 
 import Header from "../components/Header.js";
@@ -92,7 +92,7 @@ function Settings() {
   }
 
   return (
-    <>
+    <div className="min-h-screen bg-amber-300 dark:bg-neutral-800">
       <Header
         classHeader="w-full flex items-center justify-center pt-4"
         pContent="Sett!ngs"
@@ -157,7 +157,7 @@ function Settings() {
         <Modal />
         <div className="w-full h-24"></div>
       </main>
-    </>
+    </div>
   );
 }
 
