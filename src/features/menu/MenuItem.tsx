@@ -27,6 +27,7 @@ function MenuItem({ item }: Item) {
         src={image}
         alt="product-image"
         className="w-full h-24 mt-2 object-cover rounded-lg"
+        loading="lazy"
       />
       <p className="text-[0.6rem] text-neutral-900 mt-2">{productName}</p>
       <p className="mt-2 text-neutral-800">${price}</p>
