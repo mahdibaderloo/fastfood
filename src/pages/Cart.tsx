@@ -9,7 +9,7 @@ function Cart() {
   return (
     <>
       <Header pContent="Cart" />
-      <main className="overflow-y-scroll pt-22">
+      <main className="overflow-y-scroll pt-22 flex flex-col justify-between h-screen">
         <ul className="flex flex-col gap-2">
           {items.length > 0 &&
             items.map((item) => <CartItem key={item.id} item={item} />)}
