@@ -12,7 +12,7 @@ function EmptyCart() {
         Cart is empty !
       </p>
       <Link
-        className="underline text-neutral-800 text-[0.8rem] flex items-center"
+        className="underline text-neutral-800 dark:text-amber-300/80 text-[0.8rem] flex items-center"
         to="/"
       >
         <span>Get Pizza</span>
