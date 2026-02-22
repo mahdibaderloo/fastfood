@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useMemo } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import { useSearchParams } from "react-router-dom";
+import { deSlugify, slugify } from "../utils/slugify";
 
 interface Food {
   id: number;
@@ -22,15 +23,14 @@ function Search({ items }: SearchProps) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const query = searchParams.get("search") || "";
+  const slug = searchParams.get("search") || "";
+  const query = slug ? deSlugify(slug) : "";
 
   const filtered = useMemo(() => {
-    if (!query.trim()) return [];
+    if (!slug.trim()) return [];
 
-    return items.filter((item) =>
-      item.productName.toLowerCase().includes(query.toLowerCase()),
-    );
-  }, [query, items]);
+    return items.filter((item) => slugify(item.productName).includes(slug));
+  }, [slug, items]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -49,15 +49,17 @@ function Search({ items }: SearchProps) {
   }, []);
 
   function handleChange(value: string) {
+    const newSlug = slugify(value);
+
     if (value.trim()) {
-      setSearchParams({ search: value }, { replace: true });
+      setSearchParams({ search: newSlug }, { replace: true });
     } else {
       setSearchParams({}, { replace: true });
     }
   }
 
   function handleSelect(item: Food) {
-    setSearchParams({ search: item.productName }, { replace: true });
+    setSearchParams({ search: slugify(item.productName) }, { replace: true });
     setIsOpen(false);
   }
 
