@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { BiSearchAlt } from "react-icons/bi";
+import { useSearchParams } from "react-router-dom";
 
 interface Food {
   id: number;
@@ -17,24 +18,18 @@ type SearchProps = {
 };
 
 function Search({ items }: SearchProps) {
-  const [query, setQuery] = useState("");
-  const [filtered, setFiltered] = useState<Food[]>([]);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
-
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!query.trim()) {
-      setFiltered([]);
-      return;
-    }
+  const query = searchParams.get("search") || "";
 
-    const results = items.filter((item) =>
+  const filtered = useMemo(() => {
+    if (!query.trim()) return [];
+
+    return items.filter((item) =>
       item.productName.toLowerCase().includes(query.toLowerCase()),
     );
-
-    setFiltered(results);
-    setIsOpen(true);
   }, [query, items]);
 
   useEffect(() => {
@@ -48,36 +43,45 @@ function Search({ items }: SearchProps) {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () =>
-      document.removeEventListener("pointerdown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
+  function handleChange(value: string) {
+    if (value.trim()) {
+      setSearchParams({ search: value }, { replace: true });
+    } else {
+      setSearchParams({}, { replace: true });
+    }
+  }
+
   function handleSelect(item: Food) {
+    setSearchParams({ search: item.productName }, { replace: true });
     setIsOpen(false);
-    setQuery(item.productName);
   }
 
   return (
     <div ref={containerRef} className="relative w-full max-w-md">
-      <div className="bg-neutral-50 flex items-center justify-between py-2 px-1 gap-4 rounded-lg border border-neutral-200">
+      <div className="bg-neutral-50 flex items-center justify-between py-2 px-2 gap-3 rounded-lg border border-neutral-200">
         <input
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onFocus={() => query && setIsOpen(true)}
+          onChange={(e) => handleChange(e.target.value)}
+          onFocus={() => query && filtered.length > 0 && setIsOpen(true)}
           placeholder="Search for..."
-          className="w-full h-full outline-none text-neutral-800 text-[0.8rem]"
+          className="w-full outline-none text-neutral-800 text-sm"
         />
-        <BiSearchAlt size={40} className="text-neutral-700" />
+        <BiSearchAlt size={41} className="text-neutral-600" />
       </div>
 
-      {isOpen && filtered.length > 0 && (
+      {isOpen && query && filtered.length > 0 && (
         <ul className="absolute top-full left-0 w-full mt-2 bg-white border border-neutral-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
           {filtered.map((item) => (
             <li
               key={item.id}
               onMouseDown={() => handleSelect(item)}
-              className="px-2 py-2 cursor-pointer transition-colors text-neutral-700 text-[0.7rem]"
+              className="px-3 py-2 cursor-pointer transition-colors hover:bg-neutral-100 text-neutral-700 text-sm"
             >
               {item.productName}
             </li>
