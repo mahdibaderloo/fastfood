@@ -1,7 +1,8 @@
-import { GoHeart } from "react-icons/go";
+import { GoHeart, GoHeartFill } from "react-icons/go";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
 import { useCartStore } from "../../store/cartStore";
 import toast from "react-hot-toast";
+import { useFavoritesStore } from "../../store/favoritesStore";
 
 interface Item {
   item: {
@@ -19,7 +20,14 @@ interface Item {
 function MenuItem({ item }: Item) {
   const { productName, price, image, id } = item;
   const { addItem, removeItem, items } = useCartStore();
+  const {
+    items: favorites,
+    addItem: addFavorite,
+    removeItem: removeFavorite,
+  } = useFavoritesStore();
+
   const isItemInCart = items.find((i) => i.id === id);
+  const isItemInFavorites = favorites.find((i) => i.id === id);
 
   function handleAddItemToCart() {
     addItem({ ...item, count: 1 });
@@ -31,11 +39,32 @@ function MenuItem({ item }: Item) {
     toast.success("Product successfully removed from cart");
   }
 
+  function handleAddItemToFavorites() {
+    addFavorite(item);
+    toast.success("Product successfully added to favorites");
+  }
+
+  function handleRemoveItemFromFavorites() {
+    removeFavorite(id);
+    toast.success("Product successfully removed from favorites");
+  }
+
   return (
     <li className="bg-amber-50 rounded-lg w-[48%] flex flex-col p-2 relative">
       <p className="self-end">
-        <GoHeart size={30} color="#2c2c2c" />
-        {/* <GoHeartFill color="#2c2c2c" /> */}
+        {isItemInFavorites ? (
+          <GoHeartFill
+            size={30}
+            color="#2c2c2c"
+            onClick={handleRemoveItemFromFavorites}
+          />
+        ) : (
+          <GoHeart
+            size={30}
+            color="#2c2c2c"
+            onClick={handleAddItemToFavorites}
+          />
+        )}
       </p>
       <img
         src={image}
