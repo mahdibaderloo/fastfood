@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import { useFavoritesStore } from "../../store/favoritesStore";
 import { Link, useNavigate } from "react-router-dom";
 import { slugify } from "../../utils/slugify";
+import { useItemStore } from "../../store/itemStore";
+import React from "react";
 
 interface Item {
   item: {
@@ -20,39 +22,44 @@ interface Item {
 }
 
 function MenuItem({ item }: Item) {
-  const { productName, price, image, id } = item;
   const navigate = useNavigate();
   const { addItem, removeItem, items } = useCartStore();
+  const { setItem } = useItemStore();
   const {
     items: favorites,
     addItem: addFavorite,
     removeItem: removeFavorite,
   } = useFavoritesStore();
 
-  const isItemInCart = items.find((i) => i.id === id);
-  const isItemInFavorites = favorites.find((i) => i.id === id);
+  const isItemInCart = items.some((i) => i.id === item.id);
+  const isItemInFavorites = favorites.some((i) => i.id === item.id);
 
-  function handleAddItemToCart() {
+  function handleAddItemToCart(e: React.MouseEvent) {
+    e.stopPropagation();
     addItem({ ...item, count: 1 });
     toast.success("Product successfully added to cart");
   }
 
-  function handleRemoveItemFromCart() {
-    removeItem(id);
+  function handleRemoveItemFromCart(e: React.MouseEvent) {
+    e.stopPropagation();
+    removeItem(item.id);
     toast.success("Product successfully removed from cart");
   }
 
-  function handleAddItemToFavorites() {
+  function handleAddItemToFavorites(e: React.MouseEvent) {
+    e.stopPropagation();
     addFavorite(item);
     toast.success("Product successfully added to favorites");
   }
 
-  function handleRemoveItemFromFavorites() {
-    removeFavorite(id);
+  function handleRemoveItemFromFavorites(e: React.MouseEvent) {
+    e.stopPropagation();
+    removeFavorite(item.id);
     toast.success("Product successfully removed from favorites");
   }
 
   function handleNavigate() {
+    setItem({ ...item, isFavorite: isItemInFavorites ? true : false });
     navigate(`/${slugify(item.productName)}`);
   }
 
@@ -77,13 +84,13 @@ function MenuItem({ item }: Item) {
         )}
       </p>
       <img
-        src={image}
+        src={item.image}
         alt="product-image"
         className="w-full h-24 mt-2 object-cover rounded-lg"
         loading="lazy"
       />
-      <p className="text-[0.6rem] text-neutral-900 mt-2">{productName}</p>
-      <p className="mt-2 text-neutral-800">${price}</p>
+      <p className="text-[0.6rem] text-neutral-900 mt-2">{item.productName}</p>
+      <p className="mt-2 text-neutral-800">${item.price}</p>
       {isItemInCart ? (
         <button
           title="Remove from cart"

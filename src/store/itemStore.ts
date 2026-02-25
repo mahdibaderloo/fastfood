@@ -13,12 +13,12 @@ interface Item {
 }
 
 interface ItemStore {
-  item: Item | {};
+  item: Item | null;
   setItem: (Item: Item) => void;
 }
 
 export const useItemStore = create<ItemStore>()((set) => ({
-  item: {},
+  item: null,
 
   setItem: (item) => set(() => ({ item })),
 }));
