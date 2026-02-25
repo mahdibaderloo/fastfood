@@ -21,6 +21,7 @@ type SearchProps = {
 function Search({ items }: SearchProps) {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const slug = searchParams.get("search") || "";
@@ -48,6 +49,14 @@ function Search({ items }: SearchProps) {
     };
   }, []);
 
+  useEffect(() => {
+    if (isFocused && query && filtered.length > 0) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  }, [isFocused, query, filtered]);
+
   function handleChange(value: string) {
     const newSlug = slugify(value);
 
@@ -70,14 +79,15 @@ function Search({ items }: SearchProps) {
           type="text"
           value={query}
           onChange={(e) => handleChange(e.target.value)}
-          onFocus={() => query && filtered.length > 0 && setIsOpen(true)}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
           placeholder="Search for..."
           className="w-full outline-none text-neutral-800 text-sm"
         />
         <BiSearchAlt size={41} className="text-neutral-600" />
       </div>
 
-      {isOpen && query && filtered.length > 0 && (
+      {isOpen && query && (
         <ul className="absolute top-full left-0 w-full mt-2 bg-white border border-neutral-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
           {filtered.map((item) => (
             <li
