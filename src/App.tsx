@@ -1,14 +1,17 @@
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { Toaster } from "react-hot-toast";
+import { useTheme } from "./store/themeStore.js";
+
 import AppLayout from "./components/AppLayout.js";
 import Menu from "./pages/Menu.js";
 import Dashboard from "./pages/Dashboard.js";
 import Notifications from "./pages/Notifications.js";
 import Settings from "./pages/Settings.js";
 import Cart from "./pages/Cart.js";
-import { useTheme } from "./store/themeStore.js";
-import { useEffect } from "react";
 import Orders from "./pages/Orders.js";
 import Favorites from "./pages/Favorites.js";
 import Wallet from "./pages/Wallet.js";
@@ -18,7 +21,7 @@ import Order from "./pages/Order.js";
 import Account from "./pages/Account.js";
 import Notification from "./pages/Notification.js";
 import Purchase from "./pages/Purchase.js";
-import { Toaster } from "react-hot-toast";
+import Item from "./pages/Item.js";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +30,7 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { path: "/", element: <Menu /> },
+      { path: "/:itemName", element: <Item /> },
 
       { path: "/dashboard", element: <Dashboard /> },
       { path: "/favorites", element: <Favorites /> },
