@@ -95,8 +95,6 @@ function Order() {
             </span>
           </div>
         </section>
-
-        <div className="w-full h-16"></div>
       </main>
     </>
   );
