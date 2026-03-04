@@ -99,11 +99,11 @@ function Settings() {
       />
       <main className="overflow-y-scroll p-4">
         <div>
-          <p className="text-amber-800 dark:text-amber-100 text-shadow-lg">
+          <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
             Theme
           </p>
           <div
-            className="flex items-center justify-between p-2"
+            className="flex items-center justify-between p-2 sm:py-4 sm:px-14"
             onClick={toggleTheme}
           >
             <p className="text-neutral-900 dark:text-amber-300">
@@ -119,7 +119,7 @@ function Settings() {
           </div>
         </div>
         <div className="mt-4">
-          <p className="text-amber-800 dark:text-amber-100 text-shadow-lg">
+          <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
             General
           </p>
           <ul>
@@ -138,7 +138,7 @@ function Settings() {
           </ul>
         </div>
         <div className="mt-4">
-          <p className="text-amber-800 dark:text-amber-100 text-shadow-lg">
+          <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
             Feedback
           </p>
           <ul className="">
@@ -155,7 +155,7 @@ function Settings() {
           </ul>
         </div>
         <Modal />
-        <div className="w-full h-24"></div>
+        <div className="w-full h-24 sm:h-26"></div>
       </main>
     </div>
   );
