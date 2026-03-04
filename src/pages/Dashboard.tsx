@@ -8,7 +8,7 @@ function Dashboard() {
         <UserInformation />
         <UserOptions />
       </div>
-      <div className="w-full h-8"></div>
+      <div className="w-full h-4"></div>
     </div>
   );
 }
