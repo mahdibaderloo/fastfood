@@ -74,7 +74,7 @@ function Search({ items }: SearchProps) {
 
   return (
     <div ref={containerRef} className="relative w-full max-w-md">
-      <div className="bg-neutral-50 flex items-center justify-between py-2 px-2 gap-3 rounded-lg border border-neutral-200">
+      <div className="bg-neutral-50 flex items-center justify-between py-2 px-2 gap-3 rounded-lg sm:rounded-full border border-neutral-200">
         <input
           type="text"
           value={query}
