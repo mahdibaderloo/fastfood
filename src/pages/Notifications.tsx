@@ -5,7 +5,7 @@ function Notifications() {
   return (
     <>
       <Header classP="text-4xl dark:text-amber-300" pContent="Not!f!cat!ons" />
-      <main className="overflow-y-scroll p-4 pt-20 h-screen">
+      <main className="overflow-y-scroll p-4 sm:px-26 pt-20 h-screen">
         <ul className="flex flex-col gap-1">
           <NotificationItem id={1} isUnRead={true} />
           <NotificationItem id={2} isUnRead={true} />
