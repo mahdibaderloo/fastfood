@@ -15,12 +15,12 @@ function Navbar() {
   const width = window.innerWidth;
 
   return (
-    <nav className="flex justify-between rounded-xl bg-amber-50 dark:bg-amber-50 shadow-[0_0_5px_#0000003d] fixed sm:w-[52%] sm:mx-auto left-0 right-0 bottom-0 p-2 m-2">
+    <nav className="flex justify-between rounded-xl sm:rounded-full bg-amber-50 dark:bg-amber-50 shadow-[0_0_5px_#0000003d] fixed sm:w-[54%] sm:mx-auto left-0 right-0 bottom-0 sm:bottom-1 p-2 m-2">
       <NavLink
         to="/dashboard"
         className={({ isActive }) =>
           isActive
-            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl transition-all duration-500"
+            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl sm:rounded-full transition-all duration-500"
             : "p-2 sm:p-2.5"
         }
       >
@@ -36,7 +36,7 @@ function Navbar() {
         to="/cart"
         className={({ isActive }) =>
           isActive
-            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl transition-all duration-500"
+            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl sm:rounded-full transition-all duration-500"
             : "p-2 sm:p-2.5"
         }
       >
@@ -52,7 +52,7 @@ function Navbar() {
         to="/"
         className={({ isActive }) =>
           isActive
-            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl transition-all duration-500"
+            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl sm:rounded-full transition-all duration-500"
             : "p-2 sm:p-2.5"
         }
       >
@@ -68,7 +68,7 @@ function Navbar() {
         to="/notifications"
         className={({ isActive }) =>
           isActive
-            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl transition-all duration-500"
+            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl sm:rounded-full transition-all duration-500"
             : "p-2 sm:p-2.5"
         }
       >
@@ -84,7 +84,7 @@ function Navbar() {
         to="/settings"
         className={({ isActive }) =>
           isActive
-            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl transition-all duration-500"
+            ? "bg-amber-300 p-2 sm:p-2.5 rounded-xl sm:rounded-full transition-all duration-500"
             : "p-2 sm:p-2.5"
         }
       >
