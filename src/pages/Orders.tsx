@@ -19,7 +19,7 @@ function Orders() {
           <OrderItem />
           <OrderItem />
         </ul>
-        <div className="w-full h-16"></div>
+        <div className="w-full h-2"></div>
       </main>
     </>
   );
