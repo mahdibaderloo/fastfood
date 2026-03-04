@@ -15,7 +15,6 @@ function Support() {
           <SupportForm />
           <SupportLinks />
         </main>
-        <div className="w-full h-12"></div>
       </div>
     </>
   );
