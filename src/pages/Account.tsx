@@ -69,7 +69,6 @@ function Account() {
         </button>
         <Modal />
       </main>
-      <div className="w-full h-24"></div>
     </>
   );
 }
