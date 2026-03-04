@@ -31,6 +31,8 @@ function MenuItem({ item }: Item) {
     removeItem: removeFavorite,
   } = useFavoritesStore();
 
+  const width = window.innerWidth;
+
   const isItemInCart = items.some((i) => i.id === item.id);
   const isItemInFavorites = favorites.some((i) => i.id === item.id);
 
@@ -65,19 +67,19 @@ function MenuItem({ item }: Item) {
 
   return (
     <li
-      className="bg-amber-50 rounded-lg w-[48%] flex flex-col p-2 relative"
+      className="bg-amber-50 rounded-lg w-[48%] sm:w-[10rem] flex flex-col p-2 relative"
       onClick={handleNavigate}
     >
       <p className="self-end">
         {isItemInFavorites ? (
           <GoHeartFill
-            size={30}
+            size={width > 640 ? 34 : 30}
             color="#2c2c2c"
             onClick={handleRemoveItemFromFavorites}
           />
         ) : (
           <GoHeart
-            size={30}
+            size={width > 640 ? 34 : 30}
             color="#2c2c2c"
             onClick={handleAddItemToFavorites}
           />
@@ -86,15 +88,17 @@ function MenuItem({ item }: Item) {
       <img
         src={item.image}
         alt="product-image"
-        className="w-full h-24 mt-2 object-cover rounded-lg"
+        className="w-full h-24 sm:h-[9rem] mt-2 object-cover rounded-lg"
         loading="lazy"
       />
-      <p className="text-[0.6rem] text-neutral-900 mt-2">{item.productName}</p>
-      <p className="mt-2 text-neutral-800">${item.price}</p>
+      <p className="text-[0.6rem] sm:text-[0.8rem] text-neutral-900 mt-2">
+        {item.productName}
+      </p>
+      <p className="mt-2 text-neutral-800 sm:text-lg">${item.price}</p>
       {isItemInCart ? (
         <button
           title="Remove from cart"
-          className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 rounded-tl-lg rounded-br-lg"
+          className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 sm:p-2.5 rounded-tl-lg rounded-br-lg"
           onClick={handleRemoveItemFromCart}
         >
           <IoMdRemove />
@@ -102,7 +106,7 @@ function MenuItem({ item }: Item) {
       ) : (
         <button
           title="Add to cart"
-          className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 rounded-tl-lg rounded-br-lg"
+          className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 sm:p-2.5 rounded-tl-lg rounded-br-lg"
           onClick={handleAddItemToCart}
         >
           <IoMdAdd />
