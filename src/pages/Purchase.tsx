@@ -38,7 +38,7 @@ function Purchase() {
         <button className="bg-neutral-800 dark:bg-amber-300 text-amber-300 dark:text-neutral-800 p-2 rounded-lg w-full mt-6 shadow">
           Proceed to payment
         </button>
-        <div className="w-full h-18"></div>
+        <div className="w-full h-2"></div>
       </main>
     </>
   );
