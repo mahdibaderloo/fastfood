@@ -63,7 +63,7 @@ function Menu() {
             <img src={pizzaIcon} alt="pizza" className="w-11 rotate-180" />
           )}
         </div>
-        <div className="flex items-center gap-2 px-2 h-11">
+        <div className="flex items-center gap-2 sm:gap-1 px-2 h-11">
           <Search items={foods ?? []} />
           <Filter />
         </div>
