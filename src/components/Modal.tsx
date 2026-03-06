@@ -9,24 +9,27 @@ function Modal() {
   return (
     <div className="fixed inset-0 z-50 bg-black/60" onClick={close}>
       <div
-        className={`bg-amber-100 rounded-2xl mx-auto shadow ${content ? "mt-20 w-[90%]" : "mt-50 w-[80%]"} p-2 font-lilita`}
+        className={`bg-amber-100 rounded-2xl mx-auto shadow ${content ? "mt-20 w-[90%] sm:w-[80%]" : "mt-50 w-[80%] sm:w-[60%]"} p-2 font-lilita`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button onClick={close} className="rounded-[0.55rem] p-1 shadow">
+        <button
+          onClick={close}
+          className="rounded-[0.55rem] p-1 sm:p-2.5 shadow"
+        >
           <IoMdClose />
         </button>
         <h3
-          className={`w-full text-center ${content ? "text-lg" : "text-sm"} mt-1`}
+          className={`w-full sm:w-[90%] sm:text-center sm:mx-auto text-center ${content ? "text-lg" : "text-sm sm:text-[0.9rem]"} mt-1 sm:mt-4`}
         >
           {title}
         </h3>
         {content && <div className="mt-3">{content}</div>}
-        <div className="flex justify-between items-center p-4">
-          <button className="bg-green-700 px-6 py-1 rounded-xl shadow">
+        <div className="flex justify-between items-center p-4 sm:mt-4">
+          <button className="bg-green-700 px-6 py-1 sm:px-8 sm:py-2 sm:text-[1rem] rounded-xl shadow">
             {content ? "Save" : "Yes"}
           </button>
           <button
-            className="bg-red-700 px-6 py-1 rounded-xl shadow"
+            className="bg-red-700 px-6 py-1 sm:px-8 sm:py-2 sm:text-[1rem] rounded-xl shadow"
             onClick={close}
           >
             {content ? "Cancel" : "No"}
