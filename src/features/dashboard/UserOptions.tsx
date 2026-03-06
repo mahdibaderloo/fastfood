@@ -11,10 +11,10 @@ function UserOptions() {
   const { theme } = useTheme();
 
   return (
-    <div className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 p-2 rounded-xl flex flex-wrap justify-between gap-1">
+    <div className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 p-2 rounded-xl sm:w-90 sm:h-67 sm:mx-auto flex flex-wrap justify-between gap-1 sm:gap-y-2">
       <Link
         to="/account"
-        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] sm:w-[32%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
       >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
@@ -28,7 +28,7 @@ function UserOptions() {
 
       <Link
         to="/orders"
-        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] sm:w-[32%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
       >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
@@ -42,7 +42,7 @@ function UserOptions() {
 
       <Link
         to="/favorites"
-        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] sm:w-[32%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
       >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
@@ -56,7 +56,7 @@ function UserOptions() {
 
       <Link
         to="/wallet"
-        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] sm:w-[32%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
       >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
@@ -70,7 +70,7 @@ function UserOptions() {
 
       <Link
         to="/address"
-        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] sm:w-[32%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
       >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
@@ -84,7 +84,7 @@ function UserOptions() {
 
       <Link
         to="/support"
-        className="bg-amber-100 dark:bg-neutral-800 w-[31%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+        className="bg-amber-100 dark:bg-neutral-800 w-[31%] sm:w-[32%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
       >
         <p className="w-20 h-16 flex justify-center items-center">
           {theme === "dark" ? (
