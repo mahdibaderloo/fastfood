@@ -11,7 +11,7 @@ function Orders() {
         classP="text-4xl dark:text-amber-300"
       />
       <main className="overflow-y-scroll p-4 pt-20 h-screen">
-        <ul className="flex flex-col gap-1">
+        <ul className="flex flex-col gap-1 sm:gap-2 sm:w-90 sm:mx-auto">
           <OrderItem />
           <OrderItem />
           <OrderItem />

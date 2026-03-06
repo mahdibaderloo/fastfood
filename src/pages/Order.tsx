@@ -25,11 +25,11 @@ function Order() {
       <Header showBackButton={true} classP="text-4xl dark:text-amber-300" />
 
       <main className="p-4 pt-16 h-screen overflow-y-scroll">
-        <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800">
+        <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800 sm:w-90 sm:mx-auto">
           <p className="font-semibold text-amber-300 dark:text-neutral-800">
             Order: {order.id}
           </p>
-          <p className="text-sm text-amber-200 dark:text-neutral-700 mt-1">
+          <p className="text-sm text-amber-200 dark:text-neutral-700 mt-1 sm:mt-3">
             Date: {order.date}
           </p>
           <p className="text-sm text-amber-200 dark:text-neutral-700 mt-1">
@@ -37,7 +37,7 @@ function Order() {
           </p>
         </section>
 
-        <section className="mt-4 bg-amber-100 rounded-lg">
+        <section className="mt-4 bg-amber-100 rounded-lg sm:w-90 sm:mx-auto">
           <ul className="flex flex-col gap-2 p-2">
             {order.items.map((it) => (
               <li
@@ -54,7 +54,7 @@ function Order() {
                     <p className="text-amber-200 dark:text-amber-100">
                       {it.name}
                     </p>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between sm:mt-2">
                       <p className="text-sm text-amber-100 dark:text-amber-200">
                         Qty: {it.qty}
                       </p>
@@ -70,7 +70,7 @@ function Order() {
         </section>
 
         {/* Summary */}
-        <section className="dark:bg-neutral-800 rounded-lg p-4 mt-4 text-neutral-800 dark:text-amber-100">
+        <section className="dark:bg-neutral-800 rounded-lg p-4 mt-4 text-neutral-800 dark:text-amber-100 sm:w-90 sm:mx-auto">
           <div className="flex justify-between py-1">
             <span className="text-neutral-700 dark:text-amber-100">
               Subtotal
@@ -88,7 +88,7 @@ function Order() {
             </span>
           </div>
           <div className="h-px bg-neutral-600 dark:bg-neutral-700 my-2" />
-          <div className="flex justify-between py-1 text-lg font-semibold">
+          <div className="flex justify-between py-1 text-lg sm:text-xl font-semibold">
             <span className="text-neutral-800 dark:text-amber-200">Total</span>
             <span className="text-neutral-800 dark:text-amber-200">
               ${total}
