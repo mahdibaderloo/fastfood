@@ -98,7 +98,7 @@ function Settings() {
         pContent="Sett!ngs"
       />
       <main className="overflow-y-scroll p-4">
-        <div>
+        <div className="sm:w-90 sm:mx-auto">
           <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
             Theme
           </p>
@@ -118,7 +118,7 @@ function Settings() {
             </p>
           </div>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 sm:w-90 sm:mx-auto">
           <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
             General
           </p>
@@ -137,7 +137,7 @@ function Settings() {
             ))}
           </ul>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 sm:w-90 sm:mx-auto">
           <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
             Feedback
           </p>
