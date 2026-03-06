@@ -11,7 +11,7 @@ function Cart() {
     <>
       <Header pContent="Cart" />
       <main className="overflow-y-scroll pt-22 flex flex-col justify-between h-screen">
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 sm:w-90 sm:mx-auto">
           {items.length > 0 ? (
             items.map((item) => <CartItem key={item.id} item={item} />)
           ) : (
