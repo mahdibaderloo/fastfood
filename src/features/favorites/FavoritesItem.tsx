@@ -20,6 +20,7 @@ interface FavoriteProps {
 
 function FavoritesItem({ item }: FavoriteProps) {
   const { removeItem } = useFavoritesStore();
+  const width = window.innerWidth;
 
   function handleRemoveItemFromFavorites() {
     removeItem(item.id);
@@ -27,10 +28,10 @@ function FavoritesItem({ item }: FavoriteProps) {
   }
 
   return (
-    <li className="bg-amber-50 rounded-lg w-[48%] h-[300px] flex flex-col justify-between p-2 relative">
+    <li className="bg-amber-50 rounded-lg w-[48%] sm:w-[48.5%] h-[300px] flex flex-col justify-between p-2 relative">
       <p className="self-end">
         <GoHeartFill
-          size={30}
+          size={width > 640 ? 36 : 30}
           color="#2c2c2c"
           onClick={handleRemoveItemFromFavorites}
         />
@@ -40,7 +41,9 @@ function FavoritesItem({ item }: FavoriteProps) {
         alt="product-image"
         className="w-full h-24 mt-2 object-cover rounded-lg"
       />
-      <p className="text-[0.7rem] text-neutral-900 mt-2">{item.productName}</p>
+      <p className="text-[0.7rem] sm:text-[0.8rem] text-neutral-900 mt-2">
+        {item.productName}
+      </p>
     </li>
   );
 }

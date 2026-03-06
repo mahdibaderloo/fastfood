@@ -14,7 +14,7 @@ function Favorites() {
         classP="text-4xl dark:text-amber-300"
       />
       <main className="overflow-y-scroll pt-20 h-screen">
-        <ul className="flex items-center justify-start flex-wrap gap-2 p-2">
+        <ul className="flex items-center justify-start flex-wrap gap-2 p-2 sm:justify-between sm:w-90 sm:mx-auto">
           {favorites.map((item) => (
             <FavoritesItem key={item.id} item={item} />
           ))}
