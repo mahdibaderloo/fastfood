@@ -7,7 +7,7 @@ function Notification() {
   return (
     <div>
       <Header classP="text-4xl dark:text-amber-300" showBackButton={true} />
-      <main className="p-4 pt-16 h-screen flex flex-col gap-2">
+      <main className="p-4 pt-16 h-screen flex flex-col gap-2 sm:w-90 sm:mx-auto">
         <h2 className="text-lg sm:text-xl text-neutral-950 dark:text-amber-300">
           Notification Title #{params.notificationId}
         </h2>
