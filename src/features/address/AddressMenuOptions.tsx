@@ -21,7 +21,7 @@ function AddressMenuOptions({ isOpen }: OptionsProp) {
     <ul
       className={`
         absolute right-5 top-5 bg-amber-50 shadow
-        pl-4 pr-2 rounded-2xl flex flex-col gap-1 p-1.5
+        pl-4 pr-2 rounded-2xl flex flex-col gap-1 sm:gap-1 p-1.5 sm:p-2.5
         transition-all duration-200 ease-out
         origin-top-right
         ${
