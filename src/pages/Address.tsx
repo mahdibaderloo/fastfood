@@ -19,16 +19,18 @@ function Address() {
         classP="text-4xl dark:text-amber-300"
       />
       <main className="p-4 pt-22 h-screen overflow-y-scroll">
-        <ul className="flex flex-col items-center justify-center flex-wrap gap-2">
+        <ul className="flex flex-col items-center justify-center flex-wrap gap-2 sm:gap-3 sm:w-80 sm:mx-auto">
           <AddressItem />
           <AddressItem />
         </ul>
-        <button
-          className="bg-amber-200 text-neutral-800 w-full rounded-lg p-2 mt-10"
-          onClick={handleAddAddress}
-        >
-          Add New Address
-        </button>
+        <div className="sm:w-80 sm:mx-auto">
+          <button
+            className="bg-amber-200 text-neutral-800 w-full rounded-lg sm:rounded-xl p-2 mt-10"
+            onClick={handleAddAddress}
+          >
+            Add New Address
+          </button>
+        </div>
         <Modal />
         <div className="w-full h-2"></div>
       </main>

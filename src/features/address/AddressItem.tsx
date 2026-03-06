@@ -7,6 +7,8 @@ function AddressItem() {
   const [isOpenOptions, setIsOpenOptions] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
+  const width = window.innerWidth;
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
@@ -26,18 +28,18 @@ function AddressItem() {
 
   return (
     <li
-      className="w-full bg-amber-100 p-2 rounded-2xl flex flex-col gap-2 relative"
+      className="w-full bg-amber-100 p-2 sm:p-3 rounded-2xl flex flex-col gap-2 relative"
       onClick={() => setIsOpenOptions(false)}
     >
       <div className="flex justify-between items-center">
         <p>
-          <FaLocationDot size={30} color="#2c2c2c" />
+          <FaLocationDot size={width > 640 ? 34 : 30} color="#2c2c2c" />
         </p>
         <p onClick={handleOpenOptions}>
-          <CiMenuKebab size={26} color="#2c2c2c" />
+          <CiMenuKebab size={width > 640 ? 30 : 26} color="#2c2c2c" />
         </p>
       </div>
-      <h4 className="text-neutral-900 text-sm ml-2 w-[95%] mt-3">
+      <h4 className="text-neutral-900 text-sm sm:text-[0.9rem] ml-2 w-[95%] mt-3 sm:mt-4">
         Mohammad shahr, Karaj, Iran
       </h4>
       <p className="text-[16px] ml-3 text-neutral-600">
