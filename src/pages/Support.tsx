@@ -10,12 +10,12 @@ function Support() {
         showBackButton={true}
         classP="text-4xl dark:text-amber-300"
       />
-      <div className="bg-amber-300 dark:bg-neutral-800">
-        <main className="p-4 pt-22 overflow-y-scroll h-screen">
+      <main className="p-4 pt-22 sm:pt-24 overflow-y-scroll h-screen bg-amber-300 dark:bg-neutral-800">
+        <div className="sm:w-80 sm:mx-auto">
           <SupportForm />
           <SupportLinks />
-        </main>
-      </div>
+        </div>
+      </main>
     </>
   );
 }

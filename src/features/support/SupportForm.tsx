@@ -6,7 +6,7 @@ function SupportForm() {
   return (
     <form>
       <h3 className="text-amber-100">How can we help you?</h3>
-      <div className="flex items-center gap-2 bg-amber-100 p-2 rounded-lg mt-2">
+      <div className="flex items-center gap-2 bg-amber-100 p-2 rounded-lg mt-2 sm:mt-4">
         <BsPersonFill size={40} color="#262626" />
         <input
           type="text"
@@ -31,7 +31,7 @@ function SupportForm() {
             placeholder="Problem ..."
           ></textarea>
         </div>
-        <p className="text-amber-100 text-[16px] w-full flex justify-end mt-1 mr-4">
+        <p className="text-amber-100 text-[0.6rem] w-full flex justify-end mt-1 mr-4">
           10 / 200
         </p>
       </div>
