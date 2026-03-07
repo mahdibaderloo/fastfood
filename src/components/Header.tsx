@@ -22,7 +22,7 @@ function Header({
   const { theme } = useTheme();
 
   return (
-    <header className={classHeader}>
+    <header className={`${classHeader} lg:hidden lg:pointer-events-none`}>
       {showBackButton ? (
         <div
           className={`w-full flex items-center ${showBackButton ? "justify-between" : "justify-center"} px-2`}

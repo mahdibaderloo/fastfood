@@ -1,16 +1,17 @@
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useFoods } from "../hooks/useFoods.js";
+import { useTheme } from "../store/themeStore.js";
+import { deSlugify } from "../utils/slugify.js";
+
 import Filter from "../components/Filter.js";
 import Header from "../components/Header.js";
 import Search from "../components/Search.js";
 import MenuItem from "../features/menu/MenuItem.js";
-import { useTheme } from "../store/themeStore.js";
+import Loading from "../components/Loading.js";
 
 import pizzaIcon from "../assets/images/pizza.svg";
 import pizzaDarkIcon from "../assets/images/pizza-dark.svg";
-import { useFoods } from "../hooks/useFoods.js";
-import Loading from "../components/Loading.js";
-import { useSearchParams } from "react-router-dom";
-import { deSlugify } from "../utils/slugify.js";
-import { useEffect, useState } from "react";
 
 interface Food {
   id: number;
@@ -69,8 +70,8 @@ function Menu() {
         </div>
       </Header>
 
-      <main className="min-h-screen overflow-y-scroll pt-22 sm:pt-24">
-        <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-14 p-2">
+      <main className="min-h-screen overflow-y-scroll pt-22 sm:pt-24 lg:pt-0">
+        <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-14 lg:mt-0 p-2">
           {filteredSearchItems.length > 0 &&
             filteredSearchItems.map((food) => (
               <MenuItem key={food.id} item={food} />
