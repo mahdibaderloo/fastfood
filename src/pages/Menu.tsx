@@ -70,7 +70,7 @@ function Menu() {
         </div>
       </Header>
 
-      <main className="min-h-screen overflow-y-scroll pt-22 sm:pt-24 lg:pt-0">
+      <main className="min-h-screen overflow-y-scroll pt-22 sm:pt-24">
         <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-14 lg:mt-0 p-2">
           {filteredSearchItems.length > 0 &&
             filteredSearchItems.map((food) => (

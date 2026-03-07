@@ -73,8 +73,8 @@ function Search({ items }: SearchProps) {
   }
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-md">
-      <div className="bg-neutral-50 flex items-center justify-between py-2 px-2 gap-3 rounded-lg sm:rounded-full border border-neutral-200">
+    <div ref={containerRef} className="relative w-full max-w-md lg:w-50">
+      <div className="bg-neutral-50 lg:bg-amber-100 flex lg:h-8 items-center justify-between py-2 px-2 gap-3 rounded-lg sm:rounded-full border border-neutral-200 lg:border-amber-100">
         <input
           type="text"
           value={query}
@@ -82,9 +82,9 @@ function Search({ items }: SearchProps) {
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           placeholder="Search for..."
-          className="w-full outline-none text-neutral-800 text-sm"
+          className="w-full outline-none text-neutral-800 text-sm lg:text-[0.8rem]"
         />
-        <BiSearchAlt size={41} className="text-neutral-600" />
+        <BiSearchAlt size={41} className="text-neutral-600 lg:w-5" />
       </div>
 
       {isOpen && query && (
