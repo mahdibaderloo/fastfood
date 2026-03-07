@@ -45,7 +45,7 @@ function DesktopHeader() {
           <Search items={foods ?? []} />
           <Filter />
         </div>
-        <NavbarLinks />
+        {/* <NavbarLinks /> */}
       </div>
     </header>
   );
