@@ -77,7 +77,13 @@ function Menu() {
               <MenuItem key={food.id} item={food} />
             ))}
         </ul>
-        <div className="w-full h-16 sm:h-19"></div>
+        <div className="w-full h-16 sm:h-19 lg:h-4"></div>
+        <a
+          href="http://github.com/mahdibaderloo"
+          className="hidden lg:block text-[0.6rem] ml-1 text-amber-50 cursor-pointer"
+        >
+          Mahdi Baderloo
+        </a>
       </main>
     </>
   );

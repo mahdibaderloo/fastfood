@@ -88,7 +88,7 @@ function Search({ items }: SearchProps) {
       </div>
 
       {isOpen && query && (
-        <ul className="absolute top-full left-0 w-full mt-2 bg-white border border-neutral-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+        <ul className="absolute top-full left-0 w-full mt-2 bg-white lg:bg-amber-100 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
           {filtered.map((item) => (
             <li
               key={item.id}
