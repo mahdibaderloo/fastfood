@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
+
 import Header from "../components/Header";
-import pizza from "../assets/images/loading-1.png";
+import OrderSummary from "../features/order/OrderSummary";
 import BackButton from "../components/BackButton";
+
+import pizza from "../assets/images/loading-1.png";
 
 function Order() {
   const { orderId } = useParams();
 
-  // Mock data for the order detail page
   const order = {
     id: orderId ?? "4738929",
     date: "2025-10-10",
@@ -18,14 +20,11 @@ function Order() {
     deliveryFee: 0,
   };
 
-  const subtotal = order.items.reduce((sum, it) => sum + it.price * it.qty, 0);
-  const total = subtotal + order.deliveryFee;
-
   return (
     <>
       <Header showBackButton={true} classP="text-4xl dark:text-amber-300" />
 
-      <main className="p-4 pt-16 h-screen overflow-y-scroll">
+      <main className="p-4 pt-16 h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] lg:mx-auto">
         <BackButton />
         <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800 sm:w-90 sm:mx-auto">
           <p className="font-semibold text-amber-300 dark:text-neutral-800">
@@ -41,27 +40,27 @@ function Order() {
 
         <section className="mt-4 bg-amber-100 rounded-lg sm:w-90 sm:mx-auto">
           <ul className="flex flex-col gap-2 p-2">
-            {order.items.map((it) => (
+            {order.items.map((item) => (
               <li
-                key={it.id}
+                key={item.id}
                 className="bg-neutral-800 rounded-lg p-3 flex items-center justify-between"
               >
                 <div className="flex items-center gap-3">
                   <img
-                    src={it.image}
-                    alt={it.name}
+                    src={item.image}
+                    alt={item.name}
                     className="w-12 h-12 rounded-md"
                   />
                   <div>
                     <p className="text-amber-200 dark:text-amber-100">
-                      {it.name}
+                      {item.name}
                     </p>
                     <div className="flex items-center justify-between sm:mt-2">
                       <p className="text-sm text-amber-100 dark:text-amber-200">
-                        Qty: {it.qty}
+                        Qty: {item.qty}
                       </p>
                       <p className="text-amber-100 dark:text-amber-200 font-medium">
-                        ${it.price * it.qty}
+                        ${item.price * item.qty}
                       </p>
                     </div>
                   </div>
@@ -71,32 +70,7 @@ function Order() {
           </ul>
         </section>
 
-        {/* Summary */}
-        <section className="dark:bg-neutral-800 rounded-lg p-4 mt-4 text-neutral-800 dark:text-amber-100 sm:w-90 sm:mx-auto">
-          <div className="flex justify-between py-1">
-            <span className="text-neutral-700 dark:text-amber-100">
-              Subtotal
-            </span>
-            <span className="text-neutral-700 dark:text-amber-100">
-              ${subtotal}
-            </span>
-          </div>
-          <div className="flex justify-between py-1">
-            <span className="text-neutral-700 dark:text-amber-100">
-              Delivery
-            </span>
-            <span className="text-neutral-700 dark:text-amber-100">
-              {order.deliveryFee === 0 ? "Free" : `$${order.deliveryFee}`}
-            </span>
-          </div>
-          <div className="h-px bg-neutral-600 dark:bg-neutral-700 my-2" />
-          <div className="flex justify-between py-1 text-lg sm:text-xl font-semibold">
-            <span className="text-neutral-800 dark:text-amber-200">Total</span>
-            <span className="text-neutral-800 dark:text-amber-200">
-              ${total}
-            </span>
-          </div>
-        </section>
+        <OrderSummary order={order} />
       </main>
     </>
   );
