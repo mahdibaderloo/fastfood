@@ -5,6 +5,7 @@ import image1 from "../assets/images/1.jpg";
 import { useModalStore } from "../store/modalStore";
 import Modal from "../components/Modal";
 import BackButton from "../components/BackButton";
+import AccountForm from "../features/account/AccountForm";
 
 function Account() {
   const { open } = useModalStore();
@@ -38,44 +39,7 @@ function Account() {
             <FaPen size={18} color="#2c2c2c" />
           </div>
         </div>
-
-        <form className="mt-8 p-2 bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md rounded-2xl sm:w-80 sm:h-50 lg:h-fit sm:mx-auto lg:shadow">
-          <div className="p-2">
-            <p className="mb-1 sm:mb-1.5 text-neutral-800 dark:text-amber-300">
-              Name
-            </p>
-            <input
-              type="text"
-              placeholder="Mahdi Baderloo"
-              className="bg-amber-200 dark:bg-neutral-800 text-neutral-800 dark:text-amber-300 p-2 sm:p-2.5 rounded-lg w-full outline-none border-none"
-            />
-          </div>
-          <div className="p-2 sm:mt-1">
-            <p className="mb-1 sm:mb-1.5 text-neutral-800 dark:text-amber-300">
-              Phone
-            </p>
-            <input
-              type="text"
-              placeholder="0910*****98"
-              className="bg-amber-200 dark:bg-neutral-800 text-neutral-800 dark:text-amber-300 p-2 sm:p-2.5 rounded-lg w-full outline-none border-none"
-            />
-          </div>
-          <div className="hidden lg:flex gap-2 p-2">
-            <button
-              className="w-1/2 h-10 mt-2 bg-amber-300 dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-xl cursor-pointer hover:bg-neutral-700 dark:"
-              onClick={handleOpenSaveModal}
-            >
-              Save
-            </button>
-            <button
-              className="w-1/2 h-10 mt-2 bg-red-500 text-white rounded-xl cursor-pointer hover:bg-neutral-700 dark:"
-              onClick={handleOpenLogoutModal}
-            >
-              Logout
-            </button>
-          </div>
-        </form>
-
+        <AccountForm />
         <div className="sm:w-80 sm:mx-auto sm:mt-6 lg:hidden">
           <button
             className="w-full h-10 sm:h-11 mt-2 bg-amber-50 dark:bg-amber-50/20 text-amber-300 rounded-xl sm:text-lg sm:mx-auto"
