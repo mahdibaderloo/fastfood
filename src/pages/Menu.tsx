@@ -4,11 +4,12 @@ import { useFoods } from "../hooks/useFoods.js";
 import { useTheme } from "../store/themeStore.js";
 import { deSlugify } from "../utils/slugify.js";
 
+import Loading from "../components/Loading.js";
 import Filter from "../components/Filter.js";
 import Header from "../components/Header.js";
 import Search from "../components/Search.js";
 import MenuItem from "../features/menu/MenuItem.js";
-import Loading from "../components/Loading.js";
+import MenuLink from "../features/menu/MenuLink.js";
 
 import pizzaIcon from "../assets/images/pizza.svg";
 import pizzaDarkIcon from "../assets/images/pizza-dark.svg";
@@ -78,12 +79,7 @@ function Menu() {
             ))}
         </ul>
         <div className="w-full h-16 sm:h-19 lg:h-4"></div>
-        <a
-          href="http://github.com/mahdibaderloo"
-          className="hidden lg:block text-[0.6rem] ml-1 text-amber-50 cursor-pointer"
-        >
-          Mahdi Baderloo
-        </a>
+        <MenuLink />
       </main>
     </>
   );
