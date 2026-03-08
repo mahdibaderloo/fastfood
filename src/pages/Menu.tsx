@@ -8,11 +8,11 @@ import Loading from "../components/Loading.js";
 import Filter from "../components/Filter.js";
 import Header from "../components/Header.js";
 import Search from "../components/Search.js";
-import MenuItem from "../features/menu/MenuItem.js";
 import MenuLink from "../features/menu/MenuLink.js";
 
 import pizzaIcon from "../assets/images/pizza.svg";
 import pizzaDarkIcon from "../assets/images/pizza-dark.svg";
+import MenuItems from "../features/menu/MenuItems.js";
 
 interface Food {
   id: number;
@@ -72,12 +72,7 @@ function Menu() {
       </Header>
 
       <main className="min-h-screen overflow-y-scroll pt-22 sm:pt-24 lg:pt-18">
-        <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-14 lg:mt-0 p-2">
-          {filteredSearchItems.length > 0 &&
-            filteredSearchItems.map((food) => (
-              <MenuItem key={food.id} item={food} />
-            ))}
-        </ul>
+        <MenuItems filteredSearchItems={filteredSearchItems} />
         <div className="w-full h-16 sm:h-19 lg:h-4"></div>
         <MenuLink />
       </main>
