@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
+import BackButton from "../components/BackButton";
 
 function Notification() {
   const params = useParams();
@@ -7,8 +8,9 @@ function Notification() {
   return (
     <div>
       <Header classP="text-4xl dark:text-amber-300" showBackButton={true} />
-      <main className="p-4 pt-16 lg:pt-28 h-screen flex flex-col gap-2 sm:w-90 lg:w-[70%] sm:mx-auto">
-        <h2 className="text-lg sm:text-xl lg:text-2xl text-neutral-950 dark:text-amber-300">
+      <main className="p-4 pt-16 lg:pt-24 h-screen flex flex-col gap-2 sm:w-90 lg:w-[70%] sm:mx-auto">
+        <BackButton />
+        <h2 className="text-lg sm:text-xl lg:text-2xl text-neutral-950 dark:text-amber-300 lg:mt-2">
           Notification Title #{params.notificationId}
         </h2>
         <p className="text-neutral-900/80 dark:text-amber-300/50 text-[0.7rem] sm:text-[0.8rem] lg:text-[1rem]">
