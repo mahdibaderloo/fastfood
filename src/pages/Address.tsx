@@ -1,17 +1,10 @@
 import BackButton from "../components/BackButton";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
-import AddressForm from "../features/address/AddressForm";
+import AddNewAddressButton from "../features/address/AddNewAddressButton";
 import AddressItem from "../features/address/AddressItem";
-import { useModalStore } from "../store/modalStore";
 
 function Address() {
-  const { open } = useModalStore();
-
-  function handleAddAddress() {
-    open({ title: "Add New Address", content: <AddressForm /> });
-  }
-
   return (
     <>
       <Header
@@ -25,14 +18,7 @@ function Address() {
           <AddressItem />
           <AddressItem />
         </ul>
-        <div className="sm:w-80 sm:mx-auto">
-          <button
-            className="bg-amber-200 text-neutral-800 w-full rounded-lg sm:rounded-xl p-2 mt-10"
-            onClick={handleAddAddress}
-          >
-            Add New Address
-          </button>
-        </div>
+        <AddNewAddressButton />
         <Modal />
         <div className="w-full h-2"></div>
       </main>
