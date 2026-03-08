@@ -7,6 +7,7 @@ import {
 } from "react-icons/io5";
 import { BiSolidNotification } from "react-icons/bi";
 import { TbNotification } from "react-icons/tb";
+import NavbarLinkItem from "./NavbarLinkItem";
 
 const links = [
   {
@@ -44,7 +45,7 @@ function NavbarLinks() {
     <nav>
       <ul className="flex justify-center items-center gap-1">
         {links.map((link) => (
-          <NavbarLinks key={link.id} item={link} />
+          <NavbarLinkItem key={link.id} item={link} />
         ))}
       </ul>
     </nav>

@@ -12,8 +12,6 @@ interface Item {
 }
 
 function NavbarLinkItem({ item }: Item) {
-  console.log(item);
-
   return (
     <li
       title={item.title}

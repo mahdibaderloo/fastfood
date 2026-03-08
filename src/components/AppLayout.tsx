@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
-import DesktopHeader from "../features/navbar/DesktopHeader";
+import DesktopHeader from "../features/desktop-header/DesktopHeader";
 
 function AppLayout() {
   const location = useLocation();
