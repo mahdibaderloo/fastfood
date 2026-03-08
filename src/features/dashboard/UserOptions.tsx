@@ -73,12 +73,12 @@ function UserOptions() {
   const { theme } = useTheme();
 
   return (
-    <div className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 p-2 rounded-xl sm:w-90 sm:h-67 sm:mx-auto flex flex-wrap justify-between gap-1 sm:gap-y-2">
+    <div className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 lg:mt-6 p-2 rounded-xl sm:w-90 sm:h-67 sm:mx-auto flex flex-wrap justify-between gap-1 sm:gap-y-2">
       {options.map((option) => (
         <Link
           key={option.id}
           to={option.path}
-          className="bg-amber-100 dark:bg-neutral-800 w-[31%] sm:w-[32%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow"
+          className="bg-amber-100 dark:bg-neutral-800 w-[31%] sm:w-[32%] p-2 rounded-lg flex flex-col justify-center items-center gap-2 shadow lg:cursor-pointer lg:hover:bg-amber-200 lg:dark:hover:bg-neutral-900 transition-all"
         >
           <p className="w-20 h-16 flex justify-center items-center">
             {theme === "dark" ? option.darkIcon : option.lightIcon}
