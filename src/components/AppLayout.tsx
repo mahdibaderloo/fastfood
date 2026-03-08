@@ -18,7 +18,12 @@ function AppLayout() {
       {width >= 1024 && <DesktopHeader />}
 
       <Outlet />
-      {showNavbar && width < 1024 && <Navbar />}
+      {showNavbar && width < 1024 && (
+        <>
+          <Navbar />
+          <div className="fixed bottom-0 w-full h-3 blur-lg bg-black" />
+        </>
+      )}
     </div>
   );
 }
