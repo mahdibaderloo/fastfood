@@ -9,6 +9,7 @@ import { deSlugify } from "../utils/slugify";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
 import { GoHeart, GoHeartFill } from "react-icons/go";
+import BackButton from "../components/BackButton";
 
 function Item() {
   const { data: items, isLoading } = useFoods();
@@ -58,6 +59,7 @@ function Item() {
         </div>
       </Header>
       <main className="min-h-screen overflow-y-scroll pt-15 flex flex-col items-center">
+        <BackButton />
         <div className="bg-amber-300 dark:bg-neutral-400 w-[100%] h-50 p-2 rounded-full overflow-hidden">
           <img src={item?.image} alt="item-image" />
         </div>

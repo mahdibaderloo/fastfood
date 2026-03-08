@@ -4,6 +4,7 @@ import { FaPen } from "react-icons/fa6";
 import image1 from "../assets/images/1.jpg";
 import { useModalStore } from "../store/modalStore";
 import Modal from "../components/Modal";
+import BackButton from "../components/BackButton";
 
 function Account() {
   const { open } = useModalStore();
@@ -24,6 +25,7 @@ function Account() {
         classP="text-4xl dark:text-amber-300"
       />
       <main className="p-4 pt-22 sm:pt-24 h-screen overflow-y-scroll">
+        <BackButton />
         <div className="w-full sm:w-80 sm:mx-auto relative">
           <div className="w-20 h-20 sm:w-26 sm:h-26 rounded-full bg-amber-50 dark:bg-amber-300 shadow mx-auto overflow-hidden p-0.5">
             <img

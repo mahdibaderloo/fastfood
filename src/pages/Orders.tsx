@@ -1,3 +1,4 @@
+import BackButton from "../components/BackButton";
 import Header from "../components/Header";
 import OrderItem from "../features/order/OrderItem";
 
@@ -11,6 +12,7 @@ function Orders() {
         classP="text-4xl dark:text-amber-300"
       />
       <main className="overflow-y-scroll p-4 pt-20 h-screen">
+        <BackButton />
         <ul className="flex flex-col gap-1 sm:gap-2 sm:w-90 sm:mx-auto">
           <OrderItem />
           <OrderItem />

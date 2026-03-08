@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import pizza from "../assets/images/loading-1.png";
+import BackButton from "../components/BackButton";
 
 function Order() {
   const { orderId } = useParams();
@@ -25,6 +26,7 @@ function Order() {
       <Header showBackButton={true} classP="text-4xl dark:text-amber-300" />
 
       <main className="p-4 pt-16 h-screen overflow-y-scroll">
+        <BackButton />
         <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800 sm:w-90 sm:mx-auto">
           <p className="font-semibold text-amber-300 dark:text-neutral-800">
             Order: {order.id}

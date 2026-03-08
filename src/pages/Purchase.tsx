@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import PurchaseAddressBox from "../features/cart/PurchaseAddressBox";
 import PurchaseItem from "../features/cart/PurchaseItem";
 import { useCartStore } from "../store/cartStore";
+import BackButton from "../components/BackButton";
 
 function Purchase() {
   const { items } = useCartStore();
@@ -16,6 +17,7 @@ function Purchase() {
         classP="text-4xl dark:text-amber-300"
       />
       <main className="p-4 pt-19 h-screen overflow-y-scroll sm:w-90 sm:mx-auto">
+        <BackButton />
         <PurchaseAddressBox />
         <div className="bg-white/40 flex items-center gap-1 p-2 sm:p-3 rounded-xl mt-4 sm:mt-6">
           <CgDanger size={width > 640 ? 55 : 45} color="#262626" />

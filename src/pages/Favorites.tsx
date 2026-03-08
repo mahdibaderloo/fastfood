@@ -1,3 +1,4 @@
+import BackButton from "../components/BackButton";
 import Header from "../components/Header";
 import AddFavoritesButton from "../features/favorites/AddFavoritesButton";
 import FavoritesItem from "../features/favorites/FavoritesItem";
@@ -14,6 +15,7 @@ function Favorites() {
         classP="text-4xl dark:text-amber-300"
       />
       <main className="overflow-y-scroll pt-20 h-screen">
+        <BackButton />
         <ul className="flex items-center justify-start flex-wrap gap-2 p-2 sm:justify-between sm:w-90 sm:mx-auto">
           {favorites.map((item) => (
             <FavoritesItem key={item.id} item={item} />
