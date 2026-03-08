@@ -6,6 +6,7 @@ import BackButton from "../components/BackButton";
 
 import pizza from "../assets/images/loading-1.png";
 import OrderItemsQuantity from "../features/order/OrderItemsQuantity";
+import OrderTimeInfo from "../features/order/OrderTimeInfo";
 
 function Order() {
   const { orderId } = useParams();
@@ -27,17 +28,7 @@ function Order() {
 
       <main className="p-4 pt-16 h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] lg:mx-auto">
         <BackButton />
-        <section className="bg-neutral-800 dark:bg-amber-200 rounded-lg p-4 text-neutral-800 sm:w-90 sm:mx-auto">
-          <p className="font-semibold text-amber-300 dark:text-neutral-800">
-            Order: {order.id}
-          </p>
-          <p className="text-sm text-amber-200 dark:text-neutral-700 mt-1 sm:mt-3">
-            Date: {order.date}
-          </p>
-          <p className="text-sm text-amber-200 dark:text-neutral-700 mt-1">
-            Time: {order.time}
-          </p>
-        </section>
+        <OrderTimeInfo order={order} />
         <OrderItemsQuantity order={order} />
         <OrderSummary order={order} />
       </main>
