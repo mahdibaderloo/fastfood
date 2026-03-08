@@ -14,7 +14,7 @@ function CartPrice() {
   }
 
   return (
-    <form className="p-4 bg-amber-50 dark:bg-amber-300 mt-2 rounded-t-xl pb-18 sm:pb-20">
+    <form className="p-4 bg-amber-50 dark:bg-amber-300 mt-2 lg:mt-0 rounded-t-xl lg:rounded-l-2xl lg:rounded-t-none pb-18 sm:pb-4 lg:h-fit lg:flex lg:flex-col lg:justify-between">
       <div className="bg-amber-200 dark:bg-neutral-800 p-1 rounded-lg sm:rounded-2xl flex sm:w-70 sm:h-12 sm:mx-auto">
         <input
           type="text"
@@ -39,14 +39,14 @@ function CartPrice() {
           <span className="text-neutral-700">Discount</span>
           <p className="text-neutral-800">$0</p>
         </div>
-        <div className="flex justify-between items-center mt-4 sm:mt-6 sm:mx-2">
+        <div className="flex justify-between items-center mt-4 sm:mt-6 sm:mx-2 lg:text-lg">
           <span className="text-neutral-700">Total</span>
           <p className="text-neutral-800">
             ${isEmpty ? 0 : totalPrice + delivery}
           </p>
         </div>
         <button
-          className={`p-2 rounded-lg sm:rounded-2xl w-full sm:h-12 mt-6 sm:text-xl inline-block relative overflow-hidden ${isEmpty ? "hidden invisible" : "animate-bounce bg-amber-200 dark:bg-neutral-800 dark:text-amber-300 text-amber-800"}`}
+          className={`p-2 rounded-lg sm:rounded-2xl w-full sm:h-12 mt-6 sm:text-xl inline-block relative overflow-hidden ${isEmpty ? "hidden invisible" : "animate-bounce lg:animate-none bg-amber-200 dark:bg-neutral-800 dark:text-amber-300 text-amber-800 lg:cursor-pointer"}`}
           onClick={handlePurchase}
           disabled={isEmpty}
         >

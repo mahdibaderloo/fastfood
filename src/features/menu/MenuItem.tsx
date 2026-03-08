@@ -70,7 +70,7 @@ function MenuItem({ item }: Item) {
       className="bg-amber-50 rounded-lg w-[48%] sm:w-[10rem] flex flex-col p-2 relative"
       onClick={handleNavigate}
     >
-      <p className="self-end">
+      <p className="self-end lg:cursor-pointer">
         {isItemInFavorites ? (
           <GoHeartFill
             size={width > 640 ? 34 : 30}
@@ -88,7 +88,7 @@ function MenuItem({ item }: Item) {
       <img
         src={item.image}
         alt="product-image"
-        className="w-full h-24 sm:h-[9rem] mt-2 object-cover rounded-lg"
+        className="w-full h-24 sm:h-[9rem] mt-2 object-cover rounded-lg lg:cursor-pointer"
         loading="lazy"
       />
       <p className="text-[0.6rem] sm:text-[0.8rem] text-neutral-900 mt-2">
@@ -98,7 +98,7 @@ function MenuItem({ item }: Item) {
       {isItemInCart ? (
         <button
           title="Remove from cart"
-          className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 sm:p-2.5 rounded-tl-lg rounded-br-lg"
+          className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 sm:p-2.5 rounded-tl-lg rounded-br-lg lg:cursor-pointer"
           onClick={handleRemoveItemFromCart}
         >
           <IoMdRemove />
@@ -106,7 +106,7 @@ function MenuItem({ item }: Item) {
       ) : (
         <button
           title="Add to cart"
-          className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 sm:p-2.5 rounded-tl-lg rounded-br-lg"
+          className="self-end bg-amber-200 absolute right-0 bottom-0 p-2 sm:p-2.5 rounded-tl-lg rounded-br-lg lg:cursor-pointer"
           onClick={handleAddItemToCart}
         >
           <IoMdAdd />
