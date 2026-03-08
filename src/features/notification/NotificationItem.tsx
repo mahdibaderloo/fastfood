@@ -10,13 +10,13 @@ function NotificationItem({ id, isUnRead }: NotificationProps) {
   return (
     <li
       style={{ backgroundColor: isUnRead ? "#fef3c6" : "#fee685" }}
-      className="bg-amber-100 rounded-lg p-3 relative"
+      className="bg-amber-100 rounded-lg p-3 lg:p-2 relative"
     >
       <Link to={`/notifications/${id}`}>
         <div className="flex justify-between items-center">
           <p className="text-neutral-800">Notification Title</p>
           <p className="mr-1">
-            <CgChevronRight size={30} color="#262626" />
+            <CgChevronRight size={30} color="#262626" className="lg:w-3" />
           </p>
         </div>
       </Link>
