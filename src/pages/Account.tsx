@@ -24,7 +24,7 @@ function Account() {
         showBackButton={true}
         classP="text-4xl dark:text-amber-300"
       />
-      <main className="p-4 pt-22 sm:pt-24 h-screen overflow-y-scroll">
+      <main className="p-4 pt-22 sm:pt-24 lg:pt-16 lg:w-[80%] lg:mx-auto h-screen overflow-y-scroll lg:overflow-hidden">
         <BackButton />
         <div className="w-full sm:w-80 sm:mx-auto relative">
           <div className="w-20 h-20 sm:w-26 sm:h-26 rounded-full bg-amber-50 dark:bg-amber-300 shadow mx-auto overflow-hidden p-0.5">
@@ -34,12 +34,12 @@ function Account() {
               className="rounded-full shadow object-cover"
             />
           </div>
-          <div className="bg-amber-50 dark:bg-amber-300 backdrop-blur-md w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center absolute left-[58%] bottom-1">
+          <div className="bg-amber-50 dark:bg-amber-300 backdrop-blur-md w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center absolute left-[58%] bottom-1 lg:cursor-pointer">
             <FaPen size={18} color="#2c2c2c" />
           </div>
         </div>
 
-        <form className="mt-8 p-2 bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md rounded-2xl sm:w-80 sm:h-50 sm:mx-auto">
+        <form className="mt-8 p-2 bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md rounded-2xl sm:w-80 sm:h-50 lg:h-fit sm:mx-auto lg:shadow">
           <div className="p-2">
             <p className="mb-1 sm:mb-1.5 text-neutral-800 dark:text-amber-300">
               Name
@@ -55,13 +55,28 @@ function Account() {
               Phone
             </p>
             <input
-              type="number"
+              type="text"
               placeholder="0910*****98"
               className="bg-amber-200 dark:bg-neutral-800 text-neutral-800 dark:text-amber-300 p-2 sm:p-2.5 rounded-lg w-full outline-none border-none"
             />
           </div>
+          <div className="hidden lg:flex gap-2 p-2">
+            <button
+              className="w-1/2 h-10 mt-2 bg-amber-300 dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-xl cursor-pointer hover:bg-neutral-700 dark:"
+              onClick={handleOpenSaveModal}
+            >
+              Save
+            </button>
+            <button
+              className="w-1/2 h-10 mt-2 bg-red-500 text-white rounded-xl cursor-pointer hover:bg-neutral-700 dark:"
+              onClick={handleOpenLogoutModal}
+            >
+              Logout
+            </button>
+          </div>
         </form>
-        <div className="sm:w-80 sm:mx-auto sm:mt-6">
+
+        <div className="sm:w-80 sm:mx-auto sm:mt-6 lg:hidden">
           <button
             className="w-full h-10 sm:h-11 mt-2 bg-amber-50 dark:bg-amber-50/20 text-amber-300 rounded-xl sm:text-lg sm:mx-auto"
             onClick={handleOpenSaveModal}
