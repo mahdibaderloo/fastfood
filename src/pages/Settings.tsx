@@ -12,6 +12,7 @@ import Header from "../components/Header.js";
 import SettingsItem from "../features/settings/SettingsItem.js";
 import Modal from "../components/Modal.js";
 import { useModalStore } from "../store/modalStore.js";
+import ToggleThemeBox from "../features/settings/ToggleThemeBox.js";
 
 const generalItems = [
   {
@@ -77,7 +78,7 @@ const feedbackItems = [
 ];
 
 function Settings() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const { open } = useModalStore();
 
   function handleLogoutModal() {
@@ -98,26 +99,7 @@ function Settings() {
         pContent="Sett!ngs"
       />
       <main className="overflow-y-scroll p-4">
-        <div className="sm:w-90 sm:mx-auto">
-          <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
-            Theme
-          </p>
-          <div
-            className="flex items-center justify-between p-2 sm:py-4 sm:px-14"
-            onClick={toggleTheme}
-          >
-            <p className="text-neutral-900 dark:text-amber-300">
-              {theme === "dark" ? "Dark" : "Light"}
-            </p>
-            <p>
-              {theme === "dark" ? (
-                <BsMoonStarsFill color="#ffd230" />
-              ) : (
-                <RiSunLine size={30} />
-              )}
-            </p>
-          </div>
-        </div>
+        <ToggleThemeBox />
         <div className="mt-4 sm:w-90 sm:mx-auto">
           <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
             General
