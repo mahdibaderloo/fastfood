@@ -16,7 +16,6 @@ function Wallet() {
           <BackButton />
           <Balance />
           <Transactions />
-          {/* <div className="w-full h-18"></div> */}
         </main>
       </div>
     </>

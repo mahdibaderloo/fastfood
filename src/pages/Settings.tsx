@@ -16,7 +16,7 @@ function Settings() {
         <GeneralSettings />
         <FeedbackBox />
         <Modal />
-        <div className="w-full h-24 sm:h-26"></div>
+        <div className="w-full h-24 sm:h-26 lg:hidden"></div>
       </main>
     </div>
   );
