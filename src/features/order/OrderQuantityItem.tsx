@@ -3,7 +3,6 @@ interface Item {
 }
 
 function OrderQuantityItem({ item }: Item) {
-  console.log(item);
   return (
     <li
       key={item.id}
