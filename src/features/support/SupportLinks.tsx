@@ -34,16 +34,18 @@ const links: Link[] = [
 
 function SupportLinks() {
   return (
-    <ul className="flex justify-evenly items-center text-amber-200 mt-4">
+    <ul className="flex lg:flex-col lg:gap-3 justify-evenly lg:justify-center items-center text-amber-200 mt-4 lg:ml-4">
       {links.map((link) => (
         <li
           key={link.id}
-          className="flex flex-col items-center justify-center sm:gap-1 hover:text-amber-300 transition-all delay-100"
+          className="flex flex-col items-center justify-center sm:gap-1 hover:text-amber-300 transition-all lg:cursor-pointer"
         >
-          <p className="bg-amber-200 w-fit p-2 sm:p-3 rounded-full hover:bg-amber-300 transition-all delay-100">
+          <p className="bg-amber-200 w-fit p-2 sm:p-3 rounded-full hover:bg-amber-300 transition-all">
             {link.icon}
           </p>
-          <span className="text-[0.6rem] sm:text-[0.75rem]">{link.title}</span>
+          <span className="text-[0.6rem] sm:text-[0.75rem] lg:text-[0.6rem]">
+            {link.title}
+          </span>
         </li>
       ))}
     </ul>
