@@ -32,21 +32,21 @@ function AddressMenuOptions({ isOpen }: OptionsProp) {
       `}
     >
       <li
-        className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1"
+        className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1 lg:cursor-pointer"
         // onClick={handleOpenEditModal}
       >
         <span>Select</span>
         <FaCheckCircle />
       </li>
       <li
-        className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1"
+        className="flex items-center justify-between gap-4 text-neutral-800 border-b-2 border-neutral-800/10 pb-1 lg:cursor-pointer"
         onClick={handleOpenEditModal}
       >
         <span>Edit</span>
         <MdModeEditOutline />
       </li>
       <li
-        className="flex items-center justify-between gap-4 text-red-700"
+        className="flex items-center justify-between gap-4 text-red-700 lg:cursor-pointer"
         onClick={handleOpenDeleteModal}
       >
         <span>Delete</span>

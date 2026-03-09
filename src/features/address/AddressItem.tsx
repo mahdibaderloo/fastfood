@@ -28,14 +28,14 @@ function AddressItem() {
 
   return (
     <li
-      className="w-full bg-amber-100 p-2 sm:p-3 rounded-2xl flex flex-col gap-2 relative"
+      className="w-full lg:w-[48%] bg-amber-100 p-2 sm:p-3 rounded-2xl flex flex-col gap-2 relative"
       onClick={() => setIsOpenOptions(false)}
     >
       <div className="flex justify-between items-center">
         <p>
           <FaLocationDot size={width > 640 ? 34 : 30} color="#2c2c2c" />
         </p>
-        <p onClick={handleOpenOptions}>
+        <p onClick={handleOpenOptions} className="lg:cursor-pointer">
           <CiMenuKebab size={width > 640 ? 30 : 26} color="#2c2c2c" />
         </p>
       </div>
