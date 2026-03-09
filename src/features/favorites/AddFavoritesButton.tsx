@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function AddFavoritesButton() {
   return (
-    <li className="bg-amber-50 rounded-lg w-full flex flex-col justify-center items-center p-2 relative h-9 sm:h-10.5">
+    <div className="bg-amber-50 rounded-lg w-[96%] flex flex-col justify-center items-center p-2 relative h-9 sm:h-10.5 sm:w-86 lg:w-124 mx-auto lg:cursor-pointer">
       <Link to="/">
         <p className="h-full flex justify-center items-center">
           <IoMdAdd size={30} color="#525252" />
@@ -12,7 +12,7 @@ function AddFavoritesButton() {
           </span>
         </p>
       </Link>
-    </li>
+    </div>
   );
 }
 
