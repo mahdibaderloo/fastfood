@@ -71,7 +71,7 @@ function Menu() {
         </div>
       </Header>
 
-      <main className="min-h-screen overflow-y-scroll pt-22 sm:pt-24 lg:pt-18">
+      <main className="min-h-screen overflow-y-scroll lg:overflow-hidden pt-22 sm:pt-24 lg:pt-18">
         <MenuItems filteredSearchItems={filteredSearchItems} />
         <div className="w-full h-16 sm:h-19 lg:h-4"></div>
         <MenuLink />

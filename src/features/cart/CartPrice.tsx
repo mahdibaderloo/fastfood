@@ -14,7 +14,7 @@ function CartPrice() {
   }
 
   return (
-    <form className="p-4 bg-amber-50 dark:bg-amber-300 mt-2 lg:mt-0 rounded-t-xl lg:rounded-l-2xl lg:rounded-t-none pb-18 sm:pb-4 lg:h-fit lg:flex lg:flex-col lg:justify-between">
+    <form className="p-4 bg-amber-50 dark:bg-amber-300 mt-2 lg:mt-0 rounded-t-xl lg:rounded-t-2xl pb-18 sm:pb-4 lg:h-fit lg:flex lg:flex-col lg:justify-between">
       <div className="bg-amber-200 dark:bg-neutral-800 p-1 rounded-lg sm:rounded-2xl flex sm:w-70 sm:h-12 sm:mx-auto">
         <input
           type="text"
@@ -22,7 +22,7 @@ function CartPrice() {
           placeholder="Enter your code..."
           className="pl-2 border-none outline-none text-amber-800 dark:text-amber-300 w-[80%] sm:font-semibold sm:tracking-wide"
         />
-        <button className="bg-amber-50 text-amber-800 p-1 sm:py-2 sm:px-3 rounded-lg sm:rounded-xl shadow">
+        <button className="bg-amber-50 hover:bg-white transition-all text-amber-800 p-1 sm:py-2 sm:px-3 rounded-lg sm:rounded-xl shadow lg:cursor-pointer">
           Apply
         </button>
       </div>
@@ -46,7 +46,7 @@ function CartPrice() {
           </p>
         </div>
         <button
-          className={`p-2 rounded-lg sm:rounded-2xl w-full sm:h-12 mt-6 sm:text-xl inline-block relative overflow-hidden ${isEmpty ? "hidden invisible" : "animate-bounce lg:animate-none bg-amber-200 dark:bg-neutral-800 dark:text-amber-300 text-amber-800 lg:cursor-pointer"}`}
+          className={`p-2 rounded-lg sm:rounded-2xl w-full sm:h-12 mt-6 sm:text-xl inline-block relative overflow-hidden ${isEmpty ? "hidden invisible" : "animate-bounce lg:animate-none transition-all bg-amber-200 lg:hover:bg-amber-300 dark:bg-neutral-800 lg:dark:hover:bg-neutral-950 dark:text-amber-300 text-amber-800 lg:cursor-pointer"}`}
           onClick={handlePurchase}
           disabled={isEmpty}
         >
