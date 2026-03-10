@@ -11,10 +11,12 @@ function Settings() {
         classHeader="w-full flex items-center justify-center pt-4"
         pContent="Sett!ngs"
       />
-      <main className="overflow-y-scroll p-4 lg:pt-16">
+      <main className="overflow-y-scroll p-4 lg:pt-16 lg:scrollbar-hide lg:w-[80%] lg:mx-auto">
         <ToggleThemeBox />
-        <GeneralSettings />
-        <FeedbackBox />
+        <div className="lg:flex lg:items-center lg:gap-4 lg:mt-6">
+          <GeneralSettings />
+          <FeedbackBox />
+        </div>
         <Modal />
         <div className="w-full h-24 sm:h-26 lg:hidden"></div>
       </main>

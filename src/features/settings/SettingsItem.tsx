@@ -16,7 +16,7 @@ function SettingsItem({ children, title, url, onClick }: ItemProps) {
 
   return (
     <li
-      className="flex items-center justify-between p-2 sm:py-4 sm:w-[24rem] sm:mx-auto border-b-2 border-[#2c2c2c1a] dark:border-[#fef3c62d]"
+      className="flex items-center justify-between p-2 sm:py-4 sm:w-[24rem] lg:w-full sm:mx-auto lg:cursor-pointer"
       onClick={() => (url ? navigate(url) : onClick?.())}
     >
       <div className="flex items-center justify-start">
