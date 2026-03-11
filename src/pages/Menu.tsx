@@ -8,7 +8,6 @@ import Loading from "../components/Loading.js";
 import Filter from "../components/Filter.js";
 import Header from "../components/Header.js";
 import Search from "../components/Search.js";
-import MenuLink from "../features/menu/MenuLink.js";
 
 import pizzaIcon from "../assets/images/pizza.svg";
 import pizzaDarkIcon from "../assets/images/pizza-dark.svg";
@@ -74,7 +73,6 @@ function Menu() {
       <main className="min-h-screen overflow-y-scroll lg:overflow-hidden pt-22 sm:pt-24 lg:pt-18">
         <MenuItems filteredSearchItems={filteredSearchItems} />
         <div className="w-full h-16 sm:h-19 lg:h-4"></div>
-        <MenuLink />
       </main>
     </>
   );
