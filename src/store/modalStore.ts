@@ -8,7 +8,7 @@ interface OpenModalPayload {
 
 interface ModalStore {
   isOpen: boolean;
-  title: string;
+  title?: string;
   content: ReactNode | null;
 
   open: (payload: OpenModalPayload) => void;

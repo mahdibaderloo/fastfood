@@ -16,7 +16,7 @@ function Purchase() {
         pContent="PURCHA$E"
         classP="text-4xl dark:text-amber-300"
       />
-      <main className="p-4 pt-19 min-h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] lg:mx-auto sm:w-90 sm:mx-auto">
+      <main className="p-4 pt-19 min-h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] lg:pt-16 lg:mx-auto sm:w-90 sm:mx-auto">
         <BackButton />
         <PurchaseAddressBox />
         <div className="bg-white/40 flex items-center gap-1 p-2 sm:p-3 rounded-xl mt-4 sm:mt-6">
