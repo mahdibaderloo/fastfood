@@ -16,7 +16,7 @@ type Items = { filteredSearchItems: Food[] };
 function MenuItems({ filteredSearchItems }: Items) {
   console.log(filteredSearchItems);
   return (
-    <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-14 lg:mt-0 p-2">
+    <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-14 lg:mt-0 p-2 xl:w-[1100px] lg:mx-auto">
       {filteredSearchItems.length > 0 &&
         filteredSearchItems.map((food) => (
           <MenuItem key={food.id} item={food} />
