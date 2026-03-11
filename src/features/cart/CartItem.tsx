@@ -18,7 +18,7 @@ function CartItem({ item }: ItemProp) {
   const { increaseItemCount, decreaseItemCount } = useCartStore();
 
   return (
-    <li className="flex items-center bg-amber-50 rounded-xl sm:rounded-3xl p-2 shadow w-[95%] sm:w-full lg:w-[47%] sm:h-24 mx-auto">
+    <li className="flex items-center bg-amber-50 rounded-xl sm:rounded-3xl p-2 shadow w-[95%] sm:w-full lg:w-[49%] sm:h-24 mx-auto">
       <div className="bg-amber-200 w-19 h-14 sm:w-26 lg:w-27 sm:h-full rounded-xl sm:rounded-2xl shadow overflow-hidden flex justify-center items-center p-0.5 lg:cursor-pointer">
         <img src={item.image} alt="product-image" className="w-full" />
       </div>
