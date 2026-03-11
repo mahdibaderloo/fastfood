@@ -17,7 +17,7 @@ type ItemProp = { item: Item };
 
 export default function PurchaseItem({ item }: ItemProp) {
   return (
-    <li className="w-full lg:w-[45%] h-20 sm:h-24 bg-amber-100 p-2 sm:p-3 rounded-2xl flex justify-between shadow">
+    <li className="w-full lg:w-[45%] xl:w-[48%] h-20 sm:h-24 bg-amber-100 p-2 sm:p-3 rounded-2xl flex justify-between shadow">
       <div className="flex flex-col justify-around">
         <div className="flex items-center gap-2 text-neutral-800">
           <FaPizzaSlice />

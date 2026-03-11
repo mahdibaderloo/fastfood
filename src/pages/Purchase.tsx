@@ -16,10 +16,10 @@ function Purchase() {
         pContent="PURCHA$E"
         classP="text-4xl dark:text-amber-300"
       />
-      <main className="p-4 pt-19 min-h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] lg:pt-16 lg:mx-auto sm:w-90 sm:mx-auto">
+      <main className="p-4 xl:px-2 pt-19 min-h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] xl:w-[1100px] lg:pt-16 lg:mx-auto sm:w-90 sm:mx-auto">
         <BackButton />
         <PurchaseAddressBox />
-        <div className="bg-white/40 flex items-center gap-1 p-2 sm:p-3 rounded-xl mt-4 sm:mt-6">
+        <div className="bg-white/40 flex items-center gap-1 p-2 sm:p-3 rounded-xl mt-4 sm:mt-6 xl:w-[90%] xl:mx-auto">
           <CgDanger size={width > 640 ? 55 : 45} color="#262626" />
           <p className="text-neutral-800 text-[0.5rem] sm:text-[0.65rem] lg:text-[0.7rem] text-justify">
             The invoice will be delivered together with your order. You can also
@@ -27,7 +27,7 @@ function Purchase() {
           </p>
         </div>
 
-        <div>
+        <div className="xl:w-[90%] xl:mx-auto">
           <p className="mt-4 sm:mt-6 text-[0.7rem] sm:text-[0.8rem] text-neutral-800 dark:text-amber-100">
             Items:
           </p>

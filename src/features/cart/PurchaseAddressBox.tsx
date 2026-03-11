@@ -6,7 +6,7 @@ function PurchaseAddressBox() {
 
   return (
     <>
-      <div className="w-full lg:mt-2 bg-amber-100 p-3 rounded-2xl flex flex-col gap-2 sm:gap-4 relative">
+      <div className="w-full xl:w-[90%] xl:mx-auto lg:mt-2 bg-amber-100 p-3 rounded-2xl flex flex-col gap-2 sm:gap-4 relative">
         <div className="flex justify-between items-center">
           <p>
             <FaLocationDot size={width > 640 ? 34 : 30} color="#2c2c2c" />
@@ -21,7 +21,7 @@ function PurchaseAddressBox() {
       </div>
       <Link
         to="/address"
-        className="text-[0.5rem] sm:text-[0.65rem] text-blue-400 underline ml-2 lg:ml-4"
+        className="text-[0.5rem] sm:text-[0.65rem] text-blue-400 underline ml-2 lg:ml-4 xl:ml-12"
       >
         Edit address
       </Link>
