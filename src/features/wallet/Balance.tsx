@@ -4,7 +4,6 @@ import { useTheme } from "../../store/themeStore";
 
 function Balance() {
   const { theme } = useTheme();
-  const width = window.innerWidth;
 
   return (
     <div className="bg-neutral-800 dark:bg-amber-300 lg:bg-amber-100 lg:dark:bg-amber-100 w-[85%] lg:w[35%] mx-auto rounded-xl lg:rounded-none sm:w-70 sm:mx-auto lg:mt-0 lg:border-r lg:border-amber-300/20">
@@ -20,9 +19,17 @@ function Balance() {
         <li className="flex flex-col items-center justify-center">
           <span className="bg-amber-300 dark:bg-neutral-800 p-2 sm:p-3 rounded-full lg:cursor-pointer">
             {theme === "dark" ? (
-              <GiPayMoney size={width > 640 ? 36 : 30} color="#fef3c6" />
+              <GiPayMoney
+                size={30}
+                color="#fef3c6"
+                className="md:w-6 md:h-6 lg:w-8 lg:h-8"
+              />
             ) : (
-              <GiPayMoney size={width > 640 ? 36 : 30} color="#262626" />
+              <GiPayMoney
+                size={30}
+                color="#262626"
+                className="md:w-6 md:h-6 lg:w-8 lg:h-8"
+              />
             )}
           </span>
           <p className="text-[0.6rem] sm:text-[0.7rem] sm:mt-1 text-amber-300 dark:text-neutral-800 lg:text-neutral-800">
@@ -32,9 +39,17 @@ function Balance() {
         <li className="flex flex-col items-center justify-center">
           <span className="bg-amber-300 dark:bg-neutral-800 p-2 sm:p-3 rounded-full lg:cursor-pointer">
             {theme === "dark" ? (
-              <GiReceiveMoney size={width > 640 ? 36 : 30} color="#fef3c6" />
+              <GiReceiveMoney
+                size={30}
+                color="#fef3c6"
+                className="md:w-6 md:h-6 lg:w-8 lg:h-8"
+              />
             ) : (
-              <GiReceiveMoney size={width > 640 ? 36 : 30} color="#262626" />
+              <GiReceiveMoney
+                size={30}
+                color="#262626"
+                className="md:w-6 md:h-6 lg:w-8 lg:h-8"
+              />
             )}
           </span>
           <p className="text-[0.6rem] sm:text-[0.7rem] sm:mt-1 text-amber-300 dark:text-neutral-800 lg:text-neutral-800">
