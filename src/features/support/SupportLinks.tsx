@@ -38,7 +38,7 @@ const links: Link[] = [
 
 function SupportLinks() {
   return (
-    <ul className="flex lg:flex-col xl:flex-row xl:mx-auto lg:gap-3 xl:gap-12 justify-evenly lg:justify-center items-center text-amber-200 mt-4 lg:ml-4">
+    <ul className="flex lg:flex-col xl:flex-row xl:mx-auto lg:gap-3 xl:gap-12 2xl:gap-16 justify-evenly lg:justify-center items-center text-amber-200 mt-4 lg:ml-4">
       {links.map((link) => (
         <li
           key={link.id}
