@@ -29,7 +29,7 @@ function FavoritesItem({ item }: FavoriteProps) {
 
   return (
     <li className="bg-amber-50 rounded-lg w-[48%] sm:w-[48.5%] lg:w-[10rem] lg:h-fit h-[300px] flex flex-col justify-between p-2 relative">
-      <p className="self-end">
+      <p className="self-end lg:cursor-pointer">
         <GoHeartFill
           size={width > 640 ? 36 : 30}
           color="#2c2c2c"
