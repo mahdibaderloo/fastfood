@@ -15,7 +15,6 @@ interface Option {
   path: string;
   lightIcon: ReactNode;
   darkIcon: ReactNode;
-  tabletSize: number;
 }
 
 const options: Option[] = [
@@ -23,49 +22,91 @@ const options: Option[] = [
     id: 1,
     title: "Account",
     path: "/account",
-    lightIcon: <MdManageAccounts size={56} color="#262626" />,
-    darkIcon: <MdManageAccounts size={56} color="#ffd230" />,
-    tabletSize: 60,
+    lightIcon: (
+      <MdManageAccounts
+        size={56}
+        color="#262626"
+        className="2xl:w-16 2xl:h-16"
+      />
+    ),
+    darkIcon: (
+      <MdManageAccounts
+        size={56}
+        color="#ffd230"
+        className="2xl:w-16 2xl:h-16"
+      />
+    ),
   },
   {
     id: 2,
     title: "Orders",
     path: "/orders",
-    lightIcon: <PiHandbagFill size={50} color="#262626" />,
-    darkIcon: <PiHandbagFill size={50} color="#ffd230" />,
-    tabletSize: 60,
+    lightIcon: (
+      <PiHandbagFill size={50} color="#262626" className="2xl:w-14 2xl:h-14" />
+    ),
+    darkIcon: (
+      <PiHandbagFill size={50} color="#ffd230" className="2xl:w-14 2xl:h-14" />
+    ),
   },
   {
     id: 3,
     title: "Favorites",
     path: "/favorites",
-    lightIcon: <TbJewishStarFilled size={50} color="#262626" />,
-    darkIcon: <TbJewishStarFilled size={50} color="#ffd230" />,
-    tabletSize: 60,
+    lightIcon: (
+      <TbJewishStarFilled
+        size={50}
+        color="#262626"
+        className="2xl:w-14 2xl:h-14"
+      />
+    ),
+    darkIcon: (
+      <TbJewishStarFilled
+        size={50}
+        color="#ffd230"
+        className="2xl:w-14 2xl:h-14"
+      />
+    ),
   },
   {
     id: 4,
     title: "Wallet",
     path: "/wallet",
-    lightIcon: <IoWallet size={50} color="#262626" />,
-    darkIcon: <IoWallet size={50} color="#ffd230" />,
-    tabletSize: 60,
+    lightIcon: (
+      <IoWallet size={50} color="#262626" className="2xl:w-16 2xl:h-16" />
+    ),
+    darkIcon: (
+      <IoWallet size={50} color="#ffd230" className="2xl:w-16 2xl:h-16" />
+    ),
   },
   {
     id: 5,
     title: "Address",
     path: "/address",
-    lightIcon: <FaLocationDot size={50} color="#262626" />,
-    darkIcon: <FaLocationDot size={50} color="#ffd230" />,
-    tabletSize: 60,
+    lightIcon: (
+      <FaLocationDot size={50} color="#262626" className="2xl:w-14 2xl:h-14" />
+    ),
+    darkIcon: (
+      <FaLocationDot size={50} color="#ffd230" className="2xl:w-14 2xl:h-14" />
+    ),
   },
   {
     id: 6,
     title: "Support",
     path: "/support",
-    lightIcon: <TfiHeadphoneAlt size={50} color="#262626" />,
-    darkIcon: <TfiHeadphoneAlt size={50} color="#ffd230" />,
-    tabletSize: 60,
+    lightIcon: (
+      <TfiHeadphoneAlt
+        size={50}
+        color="#262626"
+        className="2xl:w-14 2xl:h-14"
+      />
+    ),
+    darkIcon: (
+      <TfiHeadphoneAlt
+        size={50}
+        color="#ffd230"
+        className="2xl:w-14 2xl:h-14"
+      />
+    ),
   },
 ];
 
@@ -73,7 +114,7 @@ function UserOptions() {
   const { theme } = useTheme();
 
   return (
-    <div className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 lg:mt-6 p-2 rounded-xl sm:w-90 sm:h-67 sm:mx-auto flex flex-wrap justify-between gap-1 sm:gap-y-2">
+    <div className="bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md m-4 mt-13 lg:mt-6 p-2 rounded-xl sm:w-90 2xl:w-110 sm:h-67 2xl:h-80 sm:mx-auto flex flex-wrap justify-between gap-1 sm:gap-y-2">
       {options.map((option) => (
         <Link
           key={option.id}
@@ -83,7 +124,7 @@ function UserOptions() {
           <p className="w-20 h-16 flex justify-center items-center">
             {theme === "dark" ? option.darkIcon : option.lightIcon}
           </p>
-          <p className="text-sm sm:text-[1rem] dark:text-amber-300">
+          <p className="text-sm sm:text-[1rem] 2xl:text-lg dark:text-amber-300">
             {option.title}
           </p>
         </Link>
