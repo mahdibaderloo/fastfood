@@ -26,7 +26,7 @@ function Order() {
     <>
       <Header showBackButton={true} classP="text-4xl dark:text-amber-300" />
 
-      <main className="p-4 xl:px-2 pt-16 h-screen lg:min-h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] xl:w-[1100px] lg:mx-auto">
+      <main className="p-4 xl:px-2 pt-16 2xl:pt-20 h-screen lg:min-h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] xl:w-[1100px] 2xl:w-[1350px] lg:mx-auto">
         <BackButton />
         <OrderTimeInfo order={order} />
         <OrderItemsQuantity order={order} />
