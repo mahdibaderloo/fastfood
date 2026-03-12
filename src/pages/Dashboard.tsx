@@ -4,7 +4,7 @@ import UserOptions from "../features/dashboard/UserOptions.js";
 function Dashboard() {
   return (
     <div className="bg-amber-300 dark:bg-neutral-800">
-      <main className="flex flex-col overflow-y-scroll lg:overflow-hidden min-h-screen">
+      <main className="flex flex-col overflow-y-scroll lg:overflow-hidden min-h-screen 2xl:pt-10">
         <UserInformation />
         <UserOptions />
       </main>

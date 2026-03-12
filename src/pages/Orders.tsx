@@ -12,7 +12,7 @@ function Orders() {
         showBackButton={true}
         classP="text-4xl dark:text-amber-300"
       />
-      <main className="overflow-y-scroll lg:overflow-hidden lg:w-[80%] xl:w-[1100px] lg:mx-auto p-4 xl:px-2 pt-20 lg:pt-16 min-h-screen">
+      <main className="overflow-y-scroll lg:overflow-hidden lg:w-[80%] xl:w-[1100px] 2xl:w-[1350px] lg:mx-auto p-4 xl:px-2 pt-20 lg:pt-16 2xl:pt-20 min-h-screen">
         <BackButton />
         <ul className="flex flex-col lg:flex-row lg:justify-center lg:flex-wrap gap-1 sm:gap-2 sm:w-90 lg:w-full lg:mt-4 sm:mx-auto lg:overflow-y-auto">
           <OrderItem />

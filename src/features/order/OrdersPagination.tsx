@@ -2,7 +2,7 @@ import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
 function OrdersPagination() {
   return (
-    <div className="hidden lg:flex w-full mt-2 justify-center items-center gap-2">
+    <div className="hidden lg:flex w-full mt-2 2xl:mt-4 justify-center items-center gap-2 2xl:gap-4">
       <CgChevronLeft
         size={22}
         className="text-neutral-700/50 dark:text-amber-200/30 transition-all cursor-pointer"
