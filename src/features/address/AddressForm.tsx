@@ -7,7 +7,7 @@ function AddressForm() {
         </label>
         <textarea
           id="address"
-          className="ml-1 text-[0.7rem] lg:text-[0.9rem] text-neutral-700 bg-amber-50 p-1 pl-2 rounded-xl outline-none border-none shadow min-h-12 sm:min-h-20 max-h-20 sm:max-h-28"
+          className="ml-1 text-[0.7rem] lg:text-[0.9rem] text-neutral-700 bg-amber-50 p-1 pl-2 rounded-xl outline-none border-none shadow min-h-12 sm:min-h-20 max-h-20 sm:max-h-28 xl:min-h-26 xl:max-h-30"
           draggable="false"
           maxLength={200}
         >
