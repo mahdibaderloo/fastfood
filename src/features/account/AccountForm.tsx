@@ -14,7 +14,7 @@ function AccountForm() {
     open({ title: "Are you sure you want to save the changes?" });
   }
   return (
-    <form className="mt-8 p-2 bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md rounded-2xl sm:w-80 sm:h-50 lg:h-fit sm:mx-auto lg:shadow">
+    <form className="mt-8 p-2 bg-amber-50 dark:bg-amber-50/20 backdrop-blur-md rounded-2xl sm:w-80 2xl:w-100 sm:h-50 2xl:h-70 lg:h-fit sm:mx-auto lg:shadow">
       <div className="p-2">
         <p className="mb-1 sm:mb-1.5 text-neutral-800 dark:text-amber-300">
           Name
@@ -35,15 +35,15 @@ function AccountForm() {
           className="bg-amber-200 dark:bg-neutral-800 text-neutral-800 dark:text-amber-300 p-2 sm:p-2.5 rounded-lg w-full outline-none border-none"
         />
       </div>
-      <div className="hidden lg:flex gap-2 p-2">
+      <div className="hidden lg:flex gap-2 2xl:gap-4 p-2">
         <button
-          className="w-1/2 h-10 mt-2 bg-amber-300 dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-xl cursor-pointer hover:bg-neutral-700 dark:"
+          className="w-1/2 h-10 mt-2 2xl:mt-6 bg-amber-300 dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-xl cursor-pointer hover:bg-neutral-700 dark:"
           onClick={handleOpenSaveModal}
         >
           Save
         </button>
         <button
-          className="w-1/2 h-10 mt-2 bg-red-500 text-white rounded-xl cursor-pointer hover:bg-neutral-700 dark:"
+          className="w-1/2 h-10 mt-2 2xl:mt-6 bg-red-500 text-white rounded-xl cursor-pointer hover:bg-neutral-700 dark:"
           onClick={handleOpenLogoutModal}
         >
           Logout

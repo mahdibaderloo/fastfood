@@ -14,7 +14,7 @@ function Account() {
         showBackButton={true}
         classP="text-4xl dark:text-amber-300"
       />
-      <main className="p-4 xl:px-2 pt-22 sm:pt-24 lg:pt-16 lg:w-[80%] xl:w-[1100px] lg:mx-auto h-screen overflow-y-scroll lg:scrollbar-hide">
+      <main className="p-4 xl:px-2 pt-22 sm:pt-24 lg:pt-16 lg:w-[80%] xl:w-[1100px] 2xl:w-[1350px] lg:mx-auto h-screen overflow-y-scroll lg:scrollbar-hide">
         <BackButton />
         <AccountPicBox />
         <AccountForm />
