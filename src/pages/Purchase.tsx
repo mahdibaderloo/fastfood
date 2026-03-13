@@ -4,10 +4,10 @@ import PurchaseAddressBox from "../features/cart/PurchaseAddressBox";
 import PurchaseItem from "../features/cart/PurchaseItem";
 import { useCartStore } from "../store/cartStore";
 import BackButton from "../components/BackButton";
+import HintBox from "../features/cart/HintBox";
 
 function Purchase() {
   const { items } = useCartStore();
-  const width = window.innerWidth;
 
   return (
     <>
@@ -19,14 +19,7 @@ function Purchase() {
       <main className="p-4 xl:px-2 pt-19 min-h-screen overflow-y-scroll lg:overflow-hidden lg:w-[80%] xl:w-[1100px] 2xl:w-[1350px] lg:pt-16 2xl:pt-20 lg:mx-auto sm:w-90 sm:mx-auto">
         <BackButton />
         <PurchaseAddressBox />
-        <div className="bg-white/40 flex items-center gap-1 p-2 sm:p-3 rounded-xl mt-4 sm:mt-6 xl:w-[90%] xl:mx-auto">
-          <CgDanger size={width > 640 ? 55 : 45} color="#262626" />
-          <p className="text-neutral-800 text-[0.5rem] sm:text-[0.65rem] lg:text-[0.7rem] 2xl:text-[0.88rem] text-justify">
-            The invoice will be delivered together with your order. You can also
-            track and view your order anytime from your dashboard
-          </p>
-        </div>
-
+        <HintBox />
         <div className="xl:w-[90%] xl:mx-auto">
           <p className="mt-4 sm:mt-6 text-[0.7rem] sm:text-[0.8rem] 2xl:text-[1rem] text-neutral-800 dark:text-amber-100">
             Items:
