@@ -6,22 +6,22 @@ function PurchaseAddressBox() {
 
   return (
     <>
-      <div className="w-full xl:w-[90%] xl:mx-auto lg:mt-2 bg-amber-100 p-3 rounded-2xl flex flex-col gap-2 sm:gap-4 relative">
+      <div className="w-full xl:w-[90%] xl:mx-auto lg:mt-2 2xl:mt-6 bg-amber-100 p-3 rounded-2xl flex flex-col gap-2 sm:gap-4 relative">
         <div className="flex justify-between items-center">
           <p>
             <FaLocationDot size={width > 640 ? 34 : 30} color="#2c2c2c" />
           </p>
         </div>
-        <p className="text-neutral-900 text-[0.7rem] sm:text-[0.85rem] ml-2 w-[95%] text-justify">
+        <p className="text-neutral-900 text-[0.7rem] sm:text-[0.85rem] 2xl:text-[1rem] ml-2 w-[95%] text-justify">
           Mohammad shahr, Karaj, Iran
         </p>
-        <p className="text-[0.5rem] sm:text-[0.65rem] ml-2 text-neutral-600">
+        <p className="text-[0.5rem] sm:text-[0.65rem] 2xl:text-[0.8rem] ml-2 text-neutral-600">
           Postal code: 123456789
         </p>
       </div>
       <Link
         to="/address"
-        className="text-[0.5rem] sm:text-[0.65rem] text-blue-400 underline ml-2 lg:ml-4 xl:ml-12"
+        className="text-[0.5rem] sm:text-[0.65rem] 2xl:text-[0.8rem] 2xl:block 2xl:mt-2 text-blue-400 underline ml-2 lg:ml-4 xl:ml-12 2xl:ml-14"
       >
         Edit address
       </Link>
