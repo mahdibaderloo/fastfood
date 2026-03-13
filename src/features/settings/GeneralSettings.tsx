@@ -46,10 +46,10 @@ function GeneralSettings() {
   }
   return (
     <div className="mt-4 sm:w-90 sm:mx-auto lg:w-[45%]">
-      <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg">
+      <p className="text-amber-800 dark:text-amber-100 text-shadow-lg sm:text-lg 2xl:text-xl">
         General
       </p>
-      <ul className="divide-y-2 divide-neutral-700/10 dark:divide-neutral-700/30">
+      <ul className="divide-y-2 divide-neutral-700/10 dark:divide-neutral-700/30 2xl:mt-4">
         {generalItems.map((item) => (
           <SettingsItem
             key={item.id}
