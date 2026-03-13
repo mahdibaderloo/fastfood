@@ -8,7 +8,7 @@ function Notification() {
   return (
     <div>
       <Header classP="text-4xl dark:text-amber-300" showBackButton={true} />
-      <main className="p-4 pt-16 lg:pt-16 min-h-screen flex flex-col gap-2 sm:w-90 lg:w-[80%] sm:mx-auto xl:w-[1100px] 2xl:w-[1350px]">
+      <main className="p-4 pt-16 lg:pt-16 2xl:pt-20 min-h-screen flex flex-col gap-2 sm:w-90 lg:w-[80%] sm:mx-auto xl:w-[1100px] 2xl:w-[1350px]">
         <BackButton />
         <h2 className="text-lg sm:text-xl lg:text-2xl 2xl:text-3xl text-neutral-950 dark:text-amber-300 lg:mt-2 2xl:w-[96%] 2xl:mx-auto">
           Notification Title #{params.notificationId}
