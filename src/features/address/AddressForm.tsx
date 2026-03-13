@@ -1,13 +1,13 @@
 function AddressForm() {
   return (
     <form className="sm:p-2">
-      <div className="flex flex-col sm:gap-1">
+      <div className="flex flex-col sm:gap-1 2xl:mt-4">
         <label htmlFor="address" className="text-neutral-950">
           Address
         </label>
         <textarea
           id="address"
-          className="ml-1 text-[0.7rem] lg:text-[0.9rem] text-neutral-700 bg-amber-50 p-1 pl-2 rounded-xl outline-none border-none shadow min-h-12 sm:min-h-20 max-h-20 sm:max-h-28 xl:min-h-26 xl:max-h-30"
+          className="ml-1 text-[0.7rem] lg:text-[0.9rem] text-neutral-700 bg-amber-50 p-1 pl-2 rounded-xl outline-none border-none shadow min-h-12 sm:min-h-20 max-h-20 sm:max-h-28 xl:min-h-26 xl:max-h-30 2xl:min-h-30 2xl:max-h-40"
           draggable="false"
           maxLength={200}
         >
@@ -15,7 +15,7 @@ function AddressForm() {
         </textarea>
       </div>
 
-      <div className="lg:flex lg:gap-4">
+      <div className="lg:flex lg:gap-4 2xl:mt-4">
         <div className="flex sm:gap-2 lg:w-2/3">
           <div className="flex flex-col sm:gap-1 mt-2 sm:mt-4 lg:mt-2 w-1/2">
             <label htmlFor="street" className="text-neutral-950">
@@ -24,7 +24,7 @@ function AddressForm() {
             <input
               type="text"
               id="street"
-              className="ml-1 text-[0.7rem] sm:text-[0.9rem] text-neutral-700 bg-amber-50 p-1 sm:py-2 pl-2 rounded-xl outline-none border-none shadow"
+              className="ml-1 text-[0.7rem] sm:text-[0.9rem] 2xl:text-[1rem] text-neutral-700 bg-amber-50 p-1 sm:py-2 pl-2 rounded-xl outline-none border-none shadow"
               maxLength={20}
             />
           </div>
@@ -35,7 +35,7 @@ function AddressForm() {
             <input
               type="number"
               id="no"
-              className="ml-1 text-[0.7rem] sm:text-[0.9rem] text-neutral-700 bg-amber-50 p-1 sm:py-2 pl-2 rounded-xl outline-none border-none shadow"
+              className="ml-1 text-[0.7rem] sm:text-[0.9rem] 2xl:text-[1rem] text-neutral-700 bg-amber-50 p-1 sm:py-2 pl-2 rounded-xl outline-none border-none shadow"
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ function AddressForm() {
           <input
             type="number"
             id="postal-code"
-            className="sm:w-1/2 lg:w-full ml-1 text-[0.7rem] sm:text-[0.9rem] text-neutral-700 bg-amber-50 p-1 sm:py-2 pl-2 rounded-xl outline-none border-none shadow"
+            className="sm:w-1/2 lg:w-full ml-1 text-[0.7rem] sm:text-[0.9rem] 2xl:text-[1rem] text-neutral-700 bg-amber-50 p-1 sm:py-2 pl-2 rounded-xl outline-none border-none shadow"
           />
         </div>
       </div>
