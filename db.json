@@ -201,5 +201,58 @@
       "comments": ["Gives a good boost."],
       "score": 4.2
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Mahdi Baderloo",
+      "phone_number": "0910*****98",
+      "image": "",
+      "wallet": [
+        {
+          "total_balance": 100,
+          "transactions": [
+            { "id": 1, "title": "Deposit", "price": 50 },
+            { "id": 2, "title": "Buy", "price": 36 },
+            { "id": 3, "title": "Withdraw", "price": 14 }
+          ]
+        }
+      ],
+      "notifications": [
+        {
+          "id": 1,
+          "date": "",
+          "title": "Welcome to pizza site",
+          "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo quas beatae deleniti exercitationem sed labore rerum quae repudiandae ipsam laudantium laborum cum, saepe maxime culpa natus! Aperiam corporis magni, accusamus unde voluptate similique hic, esse voluptas architecto quidem atque. Recusandae minus ut commodi eos eveniet optio voluptatibus, minima repellat, quasi magnam consequuntur soluta voluptate reprehenderit earum! Corporis aliquam hic numquam esse laboriosam consequuntur sed illum sint obcaecati, nobis fuga? Facilis eveniet natus beatae nemo vero nisi suscipit? Doloremque molestias ipsa veritatis, deleniti nemo laborum! Rem quod doloribus earum eos, velit maxime nesciunt ad culpa explicabo quos inventore aut tempora laudantium!"
+        }
+      ],
+      "address": [
+        {
+          "id": 1,
+          "full_address": "Karaj, ...",
+          "street": "Rezapour",
+          "number": 2,
+          "postal_code": 8739210650
+        }
+      ],
+      "favorites": [],
+      "orders": [
+        {
+          "id": 4738929,
+          "sub_total": 120,
+          "delivery": 0,
+          "date": "",
+          "order": [
+            {
+              "id": 1,
+              "title": "Pepperoni Pizza",
+              "image": "",
+              "qty": 2,
+              "price": 60
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
