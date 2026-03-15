@@ -6,7 +6,7 @@ function Transactions() {
       <p className="text-neutral-800 text-sm sm:text-[1rem] h-7 sm:h-10 lg:h-8">
         Transactions History
       </p>
-      <div className="overflow-y-scroll h-[95%] scrollbar-hide">
+      <div className="overflow-y-scroll h-[95%]">
         <ul className="flex flex-col gap-1 overflow-y-scroll pb-2 sm:pb-3.5 lg:pt-0 lg:pb-2 scrollbar-hide">
           <TransactionItem />
           <TransactionItem />
