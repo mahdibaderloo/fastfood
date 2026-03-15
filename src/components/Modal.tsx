@@ -27,7 +27,7 @@ function Modal() {
           {title}
         </h3>
         {content && <div className="mt-3 lg:mt-0">{content}</div>}
-        <div className="flex justify-between items-center p-4 lg:p-0 sm:mt-4 lg:mt-4 xl:mt-6">
+        <div className="flex justify-between items-center p-4 lg:p-0 sm:mt-4 lg:mt-4 xl:mt-6 2xl:mt-8">
           <button className="bg-green-700 text-amber-100 px-6 py-1 sm:px-8 sm:py-2 lg:py-1 xl:py-2 sm:text-[1rem] 2xl:text-lg rounded-xl shadow lg:cursor-pointer">
             {content ? "Save" : "Yes"}
           </button>
