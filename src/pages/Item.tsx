@@ -9,10 +9,9 @@ import { deSlugify } from "../utils/slugify";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
 import { GoHeart, GoHeartFill } from "react-icons/go";
-import BackButton from "../components/BackButton";
-import { FaComments } from "react-icons/fa6";
 import { CiShoppingCart } from "react-icons/ci";
 import ItemContent from "../features/item/ItemContent";
+import ItemComments from "../features/item/ItemComments";
 
 function Item() {
   const { data: items, isLoading } = useFoods();
@@ -74,6 +73,7 @@ function Item() {
               Add to cart
             </button>
           </div>
+          <ItemComments item={item} />
         </div>
       </main>
     </>
