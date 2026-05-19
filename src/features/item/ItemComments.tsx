@@ -1,16 +1,8 @@
 import { FaComments } from "react-icons/fa6";
+import { Food } from "../../types/types";
 
 interface ItemCommentsProps {
-  item: {
-    id: number;
-    productName: string;
-    price: number;
-    category: string;
-    description: string;
-    image: string;
-    comments: string[];
-    score: number;
-  } | null;
+  item: Food | null;
 }
 
 export default function ItemComments({ item }: ItemCommentsProps) {

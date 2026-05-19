@@ -1,15 +1,5 @@
+import { Food } from "../../types/types";
 import MenuItem from "./MenuItem";
-
-interface Food {
-  id: number;
-  productName: string;
-  price: number;
-  category: string;
-  description: string;
-  image: string;
-  comments: string[];
-  score: number;
-}
 
 type Items = { filteredSearchItems: Food[] };
 

@@ -13,6 +13,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import ItemContent from "../features/item/ItemContent";
 import ItemComments from "../features/item/ItemComments";
 import toast from "react-hot-toast";
+import { Food } from "../types/types";
 
 function Item() {
   const { data: items, isLoading } = useFoods();
@@ -49,12 +50,12 @@ function Item() {
   if (!item) return <p>Food not found</p>;
 
   function handleAddItemToFavorites() {
-    addFavorite(item);
+    addFavorite(item as Food);
     toast.success("Product successfully added to favorites");
   }
 
   function handleRemoveItemFromFavorites() {
-    removeFavorite(item.id);
+    removeFavorite((item as Food).id);
     toast.success("Product successfully removed from favorites");
   }
 

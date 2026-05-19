@@ -7,21 +7,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { slugify } from "../../utils/slugify";
 import { useItemStore } from "../../store/itemStore";
 import React from "react";
+import { Food } from "../../types/types";
 
-interface Item {
-  item: {
-    id: number;
-    productName: string;
-    price: number;
-    category: string;
-    description: string;
-    image: string;
-    comments: string[];
-    score: number;
-  };
+interface MenuItem {
+  item: Food;
 }
 
-function MenuItem({ item }: Item) {
+function MenuItem({ item }: MenuItem) {
   const navigate = useNavigate();
   const { addItem, removeItem, items } = useCartStore();
   const { setItem } = useItemStore();

@@ -1,16 +1,8 @@
 import { FaMoneyBillWave } from "react-icons/fa6";
+import { Food } from "../../types/types";
 
 interface ItemContentProps {
-  item: {
-    id: number;
-    productName: string;
-    price: number;
-    category: string;
-    description: string;
-    image: string;
-    comments: string[];
-    score: number;
-  } | null;
+  item: Food | null;
 }
 
 export default function ItemContent({ item }: ItemContentProps) {
