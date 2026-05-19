@@ -19,4 +19,5 @@ export interface ButtonProps {
   textDarkColor: string;
   bg: string;
   darkBg: string;
+  onclick?: (e: React.MouseEvent) => void;
 }
