@@ -14,6 +14,7 @@ import ItemContent from "../features/item/ItemContent";
 import ItemComments from "../features/item/ItemComments";
 import toast from "react-hot-toast";
 import { Food } from "../types/types";
+import Button from "../components/Button";
 
 function Item() {
   const { data: items, isLoading } = useFoods();
@@ -85,12 +86,15 @@ function Item() {
         </div>
         <div className="bg-amber-300 dark:bg-neutral-800 h-full pt-18 px-4 flex flex-col gap-4">
           <ItemContent item={item} />
-          <div className="flex justify-center">
-            <button className="flex justify-center items-center gap-2 bg-neutral-800 dark:bg-amber-300 text-amber-300 dark:text-neutral-800 text-sm 2xl:text-xl p-2 sm:p-3 rounded-lg sm:rounded-xl w-full lg:w-[40%] 2xl:w-[50%] 2xl:h-14 mt-6 shadow lg:cursor-pointer lg:hover:bg-neutral-950 lg:dark:hover:bg-amber-400 transition-all">
-              <CiShoppingCart className="text-2xl dark:text-neutral-800 text-amber-300" />{" "}
-              Add to cart
-            </button>
-          </div>
+          <Button
+            text="Add to cart"
+            bg="bg-neutral-800"
+            darkBg="bg-amber-300"
+            textColor="text-amber-300"
+            textDarkColor="text-neutral-800"
+          >
+            <CiShoppingCart className="text-2xl dark:text-neutral-800 text-amber-300" />
+          </Button>
           <ItemComments item={item} />
         </div>
       </main>
