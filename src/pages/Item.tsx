@@ -12,11 +12,16 @@ import { GoHeart, GoHeartFill } from "react-icons/go";
 import { CiShoppingCart } from "react-icons/ci";
 import ItemContent from "../features/item/ItemContent";
 import ItemComments from "../features/item/ItemComments";
+import toast from "react-hot-toast";
 
 function Item() {
   const { data: items, isLoading } = useFoods();
   const { item, setItem } = useItemStore();
-  const { items: favorites } = useFavoritesStore();
+  const {
+    items: favorites,
+    addItem: addFavorite,
+    removeItem: removeFavorite,
+  } = useFavoritesStore();
 
   const params = useParams();
   const slug = params.itemName!;
@@ -41,21 +46,33 @@ function Item() {
 
   if (isLoading) return <Loading />;
 
+  if (!item) return <p>Food not found</p>;
+
+  function handleAddItemToFavorites() {
+    addFavorite(item);
+    toast.success("Product successfully added to favorites");
+  }
+
+  function handleRemoveItemFromFavorites() {
+    removeFavorite(item.id);
+    toast.success("Product successfully removed from favorites");
+  }
+
   return (
     <>
       <Header showBackButton={true}>
         <div className="mr-3">
-          {item?.isFavorite ? (
+          {item.isFavorite ? (
             <GoHeartFill
               size={30}
               className="text-neutral-800 dark:text-[#ffd230c8]"
-              // onClick={handleRemoveItemFromFavorites}
+              onClick={handleRemoveItemFromFavorites}
             />
           ) : (
             <GoHeart
               size={30}
               className="text-neutral-800 dark:text-[#ffd230c8]"
-              // onClick={handleAddItemToFavorites}
+              onClick={handleAddItemToFavorites}
             />
           )}
         </div>

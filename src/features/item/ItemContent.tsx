@@ -1,6 +1,6 @@
 import { FaMoneyBillWave } from "react-icons/fa6";
 
-interface Item {
+interface ItemContentProps {
   item: {
     id: number;
     productName: string;
@@ -10,10 +10,10 @@ interface Item {
     image: string;
     comments: string[];
     score: number;
-  };
+  } | null;
 }
 
-export default function ItemContent({ item }: Item) {
+export default function ItemContent({ item }: ItemContentProps) {
   if (!item) {
     return <p>Food not found</p>;
   }
