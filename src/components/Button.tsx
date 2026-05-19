@@ -1,3 +1,5 @@
+import { ButtonProps } from "../types/types";
+
 export default function Button({
   children,
   text,
@@ -5,7 +7,7 @@ export default function Button({
   textDarkColor,
   bg,
   darkBg,
-}) {
+}: ButtonProps) {
   return (
     <div className="flex justify-center">
       <button

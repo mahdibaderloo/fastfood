@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface Food {
   id: number;
   productName: string;
@@ -8,4 +10,13 @@ export interface Food {
   comments: string[];
   score: number;
   isFavorite: boolean;
+}
+
+export interface ButtonProps {
+  children: ReactNode;
+  text: string;
+  textColor: string;
+  textDarkColor: string;
+  bg: string;
+  darkBg: string;
 }
