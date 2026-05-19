@@ -13,7 +13,7 @@ export interface Food {
 }
 
 export interface ButtonProps {
-  children: ReactNode;
+  children?: ReactNode;
   text: string;
   textColor: string;
   textDarkColor: string;

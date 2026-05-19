@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCartStore } from "../../store/cartStore";
+import Button from "../../components/Button";
 
 export default function TotalPurchaseBox() {
   const [delivery, setDelivery] = useState(10);
@@ -15,11 +16,13 @@ export default function TotalPurchaseBox() {
         <p>Total price: </p>
         <p>${delivery ? totalPrice + delivery : totalPrice}</p>
       </div>
-      <div className="flex justify-center">
-        <button className="bg-neutral-800 dark:bg-amber-300 text-amber-300 dark:text-neutral-800 2xl:text-xl p-2 sm:p-3 rounded-lg sm:rounded-xl w-full lg:w-[40%] 2xl:w-[50%] 2xl:h-14 mt-6 shadow lg:cursor-pointer lg:hover:bg-neutral-950 lg:dark:hover:bg-amber-400 transition-all">
-          Proceed to payment
-        </button>
-      </div>
+      <Button
+        text="Proceed to payment"
+        bg="bg-neutral-800"
+        darkBg="bg-amber-300"
+        textColor="text-amber-300"
+        textDarkColor="text-neutral-800"
+      ></Button>
     </>
   );
 }
