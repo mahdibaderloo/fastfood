@@ -1,6 +1,7 @@
 import { BsPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { FaPen } from "react-icons/fa6";
+import Button from "../../components/Button";
 
 function SupportForm() {
   return (
@@ -37,11 +38,14 @@ function SupportForm() {
           10 / 200
         </p>
       </div>
-      <div className="xl:flex xl:justify-center xl:w-full 2xl:h-13">
-        <button className="bg-amber-200 text-neutral-800 rounded-lg p-2 w-full xl:w-[40%] hover:bg-amber-300 transition-all mt-4 lg:mt-2 lg:cursor-pointer 2xl:text-lg">
-          Submit
-        </button>
-      </div>
+      <Button
+        divStyles="xl:flex xl:justify-center xl:w-full 2xl:h-13"
+        text="Submit"
+        bg="bg-amber-200"
+        darkBg="bg-amber-200"
+        textColor="text-neutral-800"
+        textDarkColor="text-neutral-800"
+      ></Button>
     </form>
   );
 }

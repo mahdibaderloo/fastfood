@@ -14,6 +14,7 @@ export interface Food {
 
 export interface ButtonProps {
   children?: ReactNode;
+  divStyles?: string;
   text: string;
   textColor: string;
   textDarkColor: string;
