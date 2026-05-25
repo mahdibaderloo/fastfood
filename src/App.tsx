@@ -22,6 +22,7 @@ import Account from "./pages/Account.js";
 import Notification from "./pages/Notification.js";
 import Purchase from "./pages/Purchase.js";
 import Item from "./pages/Item.js";
+import Login from "./pages/Login.js";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,8 @@ const router = createBrowserRouter([
       { path: "/notifications/:notificationId", element: <Notification /> },
 
       { path: "/settings", element: <Settings /> },
+
+      { path: "/login", element: <Login /> },
     ],
   },
 ]);
