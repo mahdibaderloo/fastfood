@@ -29,3 +29,9 @@ export interface FormProps {
   buttonTitle: string;
   linkTitle: string;
 }
+
+export interface FormInputProps {
+  children: ReactNode;
+  inputType: string;
+  placeholder: string;
+}

@@ -1,4 +1,10 @@
-export default function FormInput({ children, inputType, placeholder }) {
+import { FormInputProps } from "../../types/types";
+
+export default function FormInput({
+  children,
+  inputType,
+  placeholder,
+}: FormInputProps) {
   return (
     <div className="rounded-full border-3 border-neutral-800/70 dark:border-amber-300/70 p-1.5 px-2 flex items-center gap-2">
       {children}
