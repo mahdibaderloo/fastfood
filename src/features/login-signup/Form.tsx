@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
+import { FormProps } from "../../types/types";
+import Button from "../../components/Button";
 import { BiUser } from "react-icons/bi";
 import { CgLock } from "react-icons/cg";
-import Button from "../../components/Button";
-import { Link } from "react-router-dom";
 
-export default function Form({ url, text, buttonTitle, linkTitle }) {
+export default function Form({ url, text, buttonTitle, linkTitle }: FormProps) {
   return (
     <form className="w-[75%] flex flex-col gap-4 justify-center items-center mx-auto">
       <div className="rounded-full border-3 border-neutral-800/70 dark:border-amber-300/70 p-1.5 px-2 flex items-center gap-2">

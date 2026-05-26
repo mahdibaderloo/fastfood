@@ -22,3 +22,10 @@ export interface ButtonProps {
   darkBg: string;
   onclick?: (e: React.MouseEvent) => void;
 }
+
+export interface FormProps {
+  url: string;
+  text: string;
+  buttonTitle: string;
+  linkTitle: string;
+}
